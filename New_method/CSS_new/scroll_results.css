@@ -1,0 +1,361 @@
+/* To hide the link underline in the table*/
+a:link {
+  text-decoration: none;
+}
+
+.docScroller {
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Specifies that each element’s snap area should
+       align with a 100px offset from the top edge. */
+    scroll-padding: 0 20px 0;
+    /* Encourages scrolling to end at a snap position when the
+        operation completes, if it is near a snap position */
+    scroll-snap-type: y mandatory;
+}
+.active_scroll {
+  background-color: #717171;
+}
+
+#align {
+    float: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 50px;
+    top:200px;
+    align-items: center;
+    background-color: #cccccc;
+  }
+
+
+/* data table styles */
+#grid { height: 100%; width: 100%; }
+.row, .header { clear: left; font-size: 12px; line-height: 18px; height: 18px; border: black}
+.row:nth-child(odd) { background: rgba(0,0,0,0.05); }
+.header { font-weight: bold; }
+.cell { float: left;margin-left: 10px;overflow:visible;  white-space: wrap; width: 75px; height: 18px; }
+.cell-0, .header {height: 54px;}
+.col-0 { width: 100px; }
+
+/* data table styles */
+#grid2 { height: 10%; width: 100%; }
+.row, .header { clear: left; font-size: 12px; line-height: 18px; height: 18px; border: black}
+.row:nth-child(odd) { background: rgba(0,0,0,0.05); }
+.header { font-weight: bold; }
+.cell { float: left;margin-left: 10px;overflow:visible;  white-space: wrap; width: 75px; height: 18px; }
+.cell-0, .header {height: 54px;}
+.col-0 { width: 100px; }
+
+
+#align1 {
+    float: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 100px;
+    top:100px;
+    align-items: center;
+    background-color: #cccccc;
+  }
+
+#align2 {
+      float: center;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 50px;
+      top:200px;
+      align-items: center;
+      background-color: white;
+    }
+/*********************************//*********************************//*********************************//*********************************/
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container1 {
+  max-width: 70%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot0, .dot1, .dot2, .dot3{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active_dot, .dot0:hover, .dot1:hover, .dot2:hover, .dot3:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: ease;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade{
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade{
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.fade1{
+  -webkit-animation-name: fade1;
+  -webkit-animation-duration: 1.5s;
+  animation-name: ease;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade1{
+  from {opacity: .6}
+  to {opacity: 1}
+}
+
+@keyframes fade1{
+  from {opacity: .6}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*********************************//*********************************//*********************************//*********************************/
+
+
+/*divide the page into sections*/
+.section1 {
+  padding-top: 75px;
+  float: left;
+  width: 50%;
+}
+.section2 {
+  padding-top: 75px;
+  float: right;
+  width: 50%;
+}
+
+/*divide the page into sections*/
+.sec1 {
+  padding-top: 75px;
+  float: left;
+  width: 25%;
+}
+.sec2 {
+  padding-top: 75px;
+  float: right;
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.partiton:after {
+  content:  "";
+  display: table;
+  clear: both;
+}
+
+.part1 {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  float: left;
+  width: 32%;
+}
+.part2 {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  float: inherit;
+  width: 32%;
+}
+
+.part3 {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  float: left;
+  width: 32%;
+}
+
+/************************************/
+
+/* for header bar navigation bar at the top of page */
+.header {
+  overflow: visible;
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  height: 10%;
+  vertical-align: middle;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  z-index: 100;
+
+}
+.header a {
+  font-size: 24px;
+  color: grey;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+
+}
+
+.header a:hover {
+  color: white;
+  background-color: white;
+}
+
+.tab {
+ margin-left: 5.5em
+}
+
+.header img.hover-shadow {
+  transition: 0.3s;
+}
+
+div.header:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+
+}
+
+.header.active {
+  background-color: #666;
+  color: white;
+}
+
+.header img {
+  float: auto;
+  width: 10%;
+  height: 100%;
+  background: #555;
+}
+
+#proceed {
+display: none;
+}
+.overlay {
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index:3;
+}
+#proceed1 {
+display: none;
+}
+.overlay {
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index:3;
+}
+.button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline: inherit;
+    color: white;
+}
+
+/* for header bar navigation bar at the top of page */
+.topper {
+  position: fixed;
+  top: 75%;
+  right: 0;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: gray;
+  opacity: 0.8;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  transform: rotate(-90deg);
+  opacity: .5;
+
+}
+
+.topper a {
+  font-size: 24px;
+  color: grey;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+
+}
+
+.topper a:hover {
+  color: white;
+  background-color: white;
+}

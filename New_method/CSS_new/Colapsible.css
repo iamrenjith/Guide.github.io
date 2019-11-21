@@ -1,0 +1,42 @@
+.help{
+    background: red;
+    opacity: .75;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    color: grey;
+    max-width: 25%;
+    font-weight: 10;
+    text-align: center;
+    outline: none;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    transform: rotate(0deg);
+
+    /*remove text highlighting (easy to double click and highlight)
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome and Opera */
+}
+
+.help:hover {
+  transform: scale(1.5);
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+details summary.button::-webkit-details-marker {
+  display:none; /*remove the arrow of the details tag*/
+}
+
+details[open] summary{
+  background: #666; /*change background when button is 'open'*/
+}
