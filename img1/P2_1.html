@@ -43,6 +43,15 @@
 
 </head>
 <style>
+  .bottom_abc {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    background: #ccc;
+    color: red;
+  }
+
 
   * {
     box-sizing: border-box;
@@ -503,23 +512,15 @@
   z-index:9999;
   background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center rgba(0,0,0,0.25)}
 
-  .bottom_abc {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 5%;
-    background: #ccc;
-    color: red;
-  }
-  .navbar {
-    position: fixed;
-    z-index: 100;
-    width:100%;
-    top:0;
-  }
+
+/* for pop up window*/
+
+
 
 
 </style>
+
+
 <body>
   <script type="text/javascript">
   document.onreadystatechange = function () {
@@ -533,21 +534,32 @@
   document.getElementById('contents').style.visibility="visible";
   },1000);}}
   </script>
-  <div id="load"></div>
-<!-- Navbar -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li>
-      <a class="navbar-brand"  href="#">
-        <img src="../New_method/img/EcoVolkslogo.png"  style="width:30px;">
-        </a>
-        </li>
-      <li class=" " style="padding-top:5px;font-size:32;" ><a  style="font-size:24px;" href="#">Design Guide</a></li>
-    </ul>
 
+<!-- Navbar -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#home">
+          <div class="logo-image" >
+            <img src="../New_method/img/EcoVolkslogo.png" class="img-fluid" style="width:80%">
+          </div>
+        </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="#"><a href="../index.html" style="font-size: 32;">Design Guide</a></li>
+    </ul>
   </div>
 </nav>
+
+
+<!--<div class="navbar " style="background-color:#f1f1f1">
+  <div class="text">
+  <c><a href="../Index.html" > <h2 style="font-size:30px;"> Home </h2></a></c>
+
+  </div>
+</div>
+-->
 
 <div class="bottom_abc" >
   <h4 class="text-center" style="font-size:20px;">
@@ -558,6 +570,8 @@
 
 </div>
 
+
+  <!-- /#Welcome content End-->
 
 
 
@@ -585,12 +599,12 @@
 <br/><br/>
 
       <h3 class="large-font" style="font-size:24px" align="justify">
-      For further details, please send us an <button class="large-font btn-default" style="font-size:20px;background-color:gray;color:black"><a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com" style="font-size:20px;background-color:gray;color:white">email <span class="glyphicon glyphicon-send"></span></a></button>
+      For further details, please send us an <button class="large-font btn-default" style="font-size:20px;background-color:gray;color:black"><a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com" style="font-size:20px;background-color:gray;color:white">email</a></button>
 </h3>
 
 </div></div></div>
 
-<button class="openbtn" onclick="openNav()" id="#CZ_Kerala">Help me <span class="glyphicon glyphicon-hand-up"></button>
+<button class="openbtn" onclick="openNav()" id="#CZ_Kerala">Help me</button>
 
 
 

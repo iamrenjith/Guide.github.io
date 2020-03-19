@@ -1,9 +1,72 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
-<title>Design selection - T&D</title>
+<title>Design selection - Thermal</title>
 <!-- For the popup (Modal)-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+  html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;-moz-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+
+ @media print{*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;-webkit-box-shadow:none!important;box-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}img{max-width:100%!important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}.navbar{display:none}.btn>.caret,.dropup>.btn>.caret{border-top-color:#000!important}.label{border:1px solid #000}.table{border-collapse:collapse!important}.table td,.table th{background-color:#fff!important}.table-bordered td,.table-bordered th{border:1px solid #ddd!important}}@font-face{font-family:"Glyphicons Halflings";src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"),url(../fonts/glyphicons-halflings-regular.woff2) format("woff2"),url(../fonts/glyphicons-halflings-regular.woff) format("woff"),url(../fonts/glyphicons-halflings-regular.ttf) format("truetype"),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg")}.glyphicon{position:relative;top:1px;display:inline-block;font-family:"Glyphicons Halflings";font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.glyphicon-asterisk:before{content:"\002a"}.glyphicon-menu-hamburger:before{content:"\e236"}.glyphicon-hand-up:before{content:"\e129"}.glyphicon-send:before{content:"\e171"}
+
+
+
+ @media (min-width:768px){.form-horizontal .form-group-sm .control-label{padding-top:6px;font-size:12px}}.btn{display:inline-block;margin-bottom:0;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;padding:6px 12px;font-size:14px;line-height:1.42857143;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.btn.active.focus,.btn.active:focus,.btn.focus,.btn:active.focus,.btn:active:focus,.btn:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.btn.focus,.btn:focus,.btn:hover{color:#333;text-decoration:none}.btn.active,.btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}.btn.disabled,.btn[disabled],fieldset[disabled] .btn{cursor:not-allowed;filter:alpha(opacity=65);opacity:.65;-webkit-box-shadow:none;box-shadow:none}a.btn.disabled,fieldset[disabled] a.btn{pointer-events:none}.btn-default{color:#333;background-color:#fff;border-color:#ccc}.btn-default.focus,.btn-default:focus{color:#333;background-color:#e6e6e6;border-color:#8c8c8c}.btn-default:hover{color:#333;background-color:#e6e6e6;border-color:#adadad}.btn-default.active,.btn-default:active,.open>.dropdown-toggle.btn-default{color:#333;background-color:#e6e6e6;background-image:none;border-color:#adadad}.btn-default.active.focus,.btn-default.active:focus,.btn-default.active:hover,.btn-default:active.focus,.btn-default:active:focus,.btn-default:active:hover,.open>.dropdown-toggle.btn-default.focus,.open>.dropdown-toggle.btn-default:focus,.open>.dropdown-toggle.btn-default:hover{color:#333;background-color:#d4d4d4;border-color:#8c8c8c}.btn-default.disabled.focus,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled].focus,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{background-color:#fff;border-color:#ccc}.btn-default .badge{color:#fff;background-color:#333}.btn-primary{color:#fff;background-color:#337ab7;border-color:#2e6da4}.btn-primary.focus,.btn-primary:focus{color:#fff;background-color:#286090;border-color:#122b40}.btn-primary:hover{color:#fff;background-color:#286090;border-color:#204d74}.btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-primary{color:#fff;background-color:#286090;background-image:none;border-color:#204d74}.btn-primary.active.focus,.btn-primary.active:focus,.btn-primary.active:hover,.btn-primary:active.focus,.btn-primary:active:focus,.btn-primary:active:hover,.open>.dropdown-toggle.btn-primary.focus,.open>.dropdown-toggle.btn-primary:focus,.open>.dropdown-toggle.btn-primary:hover{color:#fff;background-color:#204d74;border-color:#122b40}.btn-primary.disabled.focus,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled].focus,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{background-color:#337ab7;border-color:#2e6da4}.btn-primary .badge{color:#337ab7;background-color:#fff}.btn-success{color:#fff;background-color:#5cb85c;border-color:#4cae4c}.btn-success.focus,.btn-success:focus{color:#fff;background-color:#449d44;border-color:#255625}.btn-success:hover{color:#fff;background-color:#449d44;border-color:#398439}.btn-success.active,.btn-success:active,.open>.dropdown-toggle.btn-success{color:#fff;background-color:#449d44;background-image:none;border-color:#398439}.btn-success.active.focus,.btn-success.active:focus,.btn-success.active:hover,.btn-success:active.focus,.btn-success:active:focus,.btn-success:active:hover,.open>.dropdown-toggle.btn-success.focus,.open>.dropdown-toggle.btn-success:focus,.open>.dropdown-toggle.btn-success:hover{color:#fff;background-color:#398439;border-color:#255625}.btn-success.disabled.focus,.btn-success.disabled:focus,.btn-success.disabled:hover,.btn-success[disabled].focus,.btn-success[disabled]:focus,.btn-success[disabled]:hover,fieldset[disabled] .btn-success.focus,fieldset[disabled] .btn-success:focus,fieldset[disabled] .btn-success:hover{background-color:#5cb85c;border-color:#4cae4c}.btn-success .badge{color:#5cb85c;background-color:#fff}.btn-info{color:#fff;background-color:#5bc0de;border-color:#46b8da}.btn-info.focus,.btn-info:focus{color:#fff;background-color:#31b0d5;border-color:#1b6d85}.btn-info:hover{color:#fff;background-color:#31b0d5;border-color:#269abc}.btn-info.active,.btn-info:active,.open>.dropdown-toggle.btn-info{color:#fff;background-color:#31b0d5;background-image:none;border-color:#269abc}.btn-info.active.focus,.btn-info.active:focus,.btn-info.active:hover,.btn-info:active.focus,.btn-info:active:focus,.btn-info:active:hover,.open>.dropdown-toggle.btn-info.focus,.open>.dropdown-toggle.btn-info:focus,.open>.dropdown-toggle.btn-info:hover{color:#fff;background-color:#269abc;border-color:#1b6d85}.btn-info.disabled.focus,.btn-info.disabled:focus,.btn-info.disabled:hover,.btn-info[disabled].focus,.btn-info[disabled]:focus,.btn-info[disabled]:hover,fieldset[disabled] .btn-info.focus,fieldset[disabled] .btn-info:focus,fieldset[disabled] .btn-info:hover{background-color:#5bc0de;border-color:#46b8da}.btn-info .badge{color:#5bc0de;background-color:#fff}.btn-warning{color:#fff;background-color:#f0ad4e;border-color:#eea236}.btn-warning.focus,.btn-warning:focus{color:#fff;background-color:#ec971f;border-color:#985f0d}.btn-warning:hover{color:#fff;background-color:#ec971f;border-color:#d58512}.btn-warning.active,.btn-warning:active,.open>.dropdown-toggle.btn-warning{color:#fff;background-color:#ec971f;background-image:none;border-color:#d58512}.btn-warning.active.focus,.btn-warning.active:focus,.btn-warning.active:hover,.btn-warning:active.focus,.btn-warning:active:focus,.btn-warning:active:hover,.open>.dropdown-toggle.btn-warning.focus,.open>.dropdown-toggle.btn-warning:focus,.open>.dropdown-toggle.btn-warning:hover{color:#fff;background-color:#d58512;border-color:#985f0d}.btn-warning.disabled.focus,.btn-warning.disabled:focus,.btn-warning.disabled:hover,.btn-warning[disabled].focus,.btn-warning[disabled]:focus,.btn-warning[disabled]:hover,fieldset[disabled] .btn-warning.focus,fieldset[disabled] .btn-warning:focus,fieldset[disabled] .btn-warning:hover{background-color:#f0ad4e;border-color:#eea236}.btn-warning .badge{color:#f0ad4e;background-color:#fff}.btn-danger{color:#fff;background-color:#d9534f;border-color:#d43f3a}.btn-danger.focus,.btn-danger:focus{color:#fff;background-color:#c9302c;border-color:#761c19}.btn-danger:hover{color:#fff;background-color:#c9302c;border-color:#ac2925}.btn-danger.active,.btn-danger:active,.open>.dropdown-toggle.btn-danger{color:#fff;background-color:#c9302c;background-image:none;border-color:#ac2925}.btn-danger.active.focus,.btn-danger.active:focus,.btn-danger.active:hover,.btn-danger:active.focus,.btn-danger:active:focus,.btn-danger:active:hover,.open>.dropdown-toggle.btn-danger.focus,.open>.dropdown-toggle.btn-danger:focus,.open>.dropdown-toggle.btn-danger:hover{color:#fff;background-color:#ac2925;border-color:#761c19}.btn-danger.disabled.focus,.btn-danger.disabled:focus,.btn-danger.disabled:hover,.btn-danger[disabled].focus,.btn-danger[disabled]:focus,.btn-danger[disabled]:hover,fieldset[disabled] .btn-danger.focus,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger:hover{background-color:#d9534f;border-color:#d43f3a}.btn-danger .badge{color:#d9534f;background-color:#fff}.btn-link{font-weight:400;color:#337ab7;border-radius:0}.btn-link,.btn-link.active,.btn-link:active,.btn-link[disabled],fieldset[disabled] .btn-link{background-color:transparent;-webkit-box-shadow:none;box-shadow:none}.btn-link,.btn-link:active,.btn-link:focus,.btn-link:hover{border-color:transparent}.btn-link:focus,.btn-link:hover{color:#23527c;text-decoration:underline;background-color:transparent}.btn-link[disabled]:focus,.btn-link[disabled]:hover,fieldset[disabled] .btn-link:focus,fieldset[disabled] .btn-link:hover{color:#777;text-decoration:none}.btn-group-lg>.btn,.btn-lg{padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px}.btn-group-sm>.btn,.btn-sm{padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}.btn-group-xs>.btn,.btn-xs{padding:1px 5px;font-size:12px;line-height:1.5;border-radius:3px}.btn-block{display:block;width:100%}.btn-block+.btn-block{margin-top:5px}input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-block{width:100%}.fade{opacity:0;-webkit-transition:opacity .15s linear;-o-transition:opacity .15s linear;transition:opacity .15s linear}.fade.in{opacity:1}.collapse{display:none}.collapse.in{display:block}tr.collapse.in{display:table-row}tbody.collapse.in{display:table-row-group}.collapsing{position:relative;height:0;overflow:hidden;-webkit-transition-property:height,visibility;-o-transition-property:height,visibility;transition-property:height,visibility;-webkit-transition-duration:.35s;-o-transition-duration:.35s;transition-duration:.35s;-webkit-transition-timing-function:ease;-o-transition-timing-function:ease;transition-timing-function:ease}.caret{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px dashed;border-top:4px solid\9;border-right:4px solid transparent;border-left:4px solid transparent}.dropdown,.dropup{position:relative}.dropdown-toggle:focus{outline:0}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:14px;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid #ccc;border:1px solid rgba(0,0,0,.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,.175);box-shadow:0 6px 12px rgba(0,0,0,.175)}.dropdown-menu.pull-right{right:0;left:auto}.dropdown-menu .divider{height:1px;margin:9px 0;overflow:hidden;background-color:#e5e5e5}.dropdown-menu>li>a{display:block;padding:3px 20px;clear:both;font-weight:400;line-height:1.42857143;color:#333;white-space:nowrap}.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover{color:#262626;text-decoration:none;background-color:#f5f5f5}.dropdown-menu>.active>a,.dropdown-menu>.active>a:focus,.dropdown-menu>.active>a:hover{color:#fff;text-decoration:none;background-color:#337ab7;outline:0}.dropdown-menu>.disabled>a,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover{color:#777}.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover{text-decoration:none;cursor:not-allowed;background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.gradient(enabled=false)}.open>.dropdown-menu{display:block}.open>a{outline:0}.dropdown-menu-right{right:0;left:auto}.dropdown-menu-left{right:auto;left:0}.dropdown-header{display:block;padding:3px 20px;font-size:12px;line-height:1.42857143;color:#777;white-space:nowrap}.dropdown-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:990}.pull-right>.dropdown-menu{right:0;left:auto}.dropup .caret,.navbar-fixed-bottom .dropdown .caret{content:"";border-top:0;border-bottom:4px dashed;border-bottom:4px solid\9}.dropup .dropdown-menu,.navbar-fixed-bottom .dropdown .dropdown-menu{top:auto;bottom:100%;margin-bottom:2px}
+ @media (min-width:768px){.navbar-right .dropdown-menu{right:0;left:auto}.navbar-right .dropdown-menu-left{right:auto;left:0}}.btn-group,.btn-group-vertical{position:relative;display:inline-block;vertical-align:middle}.btn-group-vertical>.btn,.btn-group>.btn{position:relative;float:left}.btn-group-vertical>.btn.active,.btn-group-vertical>.btn:active,.btn-group-vertical>.btn:focus,.btn-group-vertical>.btn:hover,.btn-group>.btn.active,.btn-group>.btn:active,.btn-group>.btn:focus,.btn-group>.btn:hover{z-index:2}.btn-group .btn+.btn,.btn-group .btn+.btn-group,.btn-group .btn-group+.btn,.btn-group .btn-group+.btn-group{margin-left:-1px}.btn-toolbar{margin-left:-5px}.btn-toolbar .btn,.btn-toolbar .btn-group,.btn-toolbar .input-group{float:left}.btn-toolbar>.btn,.btn-toolbar>.btn-group,.btn-toolbar>.input-group{margin-left:5px}.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle){border-radius:0}.btn-group>.btn:first-child{margin-left:0}.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle){border-top-right-radius:0;border-bottom-right-radius:0}.btn-group>.btn:last-child:not(:first-child),.btn-group>.dropdown-toggle:not(:first-child){border-top-left-radius:0;border-bottom-left-radius:0}.btn-group>.btn-group{float:left}.btn-group>.btn-group:not(:first-child):not(:last-child)>.btn{border-radius:0}.btn-group>.btn-group:first-child:not(:last-child)>.btn:last-child,.btn-group>.btn-group:first-child:not(:last-child)>.dropdown-toggle{border-top-right-radius:0;border-bottom-right-radius:0}.btn-group>.btn-group:last-child:not(:first-child)>.btn:first-child{border-top-left-radius:0;border-bottom-left-radius:0}.btn-group .dropdown-toggle:active,.btn-group.open .dropdown-toggle{outline:0}.btn-group>.btn+.dropdown-toggle{padding-right:8px;padding-left:8px}.btn-group>.btn-lg+.dropdown-toggle{padding-right:12px;padding-left:12px}.btn-group.open .dropdown-toggle{-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}.btn-group.open .dropdown-toggle.btn-link{-webkit-box-shadow:none;box-shadow:none}.btn .caret{margin-left:0}.btn-lg .caret{border-width:5px 5px 0;border-bottom-width:0}.dropup .btn-lg .caret{border-width:0 5px 5px}.btn-group-vertical>.btn,.btn-group-vertical>.btn-group,.btn-group-vertical>.btn-group>.btn{display:block;float:none;width:100%;max-width:100%}.btn-group-vertical>.btn-group>.btn{float:none}.btn-group-vertical>.btn+.btn,.btn-group-vertical>.btn+.btn-group,.btn-group-vertical>.btn-group+.btn,.btn-group-vertical>.btn-group+.btn-group{margin-top:-1px;margin-left:0}.btn-group-vertical>.btn:not(:first-child):not(:last-child){border-radius:0}.btn-group-vertical>.btn:first-child:not(:last-child){border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:0;border-bottom-left-radius:0}.btn-group-vertical>.btn:last-child:not(:first-child){border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:4px;border-bottom-left-radius:4px}.btn-group-vertical>.btn-group:not(:first-child):not(:last-child)>.btn{border-radius:0}.btn-group-vertical>.btn-group:first-child:not(:last-child)>.btn:last-child,.btn-group-vertical>.btn-group:first-child:not(:last-child)>.dropdown-toggle{border-bottom-right-radius:0;border-bottom-left-radius:0}.btn-group-vertical>.btn-group:last-child:not(:first-child)>.btn:first-child{border-top-left-radius:0;border-top-right-radius:0}.btn-group-justified{display:table;width:100%;table-layout:fixed;border-collapse:separate}.btn-group-justified>.btn,.btn-group-justified>.btn-group{display:table-cell;float:none;width:1%}.btn-group-justified>.btn-group .btn{width:100%}.btn-group-justified>.btn-group .dropdown-menu{left:auto}[data-toggle=buttons]>.btn input[type=checkbox],[data-toggle=buttons]>.btn input[type=radio],[data-toggle=buttons]>.btn-group>.btn input[type=checkbox],[data-toggle=buttons]>.btn-group>.btn input[type=radio]{position:absolute;clip:rect(0,0,0,0);pointer-events:none}.input-group{position:relative;display:table;border-collapse:separate}.input-group[class*=col-]{float:none;padding-right:0;padding-left:0}.input-group .form-control{position:relative;z-index:2;float:left;width:100%;margin-bottom:0}.input-group .form-control:focus{z-index:3}.input-group-lg>.form-control,.input-group-lg>.input-group-addon,.input-group-lg>.input-group-btn>.btn{height:46px;padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px}select.input-group-lg>.form-control,select.input-group-lg>.input-group-addon,select.input-group-lg>.input-group-btn>.btn{height:46px;line-height:46px}select[multiple].input-group-lg>.form-control,select[multiple].input-group-lg>.input-group-addon,select[multiple].input-group-lg>.input-group-btn>.btn,textarea.input-group-lg>.form-control,textarea.input-group-lg>.input-group-addon,textarea.input-group-lg>.input-group-btn>.btn{height:auto}.input-group-sm>.form-control,.input-group-sm>.input-group-addon,.input-group-sm>.input-group-btn>.btn{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}select.input-group-sm>.form-control,select.input-group-sm>.input-group-addon,select.input-group-sm>.input-group-btn>.btn{height:30px;line-height:30px}select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.input-group-addon,select[multiple].input-group-sm>.input-group-btn>.btn,textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon,textarea.input-group-sm>.input-group-btn>.btn{height:auto}.input-group .form-control,.input-group-addon,.input-group-btn{display:table-cell}.input-group .form-control:not(:first-child):not(:last-child),.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child){border-radius:0}.input-group-addon,.input-group-btn{width:1%;white-space:nowrap;vertical-align:middle}.input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;border-radius:4px}.input-group-addon.input-sm{padding:5px 10px;font-size:12px;border-radius:3px}.input-group-addon.input-lg{padding:10px 16px;font-size:18px;border-radius:6px}.input-group-addon input[type=checkbox],.input-group-addon input[type=radio]{margin-top:0}.input-group .form-control:first-child,.input-group-addon:first-child,.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group>.btn,.input-group-btn:first-child>.dropdown-toggle,.input-group-btn:last-child>.btn-group:not(:last-child)>.btn,.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle){border-top-right-radius:0;border-bottom-right-radius:0}.input-group-addon:first-child{border-right:0}.input-group .form-control:last-child,.input-group-addon:last-child,.input-group-btn:first-child>.btn-group:not(:first-child)>.btn,.input-group-btn:first-child>.btn:not(:first-child),.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group>.btn,.input-group-btn:last-child>.dropdown-toggle{border-top-left-radius:0;border-bottom-left-radius:0}.input-group-addon:last-child{border-left:0}.input-group-btn{position:relative;font-size:0;white-space:nowrap}.input-group-btn>.btn{position:relative}.input-group-btn>.btn+.btn{margin-left:-1px}.input-group-btn>.btn:active,.input-group-btn>.btn:focus,.input-group-btn>.btn:hover{z-index:2}.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group{margin-right:-1px}.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group{z-index:2;margin-left:-1px}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.nav>li>a:focus,.nav>li>a:hover{text-decoration:none;background-color:#eee}.nav>li.disabled>a{color:#777}.nav>li.disabled>a:focus,.nav>li.disabled>a:hover{color:#777;text-decoration:none;cursor:not-allowed;background-color:transparent}.nav .open>a,.nav .open>a:focus,.nav .open>a:hover{background-color:#eee;border-color:#337ab7}.nav .nav-divider{height:1px;margin:9px 0;overflow:hidden;background-color:#e5e5e5}.nav>li>a>img{max-width:none}.nav-tabs{border-bottom:1px solid #ddd}.nav-tabs>li{float:left;margin-bottom:-1px}.nav-tabs>li>a{margin-right:2px;line-height:1.42857143;border:1px solid transparent;border-radius:4px 4px 0 0}.nav-tabs>li>a:hover{border-color:#eee #eee #ddd}.nav-tabs>li.active>a,.nav-tabs>li.active>a:focus,.nav-tabs>li.active>a:hover{color:#555;cursor:default;background-color:#fff;border:1px solid #ddd;border-bottom-color:transparent}.nav-tabs.nav-justified{width:100%;border-bottom:0}.nav-tabs.nav-justified>li{float:none}.nav-tabs.nav-justified>li>a{margin-bottom:5px;text-align:center}.nav-tabs.nav-justified>.dropdown .dropdown-menu{top:auto;left:auto}
+ @media (min-width:768px){.nav-tabs.nav-justified>li{display:table-cell;width:1%}.nav-tabs.nav-justified>li>a{margin-bottom:0}}.nav-tabs.nav-justified>li>a{margin-right:0;border-radius:4px}.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:hover{border:1px solid #ddd}
+ @media (min-width:768px){.nav-tabs.nav-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0}.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:hover{border-bottom-color:#fff}}.nav-pills>li{float:left}.nav-pills>li>a{border-radius:4px}.nav-pills>li+li{margin-left:2px}.nav-pills>li.active>a,.nav-pills>li.active>a:focus,.nav-pills>li.active>a:hover{color:#fff;background-color:#337ab7}.nav-stacked>li{float:none}.nav-stacked>li+li{margin-top:2px;margin-left:0}.nav-justified{width:100%}.nav-justified>li{float:none}.nav-justified>li>a{margin-bottom:5px;text-align:center}.nav-justified>.dropdown .dropdown-menu{top:auto;left:auto}
+ @media (min-width:768px){.nav-justified>li{display:table-cell;width:1%}.nav-justified>li>a{margin-bottom:0}}.nav-tabs-justified{border-bottom:0}.nav-tabs-justified>li>a{margin-right:0;border-radius:4px}.nav-tabs-justified>.active>a,.nav-tabs-justified>.active>a:focus,.nav-tabs-justified>.active>a:hover{border:1px solid #ddd}
+ @media (min-width:768px){.nav-tabs-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0}.nav-tabs-justified>.active>a,.nav-tabs-justified>.active>a:focus,.nav-tabs-justified>.active>a:hover{border-bottom-color:#fff}}.tab-content>.tab-pane{display:none}.tab-content>.active{display:block}.nav-tabs .dropdown-menu{margin-top:-1px;border-top-left-radius:0;border-top-right-radius:0}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}
+ @media (min-width:768px){.navbar{border-radius:4px}}
+ @media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1);-webkit-overflow-scrolling:touch}.navbar-collapse.in{overflow-y:auto}
+ @media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important}.navbar-collapse.in{overflow-y:visible}.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse{padding-right:0;padding-left:0}}.navbar-fixed-bottom,.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse{max-height:340px}
+ @media (max-device-width:480px) and (orientation:landscape){.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse{max-height:200px}}
+ @media (min-width:768px){.navbar-fixed-bottom,.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-fixed-bottom{bottom:0;margin-bottom:0;border-width:1px 0 0}.container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}
+ @media (min-width:768px){.container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-static-top{z-index:1000;border-width:0 0 1px}
+ @media (min-width:768px){.navbar-static-top{border-radius:0}}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}.navbar-brand:focus,.navbar-brand:hover{text-decoration:none}.navbar-brand>img{display:block}
+ @media (min-width:768px){.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-right:15px;margin-top:8px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle:focus{outline:0}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}
+ @media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}
+ @media (max-width:767px){.navbar-nav .open .dropdown-menu{position:static;float:none;width:auto;margin-top:0;background-color:transparent;border:0;-webkit-box-shadow:none;box-shadow:none}.navbar-nav .open .dropdown-menu .dropdown-header,.navbar-nav .open .dropdown-menu>li>a{padding:5px 15px 5px 25px}.navbar-nav .open .dropdown-menu>li>a{line-height:20px}.navbar-nav .open .dropdown-menu>li>a:focus,.navbar-nav .open .dropdown-menu>li>a:hover{background-image:none}}
+ @media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}.navbar-form{padding:10px 15px;margin-right:-15px;margin-left:-15px;border-top:1px solid transparent;border-bottom:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1);margin-top:8px;margin-bottom:8px}
+ @media (min-width:768px){.navbar-form .form-group{display:inline-block;margin-bottom:0;vertical-align:middle}.navbar-form .form-control{display:inline-block;width:auto;vertical-align:middle}.navbar-form .form-control-static{display:inline-block}.navbar-form .input-group{display:inline-table;vertical-align:middle}.navbar-form .input-group .form-control,.navbar-form .input-group .input-group-addon,.navbar-form .input-group .input-group-btn{width:auto}.navbar-form .input-group>.form-control{width:100%}.navbar-form .control-label{margin-bottom:0;vertical-align:middle}.navbar-form .checkbox,.navbar-form .radio{display:inline-block;margin-top:0;margin-bottom:0;vertical-align:middle}.navbar-form .checkbox label,.navbar-form .radio label{padding-left:0}.navbar-form .checkbox input[type=checkbox],.navbar-form .radio input[type=radio]{position:relative;margin-left:0}.navbar-form .has-feedback .form-control-feedback{top:0}}
+ @media (max-width:767px){.navbar-form .form-group{margin-bottom:5px}.navbar-form .form-group:last-child{margin-bottom:0}}
+ @media (min-width:768px){.navbar-form{width:auto;padding-top:0;padding-bottom:0;margin-right:0;margin-left:0;border:0;-webkit-box-shadow:none;box-shadow:none}}.navbar-nav>li>.dropdown-menu{margin-top:0;border-top-left-radius:0;border-top-right-radius:0}.navbar-fixed-bottom .navbar-nav>li>.dropdown-menu{margin-bottom:0;border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:0;border-bottom-left-radius:0}.navbar-btn{margin-top:8px;margin-bottom:8px}.navbar-btn.btn-sm{margin-top:10px;margin-bottom:10px}.navbar-btn.btn-xs{margin-top:14px;margin-bottom:14px}.navbar-text{margin-top:15px;margin-bottom:15px}
+ @media (min-width:768px){.navbar-text{float:left;margin-right:15px;margin-left:15px}}
+
+ @media (min-width:768px){.navbar-left{float:left!important}.navbar-right{float:right!important;margin-right:-15px}.navbar-right~.navbar-right{margin-right:0}}.navbar-default{background-color:#f8f8f8;border-color:#e7e7e7}.navbar-default .navbar-brand{color:#777}.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover{color:#5e5e5e;background-color:transparent}.navbar-default .navbar-text{color:#777}.navbar-default .navbar-nav>li>a{color:#777}.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{color:#333;background-color:transparent}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover{color:#555;background-color:#e7e7e7}.navbar-default .navbar-nav>.disabled>a,.navbar-default .navbar-nav>.disabled>a:focus,.navbar-default .navbar-nav>.disabled>a:hover{color:#ccc;background-color:transparent}.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:focus,.navbar-default .navbar-nav>.open>a:hover{color:#555;background-color:#e7e7e7}
+
+ @media (max-width:767px){.navbar-default .navbar-nav .open .dropdown-menu>li>a{color:#777}.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{color:#333;background-color:transparent}.navbar-default .navbar-nav .open .dropdown-menu>.active>a,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover{color:#555;background-color:#e7e7e7}.navbar-default .navbar-nav .open .dropdown-menu>.disabled>a,.navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:hover{color:#ccc;background-color:transparent}}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover{background-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#888}.navbar-default .navbar-collapse,.navbar-default .navbar-form{border-color:#e7e7e7}.navbar-default .navbar-link{color:#777}.navbar-default .navbar-link:hover{color:#333}.navbar-default .btn-link{color:#777}.navbar-default .btn-link:focus,.navbar-default .btn-link:hover{color:#333}.navbar-default .btn-link[disabled]:focus,.navbar-default .btn-link[disabled]:hover,fieldset[disabled] .navbar-default .btn-link:focus,fieldset[disabled] .navbar-default .btn-link:hover{color:#ccc}.navbar-inverse{background-color:#222;border-color:#080808}.navbar-inverse .navbar-brand{color:#9d9d9d}.navbar-inverse .navbar-brand:focus,.navbar-inverse .navbar-brand:hover{color:#fff;background-color:transparent}.navbar-inverse .navbar-text{color:#9d9d9d}.navbar-inverse .navbar-nav>li>a{color:#9d9d9d}.navbar-inverse .navbar-nav>li>a:focus,.navbar-inverse .navbar-nav>li>a:hover{color:#fff;background-color:transparent}.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover{color:#fff;background-color:#080808}.navbar-inverse .navbar-nav>.disabled>a,.navbar-inverse .navbar-nav>.disabled>a:focus,.navbar-inverse .navbar-nav>.disabled>a:hover{color:#444;background-color:transparent}.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover{color:#fff;background-color:#080808}
+
+
+ @media screen and (min-width:768px){.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{width:30px;height:30px;margin-top:-10px;font-size:30px}.carousel-control .glyphicon-chevron-left,.carousel-control .icon-prev{margin-left:-10px}.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next{margin-right:-10px}.carousel-caption{right:20%;left:20%;padding-bottom:30px}.carousel-indicators{bottom:20px}}.btn-group-vertical>.btn-group:after,.btn-group-vertical>.btn-group:before,.btn-toolbar:after,.btn-toolbar:before,.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.dl-horizontal dd:after,.dl-horizontal dd:before,.form-horizontal .form-group:after,.form-horizontal .form-group:before,.modal-footer:after,.modal-footer:before,.modal-header:after,.modal-header:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.pager:after,.pager:before,.panel-body:after,.panel-body:before,.row:after,.row:before{display:table;content:" "}.btn-group-vertical>.btn-group:after,.btn-toolbar:after,.clearfix:after,.container-fluid:after,.container:after,.dl-horizontal dd:after,.form-horizontal .form-group:after,.modal-footer:after,.modal-header:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.pager:after,.panel-body:after,.row:after{clear:both}.center-block{display:block;margin-right:auto;margin-left:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none!important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-lg,.visible-md,.visible-sm,.visible-xs{display:none!important}.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}
+ @media (max-width:767px){.visible-xs{display:block!important}table.visible-xs{display:table!important}tr.visible-xs{display:table-row!important}td.visible-xs,th.visible-xs{display:table-cell!important}}
+ @media (max-width:767px){.visible-xs-block{display:block!important}}
+ @media (max-width:767px){.visible-xs-inline{display:inline!important}}
+ @media (max-width:767px){.visible-xs-inline-block{display:inline-block!important}}
+ @media (min-width:768px) and (max-width:991px){.visible-sm{display:block!important}table.visible-sm{display:table!important}tr.visible-sm{display:table-row!important}td.visible-sm,th.visible-sm{display:table-cell!important}}
+ @media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block!important}}
+ @media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline!important}}
+ @media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block!important}}
+ @media (min-width:992px) and (max-width:1199px){.visible-md{display:block!important}table.visible-md{display:table!important}tr.visible-md{display:table-row!important}td.visible-md,th.visible-md{display:table-cell!important}}
+ @media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block!important}}
+ @media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline!important}}
+ @media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block!important}}
+ @media (min-width:1200px){.visible-lg{display:block!important}table.visible-lg{display:table!important}tr.visible-lg{display:table-row!important}td.visible-lg,th.visible-lg{display:table-cell!important}}
+ @media (min-width:1200px){.visible-lg-block{display:block!important}}
+ @media (min-width:1200px){.visible-lg-inline{display:inline!important}}
+ @media (min-width:1200px){.visible-lg-inline-block{display:inline-block!important}}@media (max-width:767px){.hidden-xs{display:none!important}}
+  @media (min-width:768px) and (max-width:991px){.hidden-sm{display:none!important}}
+  @media (min-width:992px) and (max-width:1199px){.hidden-md{display:none!important}}
+  @media (min-width:1200px){.hidden-lg{display:none!important}}.visible-print{display:none!important}
+  @media print{.visible-print{display:block!important}table.visible-print{display:table!important}tr.visible-print{display:table-row!important}td.visible-print,th.visible-print{display:table-cell!important}}.visible-print-block{display:none!important}
+  @media print{.visible-print-block{display:block!important}}.visible-print-inline{display:none!important}
+  @media print{.visible-print-inline{display:inline!important}}.visible-print-inline-block{display:none!important}
+  @media print{.visible-print-inline-block{display:inline-block!important}}
+  @media print{.hidden-print{display:none!important}}
+/*# sourceMappingURL=bootstrap.min.css.map */
+</style>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="../../../../../../../New_method/CSS_new/bootstrap.min.js"></script>
 <link href="../../../../../../../New_method/CSS_new/bootstrap.min.css" rel="stylesheet"/>
@@ -46,6 +109,46 @@ height:100%;
 position:fixed;
 z-index:9999;
 background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center rgba(0,0,0,0.25)}
+
+.navbar {
+  position: fixed;
+  z-index: 100;
+  width:100%;
+  top:0;
+}
+
+.popupWindow,
+.modal-backdrop{
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.popupWindow div.col-centered{
+    background-color: #ffffff;
+    opacity: 1;
+    z-index: 1000;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 50%;
+    min-width: 50%;
+    padding: 2em;
+
+}
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+
+}
+
+.success {
+  background-color: red;
+  color: white;
+}
+
+
 </style>
 </head>
 <body>
@@ -62,17 +165,118 @@ document.getElementById('contents').style.visibility="visible";
 },1000);}}
 </script>
 <div id="load"></div>
+
+
+
+
+
+  <!-- /#Welcome popup content Start-->
+
+  <div class="col-centered row-centered vertical-center fullscreen popupWindow" id="welcome">
+      <div class="col-sm-12 col-centered" id="welcomeContainer">
+        <button class="btn pull-right popupWindowClose">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+          <br>
+          <br>
+          <h1 class="text-center" style="margin-top: 0em;"> Design selection - Tutorial video</h1>
+          <!--<h4 class="text-center" style="margin-top: 2em;">
+            Building Design Guide
+          </h4>
+          <br>-->
+
+
+
+              <div class="text-center">
+                <div id="id="video-container"">
+                <video class="video_player"  controls muted id="player" width="80%" poster="../../../../../../../New_method/img/Turorial_skip_video_poster.jpeg" ><source src="../../../../../../../New_method/Videos/Step5_1.m4v"/></video>
+  <!--              <video class="video_player" id="player" width="60%" controls="controls" autostart="0">
+                    <source src="Videos/Turorial_mov.m4v"/>
+                  </video>-->
+                </div>
+                </div>
+
+                <h4 class="text-center" style="font-size:16px;margin-top: 2em;margin-left: 2%;margin-right: 2%;">
+                  <p align=justify>
+                  *If you are a first time user of this guide, it is highly recommended that you watch this video. This video is also provided in <button class="btn success" >Help me <span class="glyphicon glyphicon-hand-up"></button>, if you want to watch it again.
+                  </p>
+                </h4>
+
+            <br>
+
+          <div class="col-sm-110" style="font-size:20px;margin-top: 0em;margin-left: 30%;margin-right: 30%;">
+
+              <h3 class="text-center" style="margin-top: 0em;"> Happy Exploring!
+            </h3>
+          </div>
+        </div>
+    </div>
+  <!-- /#Welcome content End-->
+
+
+
+
 <!-- Navbar -->
-<div class="navbar " style="background-color:#f1f1f1">
-<div class="text">
-<c><a href="../../../../../../../Index.html" > <h2 style="font-size:30px; "> Home </h2></a></c>  <a style="padding-top:20px;" href="../P4.html">Performance priority</a><a style="padding-top:20px;" href="../../../P3_1.html">Building Type</a> <a style="padding-top:20px;" href="../../../P3.html">Building Context</a> <a style="padding-top:20px;" href="../../../../../../P2.html" >Location</a>
-</div>
-</div>
-<a href="#" data-toggle="modal" data-target="#terms"><button class="termbtn topper"  >Terminologies</button></a><div id="mySidepanel" class="sidepanel"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><div class="text-center"><div class="content1"  ><h3 class="large-font" style="font-size:24px" align="justify">For further details  please send us an <a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com"><button class="large-font btn-default popupWindowClose" style="font-size:20px;"> email</button></a></h3></div></div></div><button class="openbtn" onclick="openNav()" id="#CZ_Kerala">Help me</button><!-- /#Welcome content Start-->
-<div  id="about" style="background-color:#f1f1f1">
-<div class="content1"  >
+
+
+
+<nav class="navbar navbar-inverse fixed-top navbar-light navbar-expand-lg navbar-template" style="z-index:1000;overflow:visible;">
+  <div class="container-fluid" style="z-index:1000;overflow:visible;">
+    <ul class="nav navbar-nav">
+      <li>
+        <a class="navbar-brand"  href="../../../../../../../index.html">
+          <img src="../../../../../../../New_method/img/EcoVolkslogo.png"  style="width:30px;">
+          </a>
+        </li>
+        <li class=" " style="padding-top:5px" ><a style="font-size:24px;" href="../../../../../../../index.html">Design Guide</a></li>
+    </ul>
+    <ul class="nav navbar-right" >
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"style="font-size:32px;margin-right:20px;" ><span class="glyphicon glyphicon-menu-hamburger" style="color:grey"></span></a>
+
+
+          <div class="dropdown-menu ">
+            <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item " href="../../../../../../P2.html" style="font-size:20px">Step 1: Location</a></li>
+              <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item " href="../../../P3_1.html" style="font-size:20px">Step 2: Building Context</a></li>
+                <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item " href="../../../P3.html" style="font-size:20px">Step 3: Building Type</a></li>
+                  <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item " href="../../../P3_2.html" style="font-size:20px">Step 4: Orientation</a></li>
+                    <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
+                      <a class="dropdown-item " href="../P4.html" style="font-size:20px">Step 5: Performance Priority</a></li>
+          </div>
+      </ul>
+
+      </div>
+
+</nav>
+
+
+<!--<a href="#" data-toggle="modal" data-target="#terms"><button class="termbtn topper"  >Terminologies</button></a>-->
+
+<a href="#" data-toggle="modal" data-target="#terms"><button class="termbtn topper"  >Terminologies</button></a>
+
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <div class="text-center">
+    <div class="content1"  >
+      <div class="text-center">
+        <div id="id="video-container"">
+        <video class="video_player"  controls muted id="player" width="80%" poster="../../../../../../../New_method/img/Turorial_skip_video_poster.jpeg" ><source src="../../../../../../../New_method/Videos/Step5_1.m4v"/></video>
+<!--              <video class="video_player" id="player" width="60%" controls="controls" autostart="0">
+            <source src="Videos/Turorial_mov.m4v"/>
+          </video>-->
+        </div>
+        </div>
+
+      <h3 class="large-font" style="font-size:24px" align="justify">For further details  please send us an <a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com"><button class="large-font btn-default popupWindowClose" style="font-size:20px;"> email <span class="glyphicon glyphicon-send"></span></button></a></h3></div></div></div><button class="openbtn" onclick="openNav()" id="#CZ_Kerala">Help me <span class="glyphicon glyphicon-hand-up"></button><!-- /#Welcome content Start-->
+
+<!--<button class="openbtn" onclick="openNav()" id="#CZ_Kerala">Help me</button> /#Welcome content Start-->
+<div  id="about" style="background-color:#f1f1f1;">
+<div class="content1"  style="background-color:#f1f1f1">
 <!--<div class="content2 col">-->
-<div class="text-center">
+<div class="text-center" style="background-color:#f1f1f1">
 <h2 style="font-size:24px text-aligh:center" align="justify">
 <h1 class="xlarge-font"><b>Step 6:</b></h1>
 <h1 class="large-font" style="color:MediumSeaGreen;"><b>Select the building design.</b></h1>
@@ -81,25 +285,25 @@ The designs are presented using an interactive parallel coordinates diagram.</b>
 To know more about parallel coordinates and how to select the design, please click <a href="#" data-toggle="modal" data-target="#PC_read_more">
 <button class="button" style="background-color:red">here</button></a>
 </span> </p>
-<div class="content" id="home" >
-<div class="text-center">
-<div id="video-container "><video class="video_player" autoplay controls muted id="player" width="80%" ><source src="../../../../../../../New_method/Videos/Step5_1.m4v"/></video></div>
+<!--<div class="content" id="home" style="background-color:#f1f1f1">
+<div class="text-center" style="background-color:#f1f1f1">
+<div id="video-container "><video class="video_player" autoplay controls muted id="player" width="70%" ><source src="../../../../../../../New_method/Videos/Step5_1.m4v"/></video></div>
 </div>
-</div>
-</div>
+</div>-->
 </h2>
 </div>
 </div>
+</div>
 <div  id="about" style="background-color:#f1f1f1">
-<div class="content1"  >
+<div class="content1"  style="background-color:#f1f1f1">
 <!-- Type 1-->
-<div id="1navbar1">
+<div id="1navbar1"style="background-color:#f1f1f1">
 <br><br>
 <br><br>
 <!-- Content for slide show container-->
-<div id="align2">
-<p><h1> Type 2 Building </h1></p>
-<div class="partiton">
+<div id="align2" style="background-color:#f1f1f1">
+<p><h1> Type 1 Building </h1></p>
+<div class="partiton" style="background-color:#f1f1f1">
 <div class="section2">
 <a href="#1navbar1"><img src="../../../../../../../New_method/img/T1_S.jpeg"   class="hover-shadow cursor" alt="Type 1"></a>
 </div>
@@ -150,7 +354,7 @@ captionText.innerHTML = dots[slideIndex-1].alt;
 </script>
 <script>// script for parallel axis </script>
 <div id="content">
-<div id="example2" class="parcoords" style="height:400px;width:100%"></div>
+<div id="example2" class="parcoords" style="height:500px;width:100%"></div>
 <div id="grid2" style="width:100%;height:300px;" header="height: 54px;"}></div>
 <script id="brushing">// quantitative color scale
 var blue_to_brown = d3.scale.linear()
@@ -160,27 +364,28 @@ var blue_to_brown = d3.scale.linear()
 var color = function(d) { return blue_to_brown(d['economy (mpg)']); };
 // Input values
 var types = {
-007 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 53,"WWR Wall A (%)": 51.00,"WWR Wall B (%)": 47.00,"WWR Wall C (%)": 47.00,"WWR Wall D (%)": 29.00,"Floor U-value (W/m²K)": 3.18,"Roof U-value (W/m²K)": 0.86,"Wall A U-value (W/m²K)": 1.01,"Wall D U-value (W/m²K)": 0.82,"Ground reflectance (%)": 7.00, "Window transmittance (%)": 75.00, "Wall reflectance (%)": 48.00,"Ceiling reflectance (%)": 89.00},
-013 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 92,"WWR Wall A (%)": 15.00,"WWR Wall B (%)": 60.00,"WWR Wall C (%)": 32.00,"WWR Wall D (%)": 20.00,"Floor U-value (W/m²K)": 3.31,"Roof U-value (W/m²K)": 1.16,"Wall A U-value (W/m²K)": 0.64,"Wall D U-value (W/m²K)": 1.64,"Ground reflectance (%)": 7.00, "Window transmittance (%)": 54.00, "Wall reflectance (%)": 66.00,"Ceiling reflectance (%)": 85.00},
-021 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 98,"WWR Wall A (%)": 18.00,"WWR Wall B (%)": 27.00,"WWR Wall C (%)": 15.00,"WWR Wall D (%)": 11.00,"Floor U-value (W/m²K)": 2.78,"Roof U-value (W/m²K)": 2.28,"Wall A U-value (W/m²K)": 2.23,"Wall D U-value (W/m²K)": 0.87,"Ground reflectance (%)": 12.00, "Window transmittance (%)": 82.00, "Wall reflectance (%)": 83.00,"Ceiling reflectance (%)": 52.00},
-022 :{ "Energy Demand (kWh/m²/yr)": 1,"UDI-c (%)": 93,"WWR Wall A (%)": 27.00,"WWR Wall B (%)": 40.00,"WWR Wall C (%)": 26.00,"WWR Wall D (%)": 28.00,"Floor U-value (W/m²K)": 2.21,"Roof U-value (W/m²K)": 0.29,"Wall A U-value (W/m²K)": 2.59,"Wall D U-value (W/m²K)": 0.10,"Ground reflectance (%)": 12.00, "Window transmittance (%)": 66.00, "Wall reflectance (%)": 58.00,"Ceiling reflectance (%)": 75.00},
-029 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 97,"WWR Wall A (%)": 22.00,"WWR Wall B (%)": 12.00,"WWR Wall C (%)": 12.00,"WWR Wall D (%)": 24.00,"Floor U-value (W/m²K)": 3.25,"Roof U-value (W/m²K)": 0.81,"Wall A U-value (W/m²K)": 1.00,"Wall D U-value (W/m²K)": 3.32,"Ground reflectance (%)": 19.00, "Window transmittance (%)": 90.00, "Wall reflectance (%)": 62.00,"Ceiling reflectance (%)": 87.00},
-031 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 86,"WWR Wall A (%)": 33.00,"WWR Wall B (%)": 51.00,"WWR Wall C (%)": 44.00,"WWR Wall D (%)": 39.00,"Floor U-value (W/m²K)": 3.13,"Roof U-value (W/m²K)": 1.07,"Wall A U-value (W/m²K)": 1.37,"Wall D U-value (W/m²K)": 0.52,"Ground reflectance (%)": 18.00, "Window transmittance (%)": 47.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 60.00},
-032 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 98,"WWR Wall A (%)": 32.00,"WWR Wall B (%)": 30.00,"WWR Wall C (%)": 11.00,"WWR Wall D (%)": 13.00,"Floor U-value (W/m²K)": 2.59,"Roof U-value (W/m²K)": 1.99,"Wall A U-value (W/m²K)": 1.71,"Wall D U-value (W/m²K)": 2.64,"Ground reflectance (%)": 9.00, "Window transmittance (%)": 55.00, "Wall reflectance (%)": 61.00,"Ceiling reflectance (%)": 95.00},
-033 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 92,"WWR Wall A (%)": 30.00,"WWR Wall B (%)": 39.00,"WWR Wall C (%)": 17.00,"WWR Wall D (%)": 37.00,"Floor U-value (W/m²K)": 1.00,"Roof U-value (W/m²K)": 0.75,"Wall A U-value (W/m²K)": 1.95,"Wall D U-value (W/m²K)": 1.21,"Ground reflectance (%)": 9.00, "Window transmittance (%)": 67.00, "Wall reflectance (%)": 63.00,"Ceiling reflectance (%)": 88.00},
-054 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 76,"WWR Wall A (%)": 39.00,"WWR Wall B (%)": 44.00,"WWR Wall C (%)": 41.00,"WWR Wall D (%)": 45.00,"Floor U-value (W/m²K)": 3.42,"Roof U-value (W/m²K)": 2.10,"Wall A U-value (W/m²K)": 0.25,"Wall D U-value (W/m²K)": 1.60,"Ground reflectance (%)": 19.00, "Window transmittance (%)": 53.00, "Wall reflectance (%)": 62.00,"Ceiling reflectance (%)": 93.00},
-059 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 64,"WWR Wall A (%)": 52.00,"WWR Wall B (%)": 25.00,"WWR Wall C (%)": 37.00,"WWR Wall D (%)": 33.00,"Floor U-value (W/m²K)": 3.46,"Roof U-value (W/m²K)": 0.82,"Wall A U-value (W/m²K)": 1.82,"Wall D U-value (W/m²K)": 1.80,"Ground reflectance (%)": 14.00, "Window transmittance (%)": 85.00, "Wall reflectance (%)": 56.00,"Ceiling reflectance (%)": 65.00},
-081 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 91,"WWR Wall A (%)": 22.00,"WWR Wall B (%)": 48.00,"WWR Wall C (%)": 23.00,"WWR Wall D (%)": 29.00,"Floor U-value (W/m²K)": 2.39,"Roof U-value (W/m²K)": 1.26,"Wall A U-value (W/m²K)": 1.34,"Wall D U-value (W/m²K)": 2.91,"Ground reflectance (%)": 13.00, "Window transmittance (%)": 77.00, "Wall reflectance (%)": 53.00,"Ceiling reflectance (%)": 58.00},
-087 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 71,"WWR Wall A (%)": 12.00,"WWR Wall B (%)": 13.00,"WWR Wall C (%)": 15.00,"WWR Wall D (%)": 17.00,"Floor U-value (W/m²K)": 2.23,"Roof U-value (W/m²K)": 0.33,"Wall A U-value (W/m²K)": 1.43,"Wall D U-value (W/m²K)": 0.59,"Ground reflectance (%)": 6.00, "Window transmittance (%)": 72.00, "Wall reflectance (%)": 27.00,"Ceiling reflectance (%)": 74.00},
-108 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 89,"WWR Wall A (%)": 17.00,"WWR Wall B (%)": 45.00,"WWR Wall C (%)": 24.00,"WWR Wall D (%)": 25.00,"Floor U-value (W/m²K)": 2.66,"Roof U-value (W/m²K)": 1.82,"Wall A U-value (W/m²K)": 2.04,"Wall D U-value (W/m²K)": 3.20,"Ground reflectance (%)": 5.00, "Window transmittance (%)": 86.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 95.00},
-111 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 52,"WWR Wall A (%)": 37.00,"WWR Wall B (%)": 68.00,"WWR Wall C (%)": 30.00,"WWR Wall D (%)": 42.00,"Floor U-value (W/m²K)": 2.63,"Roof U-value (W/m²K)": 0.88,"Wall A U-value (W/m²K)": 1.49,"Wall D U-value (W/m²K)": 0.26,"Ground reflectance (%)": 11.00, "Window transmittance (%)": 77.00, "Wall reflectance (%)": 76.00,"Ceiling reflectance (%)": 94.00},
-145 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 73,"WWR Wall A (%)": 31.00,"WWR Wall B (%)": 21.00,"WWR Wall C (%)": 62.00,"WWR Wall D (%)": 45.00,"Floor U-value (W/m²K)": 2.52,"Roof U-value (W/m²K)": 0.92,"Wall A U-value (W/m²K)": 0.82,"Wall D U-value (W/m²K)": 1.38,"Ground reflectance (%)": 13.00, "Window transmittance (%)": 68.00, "Wall reflectance (%)": 25.00,"Ceiling reflectance (%)": 64.00},
-150 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 86,"WWR Wall A (%)": 39.00,"WWR Wall B (%)": 51.00,"WWR Wall C (%)": 20.00,"WWR Wall D (%)": 39.00,"Floor U-value (W/m²K)": 3.47,"Roof U-value (W/m²K)": 2.60,"Wall A U-value (W/m²K)": 1.24,"Wall D U-value (W/m²K)": 2.96,"Ground reflectance (%)": 6.00, "Window transmittance (%)": 65.00, "Wall reflectance (%)": 57.00,"Ceiling reflectance (%)": 53.00},
-154 :{ "Energy Demand (kWh/m²/yr)": 2,"UDI-c (%)": 95,"WWR Wall A (%)": 36.00,"WWR Wall B (%)": 54.00,"WWR Wall C (%)": 16.00,"WWR Wall D (%)": 14.00,"Floor U-value (W/m²K)": 2.41,"Roof U-value (W/m²K)": 0.52,"Wall A U-value (W/m²K)": 1.98,"Wall D U-value (W/m²K)": 0.30,"Ground reflectance (%)": 10.00, "Window transmittance (%)": 51.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 93.00},
-156 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 89,"WWR Wall A (%)": 49.00,"WWR Wall B (%)": 59.00,"WWR Wall C (%)": 16.00,"WWR Wall D (%)": 68.00,"Floor U-value (W/m²K)": 2.29,"Roof U-value (W/m²K)": 0.60,"Wall A U-value (W/m²K)": 0.34,"Wall D U-value (W/m²K)": 0.54,"Ground reflectance (%)": 11.00, "Window transmittance (%)": 46.00, "Wall reflectance (%)": 25.00,"Ceiling reflectance (%)": 61.00},
-168 :{ "Energy Demand (kWh/m²/yr)": 1,"UDI-c (%)": 94,"WWR Wall A (%)": 28.00,"WWR Wall B (%)": 22.00,"WWR Wall C (%)": 29.00,"WWR Wall D (%)": 46.00,"Floor U-value (W/m²K)": 3.52,"Roof U-value (W/m²K)": 1.06,"Wall A U-value (W/m²K)": 1.15,"Wall D U-value (W/m²K)": 1.66,"Ground reflectance (%)": 25.00, "Window transmittance (%)": 42.00, "Wall reflectance (%)": 69.00,"Ceiling reflectance (%)": 77.00},
-171 :{ "Energy Demand (kWh/m²/yr)": 2,"UDI-c (%)": 81,"WWR Wall A (%)": 30.00,"WWR Wall B (%)": 42.00,"WWR Wall C (%)": 55.00,"WWR Wall D (%)": 21.00,"Floor U-value (W/m²K)": 3.07,"Roof U-value (W/m²K)": 0.93,"Wall A U-value (W/m²K)": 2.76,"Wall D U-value (W/m²K)": 0.20,"Ground reflectance (%)": 5.00, "Window transmittance (%)": 89.00, "Wall reflectance (%)": 32.00,"Ceiling reflectance (%)": 64.00},
+007 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 53,"WWR Wall A (%)": 51.00,"WWR Wall B (%)": 47.00,"WWR Wall C (%)": 47.00,"WWR Wall D (%)": 29.00,"Floor U-value (W/m²K)": 3.18,"Roof U-value (W/m²K)": 0.86,"Wall A U-value (W/m²K)": 1.01,"Wall D U-value (W/m²K)": 0.82,"Ground reflectance (%)": 7.00, "Window transmittance (%)": 75.00, "Wall reflectance (%)": 48.00,"Ceiling reflectance (%)": 89.00,"Details": "View"},
+013 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 92,"WWR Wall A (%)": 15.00,"WWR Wall B (%)": 60.00,"WWR Wall C (%)": 32.00,"WWR Wall D (%)": 20.00,"Floor U-value (W/m²K)": 3.31,"Roof U-value (W/m²K)": 1.16,"Wall A U-value (W/m²K)": 0.64,"Wall D U-value (W/m²K)": 1.64,"Ground reflectance (%)": 7.00, "Window transmittance (%)": 54.00, "Wall reflectance (%)": 66.00,"Ceiling reflectance (%)": 85.00,"Details": "View"},
+021 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 98,"WWR Wall A (%)": 18.00,"WWR Wall B (%)": 27.00,"WWR Wall C (%)": 15.00,"WWR Wall D (%)": 11.00,"Floor U-value (W/m²K)": 2.78,"Roof U-value (W/m²K)": 2.28,"Wall A U-value (W/m²K)": 2.23,"Wall D U-value (W/m²K)": 0.87,"Ground reflectance (%)": 12.00, "Window transmittance (%)": 82.00, "Wall reflectance (%)": 83.00,"Ceiling reflectance (%)": 52.00,"Details": "View"},
+022 :{ "Energy Demand (kWh/m²/yr)": 1,"UDI-c (%)": 93,"WWR Wall A (%)": 27.00,"WWR Wall B (%)": 40.00,"WWR Wall C (%)": 26.00,"WWR Wall D (%)": 28.00,"Floor U-value (W/m²K)": 2.21,"Roof U-value (W/m²K)": 0.29,"Wall A U-value (W/m²K)": 2.59,"Wall D U-value (W/m²K)": 0.10,"Ground reflectance (%)": 12.00, "Window transmittance (%)": 66.00, "Wall reflectance (%)": 58.00,"Ceiling reflectance (%)": 75.00,"Details": "View"},
+029 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 97,"WWR Wall A (%)": 22.00,"WWR Wall B (%)": 12.00,"WWR Wall C (%)": 12.00,"WWR Wall D (%)": 24.00,"Floor U-value (W/m²K)": 3.25,"Roof U-value (W/m²K)": 0.81,"Wall A U-value (W/m²K)": 1.00,"Wall D U-value (W/m²K)": 3.32,"Ground reflectance (%)": 19.00, "Window transmittance (%)": 90.00, "Wall reflectance (%)": 62.00,"Ceiling reflectance (%)": 87.00,"Details": "View"},
+031 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 86,"WWR Wall A (%)": 33.00,"WWR Wall B (%)": 51.00,"WWR Wall C (%)": 44.00,"WWR Wall D (%)": 39.00,"Floor U-value (W/m²K)": 3.13,"Roof U-value (W/m²K)": 1.07,"Wall A U-value (W/m²K)": 1.37,"Wall D U-value (W/m²K)": 0.52,"Ground reflectance (%)": 18.00, "Window transmittance (%)": 47.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 60.00,"Details": "View"},
+032 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 98,"WWR Wall A (%)": 32.00,"WWR Wall B (%)": 30.00,"WWR Wall C (%)": 11.00,"WWR Wall D (%)": 13.00,"Floor U-value (W/m²K)": 2.59,"Roof U-value (W/m²K)": 1.99,"Wall A U-value (W/m²K)": 1.71,"Wall D U-value (W/m²K)": 2.64,"Ground reflectance (%)": 9.00, "Window transmittance (%)": 55.00, "Wall reflectance (%)": 61.00,"Ceiling reflectance (%)": 95.00,"Details": "View"},
+033 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 92,"WWR Wall A (%)": 30.00,"WWR Wall B (%)": 39.00,"WWR Wall C (%)": 17.00,"WWR Wall D (%)": 37.00,"Floor U-value (W/m²K)": 1.00,"Roof U-value (W/m²K)": 0.75,"Wall A U-value (W/m²K)": 1.95,"Wall D U-value (W/m²K)": 1.21,"Ground reflectance (%)": 9.00, "Window transmittance (%)": 67.00, "Wall reflectance (%)": 63.00,"Ceiling reflectance (%)": 88.00,"Details": "View"},
+054 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 76,"WWR Wall A (%)": 39.00,"WWR Wall B (%)": 44.00,"WWR Wall C (%)": 41.00,"WWR Wall D (%)": 45.00,"Floor U-value (W/m²K)": 3.42,"Roof U-value (W/m²K)": 2.10,"Wall A U-value (W/m²K)": 0.25,"Wall D U-value (W/m²K)": 1.60,"Ground reflectance (%)": 19.00, "Window transmittance (%)": 53.00, "Wall reflectance (%)": 62.00,"Ceiling reflectance (%)": 93.00,"Details": "View"},
+059 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 64,"WWR Wall A (%)": 52.00,"WWR Wall B (%)": 25.00,"WWR Wall C (%)": 37.00,"WWR Wall D (%)": 33.00,"Floor U-value (W/m²K)": 3.46,"Roof U-value (W/m²K)": 0.82,"Wall A U-value (W/m²K)": 1.82,"Wall D U-value (W/m²K)": 1.80,"Ground reflectance (%)": 14.00, "Window transmittance (%)": 85.00, "Wall reflectance (%)": 56.00,"Ceiling reflectance (%)": 65.00,"Details": "View"},
+081 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 91,"WWR Wall A (%)": 22.00,"WWR Wall B (%)": 48.00,"WWR Wall C (%)": 23.00,"WWR Wall D (%)": 29.00,"Floor U-value (W/m²K)": 2.39,"Roof U-value (W/m²K)": 1.26,"Wall A U-value (W/m²K)": 1.34,"Wall D U-value (W/m²K)": 2.91,"Ground reflectance (%)": 13.00, "Window transmittance (%)": 77.00, "Wall reflectance (%)": 53.00,"Ceiling reflectance (%)": 58.00,"Details": "View"},
+087 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 71,"WWR Wall A (%)": 12.00,"WWR Wall B (%)": 13.00,"WWR Wall C (%)": 15.00,"WWR Wall D (%)": 17.00,"Floor U-value (W/m²K)": 2.23,"Roof U-value (W/m²K)": 0.33,"Wall A U-value (W/m²K)": 1.43,"Wall D U-value (W/m²K)": 0.59,"Ground reflectance (%)": 6.00, "Window transmittance (%)": 72.00, "Wall reflectance (%)": 27.00,"Ceiling reflectance (%)": 74.00,"Details": "View"},
+108 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 89,"WWR Wall A (%)": 17.00,"WWR Wall B (%)": 45.00,"WWR Wall C (%)": 24.00,"WWR Wall D (%)": 25.00,"Floor U-value (W/m²K)": 2.66,"Roof U-value (W/m²K)": 1.82,"Wall A U-value (W/m²K)": 2.04,"Wall D U-value (W/m²K)": 3.20,"Ground reflectance (%)": 5.00, "Window transmittance (%)": 86.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 95.00,"Details": "View"},
+111 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 52,"WWR Wall A (%)": 37.00,"WWR Wall B (%)": 68.00,"WWR Wall C (%)": 30.00,"WWR Wall D (%)": 42.00,"Floor U-value (W/m²K)": 2.63,"Roof U-value (W/m²K)": 0.88,"Wall A U-value (W/m²K)": 1.49,"Wall D U-value (W/m²K)": 0.26,"Ground reflectance (%)": 11.00, "Window transmittance (%)": 77.00, "Wall reflectance (%)": 76.00,"Ceiling reflectance (%)": 94.00,"Details": "View"},
+145 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 73,"WWR Wall A (%)": 31.00,"WWR Wall B (%)": 21.00,"WWR Wall C (%)": 62.00,"WWR Wall D (%)": 45.00,"Floor U-value (W/m²K)": 2.52,"Roof U-value (W/m²K)": 0.92,"Wall A U-value (W/m²K)": 0.82,"Wall D U-value (W/m²K)": 1.38,"Ground reflectance (%)": 13.00, "Window transmittance (%)": 68.00, "Wall reflectance (%)": 25.00,"Ceiling reflectance (%)": 64.00,"Details": "View"},
+150 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 86,"WWR Wall A (%)": 39.00,"WWR Wall B (%)": 51.00,"WWR Wall C (%)": 20.00,"WWR Wall D (%)": 39.00,"Floor U-value (W/m²K)": 3.47,"Roof U-value (W/m²K)": 2.60,"Wall A U-value (W/m²K)": 1.24,"Wall D U-value (W/m²K)": 2.96,"Ground reflectance (%)": 6.00, "Window transmittance (%)": 65.00, "Wall reflectance (%)": 57.00,"Ceiling reflectance (%)": 53.00,"Details": "View"},
+154 :{ "Energy Demand (kWh/m²/yr)": 2,"UDI-c (%)": 95,"WWR Wall A (%)": 36.00,"WWR Wall B (%)": 54.00,"WWR Wall C (%)": 16.00,"WWR Wall D (%)": 14.00,"Floor U-value (W/m²K)": 2.41,"Roof U-value (W/m²K)": 0.52,"Wall A U-value (W/m²K)": 1.98,"Wall D U-value (W/m²K)": 0.30,"Ground reflectance (%)": 10.00, "Window transmittance (%)": 51.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 93.00,"Details": "View"},
+156 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 89,"WWR Wall A (%)": 49.00,"WWR Wall B (%)": 59.00,"WWR Wall C (%)": 16.00,"WWR Wall D (%)": 68.00,"Floor U-value (W/m²K)": 2.29,"Roof U-value (W/m²K)": 0.60,"Wall A U-value (W/m²K)": 0.34,"Wall D U-value (W/m²K)": 0.54,"Ground reflectance (%)": 11.00, "Window transmittance (%)": 46.00, "Wall reflectance (%)": 25.00,"Ceiling reflectance (%)": 61.00,"Details": "View"},
+168 :{ "Energy Demand (kWh/m²/yr)": 1,"UDI-c (%)": 94,"WWR Wall A (%)": 28.00,"WWR Wall B (%)": 22.00,"WWR Wall C (%)": 29.00,"WWR Wall D (%)": 46.00,"Floor U-value (W/m²K)": 3.52,"Roof U-value (W/m²K)": 1.06,"Wall A U-value (W/m²K)": 1.15,"Wall D U-value (W/m²K)": 1.66,"Ground reflectance (%)": 25.00, "Window transmittance (%)": 42.00, "Wall reflectance (%)": 69.00,"Ceiling reflectance (%)": 77.00,"Details": "View"},
+171 :{ "Energy Demand (kWh/m²/yr)": 2,"UDI-c (%)": 81,"WWR Wall A (%)": 30.00,"WWR Wall B (%)": 42.00,"WWR Wall C (%)": 55.00,"WWR Wall D (%)": 21.00,"Floor U-value (W/m²K)": 3.07,"Roof U-value (W/m²K)": 0.93,"Wall A U-value (W/m²K)": 2.76,"Wall D U-value (W/m²K)": 0.20,"Ground reflectance (%)": 5.00, "Window transmittance (%)": 89.00, "Wall reflectance (%)": 32.00,"Ceiling reflectance (%)": 64.00,"Details": "View"}
 };
+
 var data = d3.entries(types).map(function(d) {
 var val = d.value;
 val.Case = d.key;
@@ -192,7 +397,7 @@ var parcoords = d3.parcoords()("#example2")
 parcoords
 .data(data)
 .color(color)
-.hideAxis(["Case"])
+.hideAxis(["Case", "Details"])
 .render()
 .reorderable()
 .brushMode("1D-axes");
@@ -227,7 +432,7 @@ multiColumnSort: false,
 forceFitColumns: true
 };
 //remove columns from display
-columns = columns.slice(0,14);
+columns = columns.slice(0,15);
 var dataView = new Slick.Data.DataView();
 var grid = new Slick.Grid("#grid2", dataView, columns, options);
 var pager = new Slick.Controls.Pager(dataView, grid, $("#pager"));
@@ -280,7 +485,7 @@ dataView.endUpdate();
 </div></div></div></div></div></div>
 <!-- End of Type 1-->
 <!-- /#Contact-->
-<div class="container" >
+<div class="container" style="background-color:#f1f1f1">
 <div class="content1"  >
 <div class="text-center">
 <div class="modal-footer">
@@ -421,12 +626,12 @@ document.getElementById("mySidepanel").style.width = "0";
 }
 </script>
 <!-- /# Details about parallel - coordinates -->
-<div class="content"  >
+<div class="content"  style="background-color:#f1f1f1">
 <div class="modal fade bannerformmodal" tabindex="-1" aria-labelledby="bannerformmodal" aria-hidden="true" id="PC_read_more">
 <div class="modal-dialog modal-sm">
 <div class="modal-content"><span class="close cursor" data-dismiss="modal" onclick="closeModal()">&times;</span>
 <div class="modal-header">
-<h2 style="font-size:30px" align="center">  Parallel Coordinates plot </h2>
+<h2 style="font-size:24px" align="center">  Parallel Coordinates plot </h2>
 </div>
 <div class="modal-body">
 <p style="width:95%;font-size:24px" align=justify> Parallel Coordinates Plots is type of data visualisation method. They are ideal for comparing many variables together and seeing the relationships between them. In this context, each variable (design parameter) is given its own axis. Each axis is placed parallel to each other and have different scales -- depending on their units. The values are plotted as a series of lines that are interconnected between axes. These interconnections show the relationship between them to produce the corresponding thermal and daylight performance. The variables or the design parameters were selected based on a sensitivity analysis. For the sensitivity analysis, a number of design parameters including of Window-Wall ratio (WWR) for different facades, U-values for walls, windows, roof and floor, reflectance of wall, ceiling, floor, outside ground etc. were considered. For sampling from among these parameters, Morris method was adopted. From the results of the analysis, the most sensitive parameters were selected and were used to produce the parallel coordinates plots. </p>

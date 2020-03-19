@@ -5,12 +5,12 @@
 
 
 
-<title>Welcome</title>
+<title>Building design guide - Welcome</title>
 
 <!-- For the popup (Modal)-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="New_method/CSS_new/bootstrap.min.js"></script>
@@ -29,8 +29,6 @@
 <script src="New_method/lib/slickgrid/slick.pager.js"></script>
 <script src="New_method/lib/slickgrid/slick.dataview.js"></script>
 
-
-
 <link rel="stylesheet" type="text/css" href="New_method/CSS_new/Index.css">
 <link rel="stylesheet" type="text/css" href="New_method/CSS_new/Page3.css">
 
@@ -38,16 +36,149 @@
 <link rel="stylesheet" type="text/css" href="New_method/CSS_new/scroll_results.css">
 
 
+<style media="screen">
+
+
+.popupWindow,
+.modal-backdrop{
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.popupWindow div.col-centered{
+    background-color: #ffffff;
+    opacity: 1;
+    z-index: 1000;
+    width: 50%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 700px;
+    min-height: 50%;
+    min-width: 50%;
+    padding: 2em;
+
+}
+
+.navbar {
+  position: fixed;
+  z-index: 100;
+  width:100%;
+  top:0;
+}
+
+
+</style>
 </head>
 <body>
 
-<!-- Navbar -->
-<div class="navbar " style="background-color:#f1f1f1">
-  <div class="text">
-  <c><a href="#home" > <h2 style="font-size:30px; "> Building design guide </h2></a></c> <a href="img1/P2.html" ><button class="button" style="background-color:red; padding-top:15px;padding-bottom:0px;font-size:30px; ">Start</button> <a style="padding-top:20px;" href="#about">About</a>
 
-  </div>
-</div>
+  <!-- /#Welcome popup content Start-->
+
+  <div class="col-centered row-centered vertical-center fullscreen popupWindow" id="welcome">
+      <div class="col-sm-12 col-centered" id="welcomeContainer">
+        <button class="btn pull-right popupWindowClose">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+          <br>
+          <br>
+          <h1 class="text-center" style="margin-top: 0em;"> Welcome</h1>
+          <!--<h4 class="text-center" style="margin-top: 2em;">
+            Building Design Guide
+          </h4>
+          <br>-->
+
+          <h4 class="text-center" style="font-size:20px;margin-top: 4em;margin-left: 5%;margin-right: 5%;">
+            <p align=justify>
+            This is a residential building design guide developed to assist designers during the early design stages of buildings that would exhibit high thermal and daylight performance in Kerala.
+            </p>
+            <p style="width:95%;font-size:20px" align=justify>
+          </p>
+          <br>
+          </h4>
+          <h4 class="text-center" style="font-size:20px;margin-top: 1em;margin-left: 5%;margin-right: 5%;">
+            <p align=justify>
+            *We are currently testing the usability of the this guide. So, only designs for buildings planned to be constructed in the city of Thiruvananthapuram, in Thiruvananthapuram district, provided here.
+            </p>
+          </h4>
+
+  <!--            <div class="col-sm-4" style="margin-top: 2em; margin-left: 30%;">
+              <div class="text-center">
+                <div id="id="video-container"">
+                <video class="video_player" id="player" width="60%" controls="controls" autostart="0">
+                    <source src="Videos/Turorial_mov.m4v"/>
+                  </video>
+                </div>
+                </div>
+
+              </div>-->
+            <br>
+
+          <div class="col-sm-110" style="font-size:20px;margin-top: 0em;margin-left: 5%;margin-right: 5%;">
+
+              <h3 class="text-center"> Happy Exploring!
+                <br>
+              <img src="New_method/img/EcoVolkslogo.png" class="img-fluid" style="width:15%;margin-top: 1em;">
+              <!--<p style="font-size:100px;margin-top: .1em;">&#128522;</p>-->
+            </h3>
+            <br>
+              <!--<h5 class="text-center">v2 (12/13/2017)</h5>
+              <br>
+              <h5 class="text-center">
+                  &copy; CORE studio | Thornton Tomasetti |
+                  <a href="http://core.thorntontomasetti.com/about" target="_blank"> About</a> |
+                  <a href="http://core.thorntontomasetti.com/about/services" target="_blank">Services</a> |
+                  <a href="http://core.thorntontomasetti.com/about/contact" target="_blank">Contact</a>
+              </h5>-->
+              <!-- last update details-->
+             <h6 class="text-center">
+                <script language="javascript">
+                var theDate = new Date(document.lastModified);
+                var ukDate = theDate.toGMTString();
+                document.write("Last updated: "+ukDate+"");
+                </script>
+              </h6>
+          </div>
+        </div>
+    </div>
+  <!-- /#Welcome content End-->
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li>
+        <a class="navbar-brand"  href="#">
+          <img src="New_method/img/EcoVolkslogo.png"  style="width:30px;">
+          </a>
+          </li>
+        <li class=" " style="padding-top:5px" ><a style="font-size:24px;" href="#">Design Guide</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a style="font-size:24px;" href="img1/P2.html">Start <span class="glyphicon glyphicon-new-window"></span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Navbar
+
+
+
+<div class="navbar " style="background-color:#f1f1f1;">
+  <div class="text">
+  <c>
+
+    <a class="navbar-brand" style="padding-top:50px" href="#home">
+        <div class="logo-image" >
+          <img src="New_method/img/EcoVolkslogo.png" class="img-fluid" style="width:80%">
+        </div>
+      </a>
+  </c>
+
+  <a href="img1/P2.html"style="padding-top:40px;padding-bottom:0px" >Start </a>
+  <a href="#home" style="margin-left: 30%;margin-right: 30%;font-size:24px;" align: center> Home </a>
+  <!--<a style="padding-top:40px;padding-bottom:0px;" href="#about">About</a>-->
+
+<!--  </div>
+</div>-->
 
 
 
@@ -56,9 +187,9 @@
 <!-- /#Welcome content Start-->
 <div class="content" id="home" >
 
-          <div class="text-center">
+          <div class="text-center" style="padding-top:50px">
               <div id="video-container ">
-                <video class="video_player" autoplay muted loop id="player" width="80%" >
+                <video class="video_player" controls muted loop id="player" width="80%" poster="/Users/Admin/Documents/Git_repository/Guide.github.io/New_method/img/Turorial_poster.pdf" >
                     <source src="New_method/Videos/Turorial_mov.m4v"/>
                   </video>
 
@@ -87,11 +218,14 @@
 
       </div>
       <h3 class="large-font" style="font-size:24px" align="justify">
-      For further details, please send us an <button class="large-font btn-default" style="font-size:20px;background-color:gray;color:black"><a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com" style="font-size:20px;background-color:gray;color:white">email</a></button>
+      For further details, please send us an <button class="large-font btn-default" style="font-size:20px;background-color:gray;color:black"><a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com" style="font-size:20px;background-color:gray;color:white">email <span class="glyphicon glyphicon-send"></span></a></button>
 </h3>
 </div></div></div>
 
-<button class="openbtn" onclick="openNav()" id="#CZ_Kerala">Help me</button>
+<div class="container" style="bottom:0">
+
+<button class="openbtn"  onclick="openNav()" id="#CZ_Kerala">Help me <span class="glyphicon glyphicon-hand-up"></button>
+</div>
 
 
 
@@ -135,7 +269,7 @@ To know more about the background of the research, click on <a href="#" data-tog
 <br/>
 
 <div style="text-align:center">
-  <h1 class="xlarge-font" style="color:red; " id="Steps" >Steps involved in selecting the desired building design</h1>
+  <h1 class="large-font" style="color:red; " id="Steps" >Steps involved in selecting the desired building design</h1>
 </div>
 
 <br/>
@@ -193,7 +327,7 @@ To know more about the background of the research, click on <a href="#" data-tog
 </div>
 
 <!-- The App Section -->
-<div class="container" style="background-color:#f1f1f1">
+<div class="container" >
   <div class="row1">
     <div class="column-33">
         <img src="New_method/img/Orientation.jpg" style="width:100%">
@@ -210,7 +344,7 @@ To know more about the background of the research, click on <a href="#" data-tog
 <!-- The App Section -->
 
 <!-- Clarity Section -->
-<div class="container" >
+<div class="container" style="background-color:#f1f1f1">
   <div class="row1">
     <div class="column-66">
       <h1 class="xlarge-font"><b>Step 5</b></h1>
@@ -227,7 +361,7 @@ To know more about the background of the research, click on <a href="#" data-tog
 </div>
 
 <!-- The App Section -->
-<div class="container" style="background-color:#f1f1f1">
+<div class="container" >
   <div class="row1">
     <div class="column-33">
         <img src="New_method/img/B_Design.jpg" style="width:100%">
@@ -241,7 +375,7 @@ To know more about the background of the research, click on <a href="#" data-tog
     </div>
   </div>
 </div>
-<div class="container" style="background-color:#f1f1">
+<div class="container" style="background-color:#f1f1f1">
   <div class="row1">
     <div class="column-66">
       <h1 class="xlarge-font"><b>Building design report</b></h1>
@@ -257,7 +391,6 @@ To know more about the background of the research, click on <a href="#" data-tog
 </div>
 
 
-<div class="content"><h1><br></h1></div><br><br>
 
 
 
@@ -342,14 +475,14 @@ To know more about the background of the research, click on <a href="#" data-tog
 <!-- /#Meet the team-->
 <div class="content1" id="contacts" >
 <div class="text-center">
-<a href="#contacts">
+<!--<a href="#contacts">-->
 <div class="container" id="contacts" style="background-color:#f1f1f1" >
 <div class="content1"  style="padding-bottom:0px;">
 <div class="text-center">
+<!--<h2 class="large-font" style="font-size:30px" style="color:red;">  To begin using this guide, please click on  <a href="img1/P2.html"><button class="button" style="background-color:red; padding-left:5px ; padding-top:5px; padding-right:5px; padding-bottom:5px ;font-size:30px">Start</button></a>-->
+<h2 class="large-font" style="font-size:30px" style="color:red;">  To begin using this guide, please click on  <a href="img1/P2.html"> Start <span class="glyphicon glyphicon-new-window"></span></a></h2>
 
-<h2 class="large-font" style="font-size:30px" style="color:red;">  To begin using this guide, please click on  <a href="img1/P2.html"><button class="button" style="background-color:red; padding-left:5px ; padding-top:5px; padding-right:5px; padding-bottom:5px ;font-size:30px">Start</button></a>
 
-</h2>
 </div>
 </div>
 </div>

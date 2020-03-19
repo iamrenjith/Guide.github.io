@@ -14,54 +14,6 @@ body {
   width: 100% ;
 }
 
-/* for navigation bar navigation bar at the top of page */
-.navbar {
-  overflow: hidden;
-  background-color: white;
-  width: 100%; /* Full width */
-  position: fixed;
-  top: 0;
-  padding-top: 0px;
-  padding-bottom: 10px;
-  height: 100px;
-  vertical-align: middle;
-  z-index: 100;
-  }
-
-  .navbar a {
-    float: right;
-    font-size: 24px;
-    color: black;
-    text-align: center;
-    padding-right: 30px;
-    text-decoration: none;
-  }
-
-  .navbar c {
-    float: left;
-    font-size: 24px;
-    color: black;
-    text-align: center;
-    padding-left: 20px;
-    text-decoration: none;
-  }
-
-  .navbar-centered a {
-    float: none;
-    position: relative;
-    right: 50%;
-    left: 50%;
-    /*top: 50%;*/
-    transform: translate(-50%, -50%);
-  }
-  .navbar-centered c {
-    float: none;
-    position: relative;
-    right: 50%;
-    left: 50%;
-    /*top: 50%;*/
-    transform: translate(-50%, -50%);
-  }
   /* End navigation bar at the top of page */
 
 
