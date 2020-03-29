@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+<title>Building_context</title>
+<!-- For the popup (Modal)-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="../../../../New_method/CSS_new/bootstrap.min.js"></script>
+<link href="../../../../New_method/CSS_new/bootstrap.min.css" rel="stylesheet"/>
+<!-- For the Parallell_coordinates plot-->
+<script src="../../../../New_method/lib/d3.min.js"></script>
+<script src="../../../../New_method/JS/d3.parcoords.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../New_method/CSS_new/d3.parcoords.css">
+<!-- For the Parallell_coordinates table-->
+<link rel="stylesheet" href="../../../../New_method/lib/slickgrid/slick.grid.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../New_method/lib/slickgrid/jquery-ui-1.8.16.custom.css" type="text/css"/>
+<script src="../../../../New_method/lib/slickgrid/jquery-1.7.min.js"></script>
+<script src="../../../../New_method/lib/slickgrid/jquery.event.drag-2.0.min.js"></script>
+<script src="../../../../New_method/lib/slickgrid/slick.core.js"></script>
+<script src="../../../../New_method/lib/slickgrid/slick.grid.js"></script>
+<script src="../../../../New_method/lib/slickgrid/slick.pager.js"></script>
+<script src="../../../../New_method/lib/slickgrid/slick.dataview.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../New_method/CSS_new/Index.css">
+<link rel="stylesheet" type="text/css" href="../../../../New_method/CSS_new/Page3.css">
+<link rel="stylesheet" type="text/css" href="../../../../New_method/CSS_new/scroll_results.css">
+</head>
+<style>
+* {
+box-sizing: border-box;
+}
+#mysearch {
+background-image: url('/css/searchicon.png');
+background-position: 10px 12px;
+background-repeat: no-repeat;
+width: 100%;
+font-size: 16px;
+padding: 12px 20px 12px 40px;
+border: 1px solid #ddd;
+margin-bottom: 12px;
+}
+#myUL {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+#myUL li a {
+border: 1px solid #ddd;
+margin-top: -1px; /* Prevent double borders */
+background-color: #f6f6f6;
+padding: 12px;
+text-decoration: none;
+font-size: 18px;
+color: black;
+display: block
+}
+#myUL li a:hover:not(.header) {
+background-color: #eee;
+}
+.column25{
+float: left;
+width: 33%;
+padding: 20px;
+}
+.default {cursor: default;}
+
+.navbar {
+  position: fixed;
+  z-index: 100;
+  width:100%;
+  top:0;
+}
+.bottom_abc {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  background: #ccc;
+  color: red;
+  z-index: 100;
+}
+
+</style>
+<body>
+<!-- Navbar
+<div class="navbar " style="background-color:#f1f1f1">
+<div class="text">
+<c><a href="../../../../Guide.html" > <h2 style="font-size:30px;"> Home </h2></a></c> <a style="padding-top:20px; " href="P3.html" >Building context</a> <a style="padding-top:20px; " href="../../../P2.html" >Location</a>
+</div>
+</div>-->
+
+
+<nav class="navbar navbar-inverse fixed-top navbar-light navbar-expand-lg navbar-template" style="z-index:1000;overflow:visible;">
+  <div class="container-fluid" style="z-index:1000;overflow:visible;">
+    <ul class="nav navbar-nav">
+      <li>
+        <a class="navbar-brand"  href="../../../../Guide.html">
+          <img src="../../../../New_method/img/EcoVolkslogo.png"  style="width:30px;">
+          </a>
+        </li>
+        <li class=" " style="padding-top:5px" ><a style="font-size:24px;" href="../../../../Guide.html">Design Guide</a></li>
+    </ul>
+    <ul class="nav navbar-right" >
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"style="font-size:32px;margin-right:20px;" ><span class="glyphicon glyphicon-menu-hamburger" style="color:grey"></span></a>
+
+
+          <div class="dropdown-menu ">
+            <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item " href="../../../P2.html" style="font-size:20px">Step 1: Location</a></li>
+              <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item " href="P3.html" style="font-size:20px">Step 2: Building Context</a></li>
+                <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item " href="P3_1.html" style="font-size:20px">Step 3: Building Type</a></li>
+          </div>
+      </ul>
+
+      </div>
+
+</nav>
+
+<div class="bottom_abc" >
+  <h4 class="text-center" style="font-size:20px;">
+    <p align=justify>
+    *We are currently testing the usability of the this guide. So, only designs for South orientation are provided here.
+    </p>
+  </h4>
+
+</div>
+
+
+
+<div id="mySidepanel" class="sidepanel" ><a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >×</a><div class="text-center"><div class="content1"  >
+  <h3 class="large-font" style="font-size:24px" align="justify">For further details  please send us an <a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com">
+  <button class="large-font btn-default popupWindowClose" style="font-size:20px;"> email <span class="glyphicon glyphicon-send"></span></button></a></h3></div></div></div>
+<button class="openbtn" onclick="openNav()" id="#CZ_Kerala" style="z-index: 1000;">Help me <span class="glyphicon glyphicon-hand-up"></button>
+
+<!-- /#Welcome content End-->
+<p></p>
+<p></p>
+<!-- /#Welcome content Start-->
+<!-- /# Modal content start -->
+<div class="container" id="about" style="background-color:#f1f1f1">
+<div class="content1"  >
+<div class="text-center" style="background-color:#f1f1f1">
+  <h2 style="font-size:24px text-aligh:center" align="justify">
+  <h1 class="xlarge-font"><b>Step 4:</b></h1>
+  <h1  style="color:MediumSeaGreen;"><b>Orientation of the building.</b></h1>
+  <p><span style="font-size:24px">The third step is to define the orientation of the building.</span> </p>
+  <p><span  style="font-size:20px">To define the orientation, please select the direction of the entrance door of the proposed building: </span> </p>
+  </h2>
+</div>
+</div>
+</div>
+<div class="content "  >
+<div class="modal-body ">
+<div class="text-center">
+<div class="row1">
+<div class="columns">
+<a href="#" data-toggle="modal" data-target="	#bannerformmodalT3	"><img src="../../../../New_method/img/T1_NW.jpeg" style="width:7%"  class="hover-shadow cursor"></a>
+<a href="#" data-toggle="modal" data-target="	#bannerformmodalT3	"><img src="../../../../New_method/img/T1_N.jpeg" style="width:7%"  class="hover-shadow cursor"></a>
+<a href="#" data-toggle="modal" data-target="	#bannerformmodalT3	"><img src="../../../../New_method/img/T1_NE.jpeg" style="width:7%"  class="hover-shadow cursor"></a>
+</div>
+</div>
+<div class="row1">
+<div class="columns">
+<a href="#" data-toggle="modal" data-target="	#bannerformmodalT3	"><img src="../../../../New_method/img/T1_W.jpeg" style="width:7%"  class="hover-shadow cursor"></a>
+<a href="#"><img src="../../../../New_method/img/Type-1i copy.jpeg" style="width:7%"  class="default"></a>
+<a href="#" data-toggle="modal" data-target="	#bannerformmodalT3	"><img src="../../../../New_method/img/T1_E.jpeg" style="width:7%"  class="hover-shadow cursor"></a>
+</div>
+</div>
+<div class="row1">
+<div class="columns">
+<a href="#" data-toggle="modal" data-target="	#bannerformmodalT3	"><img src="../../../../New_method/img/T1_SW.jpeg" style="width:7%"  class="hover-shadow cursor"></a>
+<a href="Type1/South/P4.html"><img src="../../../../New_method/img/T1_S1.jpeg" style="width:7%"  class="hover-shadow cursor"></a>
+<a href="#" data-toggle="modal" data-target="	#bannerformmodalT3	"><img src="../../../../New_method/img/T1_SE.jpeg" style="width:7%"  class="hover-shadow cursor"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- /# Modal for Type 3 orientation start -->
+<div class="content "  >
+<div class="modal fade bannerformmodal " tabindex="-1" aria-labelledby="bannerformmodal" aria-hidden="true" id="bannerformmodalT3">
+<div class="modal-dialog modal-sm ">
+<div class="modal-content">
+<div class="modal-body "><div class="text-center"><div class="row1"><p><span style="font-size:24px">This section with be updated soon.</span> </p></div></div></div>
+<span class="close cursor" data-dismiss="modal" onclick="closeModal()">&times;</span>
+</div>
+</div>
+</div>
+</div>
+
+
+<script>
+function openNav() {
+document.getElementById("mySidepanel").style.width = "50%";}
+function closeNav() {
+document.getElementById("mySidepanel").style.width = "0";}
+</script>
+<!-- Script to close Welcome Window start-->
+<script>
+window.onload = function () {
+d3.selectAll(".popupWindowClose")
+.on("click", function () {
+d3.selectAll(".popupWindow")
+.style("display", "none");
+});
+};
+</script>
+
+<!-- /# Modal for Type 3 orientation start -->
+<div class="content "  >
+<div class="modal fade bannerformmodal " tabindex="-1" aria-labelledby="bannerformmodal" aria-hidden="true" id="bannerformmodalT3">
+<div class="modal-dialog modal-sm ">
+<div class="modal-content">
+<div class="modal-body "><div class="text-center"><div class="row1"><p><span style="font-size:24px">This section with be updated soon.</span> </p></div></div></div>
+<span class="close cursor" data-dismiss="modal" onclick="closeModal()">&times;</span>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="text-center" style="bottom:0">
+        <small>&copy; Copyright 2020, Renjith Jayapalan Nair
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://twitter.com/Renjith_jn" class="fa fa-twitter" target="_blank"></a></li>
+&nbsp; <a href="https://www.linkedin.com/in/renjith-jayapalan-nair-7b5a8144/" class="fa fa-linkedin" target="_blank"></a>
+&nbsp; <a href="https://join.skype.com/invite/og93iE4ikfrn" class="fa fa-skype" target="_blank"></a>
+&nbsp; <a href="https://orcid.org/0000-0003-2157-2801" class="fab fa-orcid" target="_blank" ></a>
+ <a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com" class="glyphicon glyphicon-send" target="_blank" ></a>
+</small>
+</body></html>

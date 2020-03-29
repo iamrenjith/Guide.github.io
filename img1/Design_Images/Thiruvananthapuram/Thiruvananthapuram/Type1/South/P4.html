@@ -1,336 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
-<title>Design_priority</title>
-<!-- For the popup (Modal)-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<meta charset="utf-8">
+<title>Guide - select design priority</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-
+<!-- /#Social media fonts-->
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="../../../../../../New_method/CSS_new/bootstrap.min.js"></script>
-<link href="../../../../../../New_method/CSS_new/bootstrap.min.css" rel="stylesheet"/>
-<!-- For the Parallell_coordinates plot-->
-<script src="../../../../../../New_method/lib/d3.min.js"></script>
-<script src="../../../../../../New_method/JS/d3.parcoords.js"></script>
-<link rel="stylesheet" type="text/css" href="../../../../../../New_method/CSS_new/d3.parcoords.css">
-<!-- For the Parallell_coordinates table-->
-<link rel="stylesheet" href="../../../../../../New_method/lib/slickgrid/slick.grid.css" type="text/css"/>
-<link rel="stylesheet" href="../../../../../../New_method/lib/slickgrid/jquery-ui-1.8.16.custom.css" type="text/css"/>
-<script src="../../../../../../New_method/lib/slickgrid/jquery-1.7.min.js"></script>
-<script src="../../../../../../New_method/lib/slickgrid/jquery.event.drag-2.0.min.js"></script>
-<script src="../../../../../../New_method/lib/slickgrid/slick.core.js"></script>
-<script src="../../../../../../New_method/lib/slickgrid/slick.grid.js"></script>
-<script src="../../../../../../New_method/lib/slickgrid/slick.pager.js"></script>
-<script src="../../../../../../New_method/lib/slickgrid/slick.dataview.js"></script>
-<link rel="stylesheet" type="text/css" href="../../../../../../New_method/CSS_new/Index.css">
-<link rel="stylesheet" type="text/css" href="../../../../../../New_method/CSS_new/Page3.css">
-<link rel="stylesheet" type="text/css" href="../../../../../../New_method/CSS_new/scroll_results.css">
 </head>
-<style>
-* {
-box-sizing: border-box;
-}
-#mysearch {
-background-image: url('/css/searchicon.png');
-background-position: 10px 12px;
-background-repeat: no-repeat;
-width: 100%;
-font-size: 16px;
-padding: 12px 20px 12px 40px;
-border: 1px solid #ddd;
-margin-bottom: 12px;
-}
-#myUL {
-list-style-type: none;
-padding: 0;
-margin: 0;
-}
-#myUL li a {
-border: 1px solid #ddd;
-margin-top: -1px; /* Prevent double borders */
-background-color: #f6f6f6;
-padding: 12px;
-text-decoration: none;
-font-size: 18px;
-color: black;
-display: block
-}
-#myUL li a:hover:not(.header) {
-background-color: #eee;
-}
-
-.navbar {
-  position: fixed;
-  z-index: 100;
-  width:100%;
-  top:0;
-}
-.bottom_abc {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 5%;
-  background: #ccc;
-  color: red;
-  z-index: 100;
-}
-
-</style>
 <body>
-<!-- Navbar -->
-<div class="navbar " style="background-color:#f1f1f1">
-<div class="text">
-<c><a href="../../../../../../Guide.html" > <h2 style="font-size:30px; "> Home </h2></a></c> <a style="padding-top:20px;" href="../../P3_1.html">Building Type</a> <a style="padding-top:20px;" href="../../P3.html">Building Context</a> <a style="padding-top:20px;" href="../../../../../P2.html" >Location</a>
-</div>
-</div>
 
 
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- Navbar-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 
+<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+      <a class="navbar-brand"  href="#"><img src="New_method/img/EcoVolkslogo.png"  style="width:30px;"> Design guide</a>
 
-<nav class="navbar navbar-inverse fixed-top navbar-light navbar-expand-lg navbar-template" style="z-index:1000;overflow:visible;">
-  <div class="container-fluid" style="z-index:1000;overflow:visible;">
-    <ul class="nav navbar-nav">
-      <li>
-        <a class="navbar-brand"  href="../../../../../../Guide.html">
-          <img src="../../../../../../New_method/img/EcoVolkslogo.png"  style="width:30px;">
-          </a>
-        </li>
-        <li class=" " style="padding-top:5px" ><a style="font-size:24px;" href="../../../../../../Guide.html">Design Guide</a></li>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="../../../../../P2.html" style="font-size:20px;">Step 1: Location</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../../P3.html" style="font-size:20px;">Step 2: Context</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../../P3_1.html" style="font-size:20px;">Step 3: Form</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../../P3_2.html" style="font-size:20px;">Step 4: Orientation</a>
+      </li>
     </ul>
-    <ul class="nav navbar-right" >
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"style="font-size:32px;margin-right:20px;" ><span class="glyphicon glyphicon-menu-hamburger" style="color:grey"></span></a>
+  </div>
+</nav>
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Header-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<div class="container">
+  <div class="jumbotron" align="center">
+    <h1 class="xlarge-font"  ><b>Step 5</b></h1>
+    <h1 class="large-font"  style="color:MediumSeaGreen;"><b>Select the building's design priority.</b></h1>
+    <p><span style="font-size:30px">The second step is to select building context.</span>
+    </p>
+    <p><span style="font-size:24px">Having selected the location, building context and orientation, the next step is to define your building performance priority.</span>
+    </p>
+  </div>
+</div>
 
 
-          <div class="dropdown-menu ">
-            <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
-              <a class="dropdown-item " href="../../../../../P2.html" style="font-size:20px">Step 1: Location</a></li>
-              <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item " href="../../P3_1.html" style="font-size:20px">Step 2: Building Context</a></li>
-                <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item " href="../../P3.html" style="font-size:20px">Step 3: Building Type</a></li>
-                  <li class=" " style="padding-top:5px" ><div role="separator" class="dropdown-divider"></div>
-                    <a class="dropdown-item " href="../../P3_2.html" style="font-size:20px">Step 4: Orientation</a></li>
+<div class="container">
+  <div class="jumbotron">
+    <h1 style="font-size:30px" align="center"><b>To proceed please select the building's design priority. </b></h1><br>
+    <div class="row">
+      <div class="col-sm-4" style="background-color:lavenderblush;" align=center>
+        <p>  <a href="Combined/P5_Combined.html">
+          <img src="../../../../../../New_method/img/Combined.png"  style="width:100%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  > </a><br/>
+        </p>
+      </div>
+      <div class="col-sm-4" style="background-color:lavenderblush;" align=center>
+        <p>  <a href="Thermal/P5_Thermal.html">
+          <img src="../../../../../../New_method/img/Thermal.png" style="width:100%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" class="hover-shadow cursor" ></a><br/>
+        </p>
+      </div>
+      <div class="col-sm-4" style="background-color:lavenderblush;" align=center>
+        <p>  <a href="Daylight/P5_Daylight.html">
+          <img src="../../../../../../New_method/img/Daylight.png" style="width:100%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  > </a><br/>
+        </p>
+      </div>
+      <br>
+        <hr class="rgba-white-light" style="margin: 0 2%;">
+        <br>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- Footer -->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<footer class="page-footer font-small indigo" style="background-color:#f1f1f1;">
+  <div class="container">
+    <!-- Grid row-->
+    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+      <!-- Grid column -->
+      <div class="col-md-3 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="../index.html" target="_blank">About the author</a>
+        </h6>
+      </div>
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#" data-toggle="modal" data-target="	#downloads">Downloads</a>
+        </h6>
+      </div>
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#" data-toggle="modal" data-target="#Acknowledgement">Acknowledgements</a>
+        </h6>
+      </div>
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#" data-toggle="modal" data-target="	#help">Help</a>
+        </h6>
+      </div>
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">Contact</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Line-->
+    <hr class="rgba-white-light" style="margin: 0 15%;">
+    <!-- Grid row-->
+    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+      <!-- Grid column -->
+      <div class="col-md-9 col-12 mt-5">
+        <p style="line-height: 1.7rem">
+          This guide is developed as a result of the research work
+          carried out at Loughborough University, United Kingdom.
+          We are currently testing the usability of the this guide. So, only designs for buildings
+          planned to be constructed in the city of Thiruvananthapuram, in Thiruvananthapuram district, provided here.</p>
+      </div>
+    </div>
+    <!-- Line -->
+    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">&copy; Copyright 2020,
+    <a href="index.html"> Renjith Jayapalan Nair</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Modal-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<!-- /# Modal for Updated soon -->
+<div class="content"  >
+  <div class="modal fade" id="update_soon" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<h4 class="modal-title">Building Design Guide</h4>-->
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>This section with be updated soon.
+          </p>
+          <br>
+          <p>We are currently testing the usability of the this guide. So, only designs for buildings
+          planned to be constructed in <b>open low-rise context </b>, provided here.
+        </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- /# help -->
+<div class="content"  >
+  <div class="modal fade" id="help" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Help - select the location</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>The first step is to select the location of interest in Kerala. Kerala
+            is one of the 29 States in India and is located in the south western part
+            of the country between the Arabian sea and the mountain ranges - Western
+            Ghats. The State of Kerala is divided into 14 administrative districts,
+            which are further divided into corporations, municipalities, panchayaths
+            and villages. In this guide each of the administrative bodies are assigned
+            their respective Adaptive Climate Zone. By selecting the location, the
+            designs tailored for their respective climate will be made available.
+            To know how to select the location please watch the below video.
+          </p>
+          <div id="video-container ">
+            <video class="video_player" controls id="player" width="100%" >
+                <source src="../New_method/Videos/Step1.m4v"/>
+              </video>
+              <br><br>
+              <p><img src="../New_method/GIFs/CZ_step1.gif" alt="App" style="width:100%"><br/></p>
+              <br><br>
           </div>
-      </ul>
-
+          <p>
+          For further details, please send us an <button class="large-font btn-default" style="font-size:20px;background-color:gray;color:black">
+            <a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com" style="font-size:20px;background-color:gray;color:white">email
+              <span class="fas fa-envelope"></span></a></button>
+        </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
 
-</nav>
+    </div>
+  </div>
+</div>
 
 
-<div id="mySidepanel" class="sidepanel" ><a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >×</a><div class="text-center"><div class="content1"  >
-  <h3 class="large-font" style="font-size:24px" align="justify">For further details  please send us an <a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com">
-  <button class="large-font btn-default popupWindowClose" style="font-size:20px;"> email <span class="glyphicon glyphicon-send"></span></button></a></h3></div></div></div>
-<button class="openbtn" onclick="openNav()" id="#CZ_Kerala" style="z-index: 1000;">Help me <span class="glyphicon glyphicon-hand-up"></button>
-
-<p></p>
-<p></p>
-<!-- /#Welcome content Start-->
-<div class="container" id="about" style="background-color:#f1f1f1">
-<div class="content1"  >
-<!--<div class="content2 col">-->
-<div class="text-center">
-<h2 style="font-size:24px text-aligh:center" align="justify">
-<h1 class="xlarge-font"><b>Step 5:</b></h1>
-<h1 class="large-font" style="color:MediumSeaGreen;"><b>Select the building performance priority.</b></h1>
-<p><span style="font-size:30px">Having selected the location, building context and orientation, the next step is to define your building performance priority.</span> </p>
-</h2>
-</div>
-</div>
-</div>
-<div class="container" id="about" style="background-color:#f1f1f1">
-<div class="content1"  >
-<!--<div class="content2 col">-->
-<div class="row1">
-<div class="column-33-33 hover-shadow cursor">
-<p>  <a href="Combined/P5_Combined.html">  <img src="../../../../../../New_method/img/Combined.png" style="width:100%"  ></a> <br/></p>
-</div>
-<div class="column-33-33 hover-shadow cursor">
-<p>  <a href="Thermal/P5_Thermal.html">   <img src="../../../../../../New_method/img/Thermal.png" style="width:100%" ></a><br/></p>
-</div>
-<div class="column-33-33 hover-shadow cursor ">
-<p> <a href="Daylight/P5_Daylight.html">  <img src="../../../../../../New_method/img/Daylight.png" style="width:100%" ></a><br/></p>
-</div>
-</div>
-<br/>
-<br/>
-</div>
-</div>
-<br/>
-<br/>
-<br/>
-<!-- /# Step 1 -->
+<!-- /# Acknowledgement -->
 <div class="content"  >
-<div class="modal fade bannerformmodal" tabindex="-1" aria-labelledby="bannerformmodal" aria-hidden="true" id="Step1">
-<div class="modal-dialog modal-sm">
-<div class="modal-content">
-<div class="modal-body">
-<div class="text-center">
-<div id="video-container ">
-<video class="video_player" controls id="player" width="100%" >
-<source src="Videos/Turorial_mov.m4v"/>
-</video>
+  <div class="modal fade" id="Acknowledgement" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Acknowledgements</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+          <div class="col-md-7 mb-3">
+            <figure>
+              <img src="../New_method/img/Habitat.png" alt="App" style="width:100%;">
+            </figure>
+          </div>
+          <div class="col-md-7 mb-3">
+            <figure>
+              <img src="../New_method/img/Lboro.jpeg" alt="App" style="width:100%">
+            </figure>
+          </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
-</div>
-<div id="myModal" class="modal"></div>
-</div>
-<span class="close cursor" data-dismiss="modal" onclick="closeModal()">&times;</span>
-</div>
-</div>
-</div>
-</div>
-<!-- /# Step 2 -->
-<div class="content"  >
-<div class="modal fade bannerformmodal" tabindex="-1" aria-labelledby="bannerformmodal" aria-hidden="true" id="Step5">
-<div class="modal-dialog modal-sm">
-<div class="modal-content">
-<div class="modal-body">
-<div class="text-center">
-<div id="video-container ">
-<video class="video_player" controls id="player" width="100%" >
-<source src="Videos/Turorial_mov.m4v"/>
-</video>
-</div>
-</div>
-<div id="myModal" class="modal"></div>
-</div>
-<span class="close cursor" data-dismiss="modal" onclick="closeModal()">&times;</span>
-</div>
-</div>
-</div>
-</div>
-<!-- /# Search script start -->
-<script>
-function myFunction() {
-// Declare variables
-var input, filter, ul,li, a, i, txtValue;
-input = document.getElementById('mysearch');
-filter = input.value.toUpperCase();
-ul = document.getElementById("myUL");
-div = ul.getElementsByTagName("h4");
-for (i = 0; i < div.length; i++) {
-a = div[i].getElementsByTagName("a")[0];
-txtValue = a.textContent || a.innerText;
-if (txtValue.toUpperCase().indexOf(filter) > -1) {
-div[i].style.display = "";
-} else {
-div[i].style.display = "None";
-}}}
-</script>
-<!-- /# Search script end -->
-<script>
-function openNav() {
-document.getElementById("mySidepanel").style.width = "50%";
-}
-function closeNav() {
-document.getElementById("mySidepanel").style.width = "0";
-}
-</script>
-<!-- Script to close Welcome Window start-->
-<script>
-window.onload = function () {
-d3.selectAll(".popupWindowClose")
-.on("click", function () {
-d3.selectAll(".popupWindow")
-.style("display", "none");
-});
-};
-</script>
-<!-- Script to play video-->
-<script type="text/javascript">
-function goFullscreen(id) {
-var element = document.getElementById(id);
-if (element.mozRequestFullScreen) {
-element.mozRequestFullScreen();
-} else if (element.webkitRequestFullScreen) {
-element.webkitRequestFullScreen();
-}
-}
-</script>
-<!-- Script to scroll to top of page on refresh-->
-<script type="text/javascript">
-$(window).on('beforeunload', function() {
-$(window).scrollTop(0);
-});
-</script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script>
-function initialize() {
-var map_canvas = document.getElementById('map_canvas');
-var map_options = {
-center: new google.maps.LatLng(10,76),
-zoom: 7,
-mapTypeId: google.maps.MapTypeId.ROADMAP
-}
-var map = new google.maps.Map(map_canvas, map_options);
-}
-google.maps.event.addDomListener(window,'load', initialize);
-</script>
-<!--Script to scroll to the desired point-->
-<script>
-$(document).ready(function () {
-$(document).on("scroll", onScroll);
-//smoothscroll
-$('a[href^="#1"]').on('click', function (e) {
-e.preventDefault();
-$(document).off("scroll");
-var target = this.hash,
-menu = target;
-$target = $(target);
-$('html, body').stop().animate({
-'scrollTop': $target.offset().top+2
-}, 1200,'swing', function () { // change scroll speed
-window.location.hash = target;
-$(document).on("scroll", onScroll);
-});
-});
-});
-// Function to offset the achor top height
-// The function actually applying the offset
-function offsetAnchor() {
-if (location.hash.length !== 0) {
-window.scrollTo(window.scrollX, window.scrollY - 100);
-}
-}
-// Captures click events of all a elements with href starting with #
-$(document).on('click', 'a[href^="#"]', function(event) {
-// Click events are captured before hashchanges. Timeout
-// causes offsetAnchor to be called after the page jump.
-window.setTimeout(function() {
-offsetAnchor();
-}, 0);
-});
-// Set the offset when entering page with hash present in the url
-window.setTimeout(offsetAnchor, 0);
-function onScroll(event){
-var scrollPos = $(document).scrollTop();
-$('#menu-center a').each(function () {
-var currLink = $(this);
-var refElement = $(currLink.attr("href"));
-if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-$('#menu-center ul li a').removeClass("active_scroll");
-currLink.addClass("active_scroll");
-}
-else{
-currLink.removeClass("active_scroll");
-}
-});
-}
-</script>
-<footer class="text-center" style="bottom:0">
-        <small>&copy; Copyright 2020, Renjith Jayapalan Nair
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://twitter.com/Renjith_jn" class="fa fa-twitter" target="_blank"></a></li>
-&nbsp; <a href="https://www.linkedin.com/in/renjith-jayapalan-nair-7b5a8144/" class="fa fa-linkedin" target="_blank"></a>
-&nbsp; <a href="https://join.skype.com/invite/og93iE4ikfrn" class="fa fa-skype" target="_blank"></a>
-&nbsp; <a href="https://orcid.org/0000-0003-2157-2801" class="fab fa-orcid" target="_blank" ></a>
- <a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com" class="glyphicon glyphicon-send" target="_blank" ></a>
-</small>
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Javascript-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+
 </body>
 </html>
