@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8">
-<title>Guide - select design -thermal</title>
-
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+<title>Design selection - Thermal</title>
+<!-- For the popup (Modal)-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../../../../../../../New_method/CSS_new/bootstrap4.min.css">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src="../../../../../../../New_method/CSS_new/bootstrap.min.js"></script>
+<link href="../../../../../../../New_method/CSS_new/bootstrap.min.css" rel="stylesheet"/>
 <!-- For the Parallell_coordinates plot-->
 <script src="../../../../../../../New_method/lib/d3.min.js"></script>
 <script src="../../../../../../../New_method/JS/d3.parcoords.js"></script>
@@ -26,39 +26,42 @@
 <script src="../../../../../../../New_method/lib/slickgrid/slick.grid.js"></script>
 <script src="../../../../../../../New_method/lib/slickgrid/slick.pager.js"></script>
 <script src="../../../../../../../New_method/lib/slickgrid/slick.dataview.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../../New_method/CSS_new/Page1.css">
+<link rel="stylesheet" type="text/css" href="../../../../../../../New_method/CSS_new/Index.css">
+<link rel="stylesheet" type="text/css" href="../../../../../../../New_method/CSS_new/Page3.css">
+<link rel="stylesheet" type="text/css" href="../../../../../../../New_method/CSS_new/scroll_results.css">
+<style media="screen">.modal{opacity: 1 !important;}.navbar {position: fixed;z-index: 100;width:100%;top:0;}.popupWindow,.modal-backdrop{background-color: rgba(0, 0, 0, .8);}</style>
+<style media="screen">/* Footer style */.ct-footer {background-color: #f1f1f1;margin-top: 20px;position: relative;}.ct-footer-list {padding: 10px 10px;display: table;width: 100%;}/* Media Queries */@media (min-width:1200px) {.ct-footer-pre {display: table;}.ct-footer-pre > .inner {display: table-cell;vertical-align: middle;}.ct-footer-list > li {width: 10%;display: table-cell;vertical-align: top;}.ct-footer-list > li:last-child {width: 7%;}}@media (max-width: 1199px) {.ct-footer-list > li {display: inline-block;float: left;}}@media (min-width:992px) {.ct-footer-post .inner-left {float: left;}.ct-footer-post .inner-right {float: right;}}@media (max-width:991px) {.ct-footer-post {text-align: center;}}@media (min-width: 768px) and (max-width: 1199px) {.ct-footer-list > li {width: 33.3333%;}}@media (min-width:768px) {.ct-footer-post p {display: inline-block;}}@media (min-width: 480px) and (max-width:767px) {.ct-footer-list > li {width: 50%;}}@media (max-width:479px) {.ct-footer-list > li {width: 100%;text-align: center;}.ct-footer-list {padding: 20px 0;}}</style>
 
-
-
-<!-- /#Social media fonts-->
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- /#Welcome pop-up window-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
-<div id="myModal" class="modal fade">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" align=center>Design selection - Tutorial video</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div>
-            <div class="modal-body">
-              <div id="id="video-container"">
-              <video class="video_player"  controls muted id="player" width="100%" poster="../../../../../../../New_method/img/Turorial_skip_video_poster.jpeg" ><source src="../../../../../../../New_method/Videos/Step5_1.m4v"/></video>
-              </div>
-              <p align=justify>
-              *If you are a first time user of this guide, it is highly recommended that you watch this video. This video is also provided in under <b>Help</b>, if you want to watch it again.
-              </p>
-            </div>
-            <div class="col-sm-110" style="font-size:20px;margin-top: 0em;margin-left: 5%;margin-right: 5%;">
-              <h3 class="text-center"> Happy Exploring!
-              </h3>
-            </div>
-          </div>
+
+<div class=" col-centered row-centered vertical-center fullscreen popupWindow" id="welcome">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title" ><b>Design selection - Tutorial video</b></h4>
+      <button type="button" class="btn btn-default pull-right popupWindowClose" data-dismiss="modal">Close</button>
+    </div>
+    <div class="modal-body">
+      <div class="text-center" id="video-container">
+        <video class="video_player"  controls muted id="player" width="80%" poster="../../../../../../../New_method/img/Turorial_skip_video_poster.jpeg" ><source src="../../../../../../../New_method/Videos/Step5_1.m4v"/></video>
       </div>
+        <h3 class="text-center" style="margin-top: 0em;"> Happy Exploring!
+        </h3>
+    </div>
+    <div class="modal-footer">
+      <h4 class="text-center" style="font-size:16px;margin-top: 2em;margin-left: 2%;margin-right: 2%;">
+        <p style="color:red" align=justify>
+          *If you are a first time user of this guide, it is highly recommended that you watch this video. This video is also provided in <b>Help</b>, if you want to watch it again.
+        </p>
+      </h4>
+    </div>
   </div>
+</div>
 
 
 
@@ -67,7 +70,7 @@
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-      <a class="navbar-brand"  href="#"><img src="New_method/img/EcoVolkslogo.png"  style="width:30px;"> Design guide</a>
+      <a class="navbar-brand"  href="../../../../../../../Guide.html"><img src="../../../../../../../New_method/img/EcoVolkslogo.png"  style="width:30px;"> Design guide</a>
 
   <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -87,11 +90,13 @@
         <a class="nav-link" href="../../../P3_2.html" style="font-size:20px;">Step 4: Orientation</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../../../P4.html" style="font-size:20px;">Step 5: Priority</a>
+        <a class="nav-link" href="../P4.html" style="font-size:20px;">Step 5: Priority </a>
       </li>
     </ul>
   </div>
 </nav>
+
+
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- #Header-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
@@ -104,256 +109,267 @@
     The designs are presented using an interactive parallel coordinates diagram.</span>
     </p>
     <p><span style="font-size:24px">To know more about parallel coordinates and how to select the design, please click <a href="#" data-toggle="modal" data-target="#PC_read_more">
-    <button class="button" style="background-color:red">here</button></a></span>
+    here</a></span>.
     </p>
   </div>
 </div>
 
-
-
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Building type-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 
 <div class="container">
   <div class="jumbotron" align="center">
-
-    <div  id="about" style="background-color:#f1f1f1">
-    <div class="content1"  style="background-color:#f1f1f1">
-    <!-- Type 1-->
-    <div id="1navbar1"style="background-color:#f1f1f1">
-    <br><br>
-    <br><br>
-    <!-- Content for slide show container-->
-    <div id="align2" style="background-color:#f1f1f1">
-    <p><h1> Type 1 Building </h1></p>
+    <h1 style="font-size:30px" align="center"><b>Building form - Type 1.</b></h1>
     <div class="partiton" style="background-color:#f1f1f1">
-    <div class="section2">
-    <a href="#1navbar1"><img src="../../../../../../../New_method/img/T1_S.jpeg"   class="hover-shadow cursor" alt="Type 1"></a>
+      <div class="section2">
+      <a href="#1navbar1"><img src="../../../../../../../New_method/img/T1_S.jpeg"   class="hover-shadow cursor" alt="Type 1"></a>
+      </div>
+      <div class="section1">
+      <a href="#1navbar1"><img src="../../../../../../../New_method/img/Type-1i.jpeg"   class="hover-shadow cursor" alt="Type 2"></a>
+      </div>
     </div>
-    <div class="section1">
-    <a href="#1navbar1"><img src="../../../../../../../New_method/img/Type-1i.jpeg"   class="hover-shadow cursor" alt="Type 2"></a>
-    </div>
-    </div>
-    </div>
-    <br>
   </div>
-  </div>
-</div>
-</div>
 </div>
 
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- Content for parallel coordinates-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <div class="container">
-  <div class="jumbotron" >
-
-    <!-- Content for parallel coordinates-->
-
-
-    <script>// script for parallel axis </script>
-
+  <div class="jumbotron">
+    <h1 style="font-size:30px" align="center"><b>Parallel coordinates plot.</b></h1>
     <div id="example2" class="parcoords" style="height:500px;width:100%"></div>
     <div id="grid2" style="width:100%;height:300px;" header="height: 54px;"}></div>
     <script id="brushing">// quantitative color scale
-    var blue_to_brown = d3.scale.linear()
-    .domain([9, 50])
-    .range(["steelblue", "brown"])
-    .interpolate(d3.interpolateLab);
-    var color = function(d) { return blue_to_brown(d['economy (mpg)']); };
-    // Input values
-    var types = {
-    007 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 53,"WWR Wall A (%)": 51.00,"WWR Wall B (%)": 47.00,"WWR Wall C (%)": 47.00,"WWR Wall D (%)": 29.00,"Floor U-value (W/m²K)": 3.18,"Roof U-value (W/m²K)": 0.86,"Wall A U-value (W/m²K)": 1.01,"Wall D U-value (W/m²K)": 0.82,"Ground reflectance (%)": 7.00, "Window transmittance (%)": 75.00, "Wall reflectance (%)": 48.00,"Ceiling reflectance (%)": 89.00,"Details": "View"},
-    013 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 92,"WWR Wall A (%)": 15.00,"WWR Wall B (%)": 60.00,"WWR Wall C (%)": 32.00,"WWR Wall D (%)": 20.00,"Floor U-value (W/m²K)": 3.31,"Roof U-value (W/m²K)": 1.16,"Wall A U-value (W/m²K)": 0.64,"Wall D U-value (W/m²K)": 1.64,"Ground reflectance (%)": 7.00, "Window transmittance (%)": 54.00, "Wall reflectance (%)": 66.00,"Ceiling reflectance (%)": 85.00,"Details": "View"},
-    021 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 98,"WWR Wall A (%)": 18.00,"WWR Wall B (%)": 27.00,"WWR Wall C (%)": 15.00,"WWR Wall D (%)": 11.00,"Floor U-value (W/m²K)": 2.78,"Roof U-value (W/m²K)": 2.28,"Wall A U-value (W/m²K)": 2.23,"Wall D U-value (W/m²K)": 0.87,"Ground reflectance (%)": 12.00, "Window transmittance (%)": 82.00, "Wall reflectance (%)": 83.00,"Ceiling reflectance (%)": 52.00,"Details": "View"},
-    022 :{ "Energy Demand (kWh/m²/yr)": 1,"UDI-c (%)": 93,"WWR Wall A (%)": 27.00,"WWR Wall B (%)": 40.00,"WWR Wall C (%)": 26.00,"WWR Wall D (%)": 28.00,"Floor U-value (W/m²K)": 2.21,"Roof U-value (W/m²K)": 0.29,"Wall A U-value (W/m²K)": 2.59,"Wall D U-value (W/m²K)": 0.10,"Ground reflectance (%)": 12.00, "Window transmittance (%)": 66.00, "Wall reflectance (%)": 58.00,"Ceiling reflectance (%)": 75.00,"Details": "View"},
-    029 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 97,"WWR Wall A (%)": 22.00,"WWR Wall B (%)": 12.00,"WWR Wall C (%)": 12.00,"WWR Wall D (%)": 24.00,"Floor U-value (W/m²K)": 3.25,"Roof U-value (W/m²K)": 0.81,"Wall A U-value (W/m²K)": 1.00,"Wall D U-value (W/m²K)": 3.32,"Ground reflectance (%)": 19.00, "Window transmittance (%)": 90.00, "Wall reflectance (%)": 62.00,"Ceiling reflectance (%)": 87.00,"Details": "View"},
-    031 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 86,"WWR Wall A (%)": 33.00,"WWR Wall B (%)": 51.00,"WWR Wall C (%)": 44.00,"WWR Wall D (%)": 39.00,"Floor U-value (W/m²K)": 3.13,"Roof U-value (W/m²K)": 1.07,"Wall A U-value (W/m²K)": 1.37,"Wall D U-value (W/m²K)": 0.52,"Ground reflectance (%)": 18.00, "Window transmittance (%)": 47.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 60.00,"Details": "View"},
-    032 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 98,"WWR Wall A (%)": 32.00,"WWR Wall B (%)": 30.00,"WWR Wall C (%)": 11.00,"WWR Wall D (%)": 13.00,"Floor U-value (W/m²K)": 2.59,"Roof U-value (W/m²K)": 1.99,"Wall A U-value (W/m²K)": 1.71,"Wall D U-value (W/m²K)": 2.64,"Ground reflectance (%)": 9.00, "Window transmittance (%)": 55.00, "Wall reflectance (%)": 61.00,"Ceiling reflectance (%)": 95.00,"Details": "View"},
-    033 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 92,"WWR Wall A (%)": 30.00,"WWR Wall B (%)": 39.00,"WWR Wall C (%)": 17.00,"WWR Wall D (%)": 37.00,"Floor U-value (W/m²K)": 1.00,"Roof U-value (W/m²K)": 0.75,"Wall A U-value (W/m²K)": 1.95,"Wall D U-value (W/m²K)": 1.21,"Ground reflectance (%)": 9.00, "Window transmittance (%)": 67.00, "Wall reflectance (%)": 63.00,"Ceiling reflectance (%)": 88.00,"Details": "View"},
-    054 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 76,"WWR Wall A (%)": 39.00,"WWR Wall B (%)": 44.00,"WWR Wall C (%)": 41.00,"WWR Wall D (%)": 45.00,"Floor U-value (W/m²K)": 3.42,"Roof U-value (W/m²K)": 2.10,"Wall A U-value (W/m²K)": 0.25,"Wall D U-value (W/m²K)": 1.60,"Ground reflectance (%)": 19.00, "Window transmittance (%)": 53.00, "Wall reflectance (%)": 62.00,"Ceiling reflectance (%)": 93.00,"Details": "View"},
-    059 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 64,"WWR Wall A (%)": 52.00,"WWR Wall B (%)": 25.00,"WWR Wall C (%)": 37.00,"WWR Wall D (%)": 33.00,"Floor U-value (W/m²K)": 3.46,"Roof U-value (W/m²K)": 0.82,"Wall A U-value (W/m²K)": 1.82,"Wall D U-value (W/m²K)": 1.80,"Ground reflectance (%)": 14.00, "Window transmittance (%)": 85.00, "Wall reflectance (%)": 56.00,"Ceiling reflectance (%)": 65.00,"Details": "View"},
-    081 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 91,"WWR Wall A (%)": 22.00,"WWR Wall B (%)": 48.00,"WWR Wall C (%)": 23.00,"WWR Wall D (%)": 29.00,"Floor U-value (W/m²K)": 2.39,"Roof U-value (W/m²K)": 1.26,"Wall A U-value (W/m²K)": 1.34,"Wall D U-value (W/m²K)": 2.91,"Ground reflectance (%)": 13.00, "Window transmittance (%)": 77.00, "Wall reflectance (%)": 53.00,"Ceiling reflectance (%)": 58.00,"Details": "View"},
-    087 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 71,"WWR Wall A (%)": 12.00,"WWR Wall B (%)": 13.00,"WWR Wall C (%)": 15.00,"WWR Wall D (%)": 17.00,"Floor U-value (W/m²K)": 2.23,"Roof U-value (W/m²K)": 0.33,"Wall A U-value (W/m²K)": 1.43,"Wall D U-value (W/m²K)": 0.59,"Ground reflectance (%)": 6.00, "Window transmittance (%)": 72.00, "Wall reflectance (%)": 27.00,"Ceiling reflectance (%)": 74.00,"Details": "View"},
-    108 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 89,"WWR Wall A (%)": 17.00,"WWR Wall B (%)": 45.00,"WWR Wall C (%)": 24.00,"WWR Wall D (%)": 25.00,"Floor U-value (W/m²K)": 2.66,"Roof U-value (W/m²K)": 1.82,"Wall A U-value (W/m²K)": 2.04,"Wall D U-value (W/m²K)": 3.20,"Ground reflectance (%)": 5.00, "Window transmittance (%)": 86.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 95.00,"Details": "View"},
-    111 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 52,"WWR Wall A (%)": 37.00,"WWR Wall B (%)": 68.00,"WWR Wall C (%)": 30.00,"WWR Wall D (%)": 42.00,"Floor U-value (W/m²K)": 2.63,"Roof U-value (W/m²K)": 0.88,"Wall A U-value (W/m²K)": 1.49,"Wall D U-value (W/m²K)": 0.26,"Ground reflectance (%)": 11.00, "Window transmittance (%)": 77.00, "Wall reflectance (%)": 76.00,"Ceiling reflectance (%)": 94.00,"Details": "View"},
-    145 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 73,"WWR Wall A (%)": 31.00,"WWR Wall B (%)": 21.00,"WWR Wall C (%)": 62.00,"WWR Wall D (%)": 45.00,"Floor U-value (W/m²K)": 2.52,"Roof U-value (W/m²K)": 0.92,"Wall A U-value (W/m²K)": 0.82,"Wall D U-value (W/m²K)": 1.38,"Ground reflectance (%)": 13.00, "Window transmittance (%)": 68.00, "Wall reflectance (%)": 25.00,"Ceiling reflectance (%)": 64.00,"Details": "View"},
-    150 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 86,"WWR Wall A (%)": 39.00,"WWR Wall B (%)": 51.00,"WWR Wall C (%)": 20.00,"WWR Wall D (%)": 39.00,"Floor U-value (W/m²K)": 3.47,"Roof U-value (W/m²K)": 2.60,"Wall A U-value (W/m²K)": 1.24,"Wall D U-value (W/m²K)": 2.96,"Ground reflectance (%)": 6.00, "Window transmittance (%)": 65.00, "Wall reflectance (%)": 57.00,"Ceiling reflectance (%)": 53.00,"Details": "View"},
-    154 :{ "Energy Demand (kWh/m²/yr)": 2,"UDI-c (%)": 95,"WWR Wall A (%)": 36.00,"WWR Wall B (%)": 54.00,"WWR Wall C (%)": 16.00,"WWR Wall D (%)": 14.00,"Floor U-value (W/m²K)": 2.41,"Roof U-value (W/m²K)": 0.52,"Wall A U-value (W/m²K)": 1.98,"Wall D U-value (W/m²K)": 0.30,"Ground reflectance (%)": 10.00, "Window transmittance (%)": 51.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 93.00,"Details": "View"},
-    156 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 89,"WWR Wall A (%)": 49.00,"WWR Wall B (%)": 59.00,"WWR Wall C (%)": 16.00,"WWR Wall D (%)": 68.00,"Floor U-value (W/m²K)": 2.29,"Roof U-value (W/m²K)": 0.60,"Wall A U-value (W/m²K)": 0.34,"Wall D U-value (W/m²K)": 0.54,"Ground reflectance (%)": 11.00, "Window transmittance (%)": 46.00, "Wall reflectance (%)": 25.00,"Ceiling reflectance (%)": 61.00,"Details": "View"},
-    168 :{ "Energy Demand (kWh/m²/yr)": 1,"UDI-c (%)": 94,"WWR Wall A (%)": 28.00,"WWR Wall B (%)": 22.00,"WWR Wall C (%)": 29.00,"WWR Wall D (%)": 46.00,"Floor U-value (W/m²K)": 3.52,"Roof U-value (W/m²K)": 1.06,"Wall A U-value (W/m²K)": 1.15,"Wall D U-value (W/m²K)": 1.66,"Ground reflectance (%)": 25.00, "Window transmittance (%)": 42.00, "Wall reflectance (%)": 69.00,"Ceiling reflectance (%)": 77.00,"Details": "View"},
-    171 :{ "Energy Demand (kWh/m²/yr)": 2,"UDI-c (%)": 81,"WWR Wall A (%)": 30.00,"WWR Wall B (%)": 42.00,"WWR Wall C (%)": 55.00,"WWR Wall D (%)": 21.00,"Floor U-value (W/m²K)": 3.07,"Roof U-value (W/m²K)": 0.93,"Wall A U-value (W/m²K)": 2.76,"Wall D U-value (W/m²K)": 0.20,"Ground reflectance (%)": 5.00, "Window transmittance (%)": 89.00, "Wall reflectance (%)": 32.00,"Ceiling reflectance (%)": 64.00,"Details": "View"}
-    };
+        var blue_to_brown = d3.scale.linear()
+        .domain([9, 50])
+        .range(["steelblue", "brown"])
+        .interpolate(d3.interpolateLab);
+        var color = function(d) { return blue_to_brown(d['economy (mpg)']); };
+        // Input values
+        var types = {
+        007 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 53,"WWR Wall A (%)": 51.00,"WWR Wall B (%)": 47.00,"WWR Wall C (%)": 47.00,"WWR Wall D (%)": 29.00,"Floor U-value (W/m²K)": 3.18,"Roof U-value (W/m²K)": 0.86,"Wall A U-value (W/m²K)": 1.01,"Wall D U-value (W/m²K)": 0.82,"Ground reflectance (%)": 7.00, "Window transmittance (%)": 75.00, "Wall reflectance (%)": 48.00,"Ceiling reflectance (%)": 89.00,"Details": "View"},
+        013 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 92,"WWR Wall A (%)": 15.00,"WWR Wall B (%)": 60.00,"WWR Wall C (%)": 32.00,"WWR Wall D (%)": 20.00,"Floor U-value (W/m²K)": 3.31,"Roof U-value (W/m²K)": 1.16,"Wall A U-value (W/m²K)": 0.64,"Wall D U-value (W/m²K)": 1.64,"Ground reflectance (%)": 7.00, "Window transmittance (%)": 54.00, "Wall reflectance (%)": 66.00,"Ceiling reflectance (%)": 85.00,"Details": "View"},
+        021 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 98,"WWR Wall A (%)": 18.00,"WWR Wall B (%)": 27.00,"WWR Wall C (%)": 15.00,"WWR Wall D (%)": 11.00,"Floor U-value (W/m²K)": 2.78,"Roof U-value (W/m²K)": 2.28,"Wall A U-value (W/m²K)": 2.23,"Wall D U-value (W/m²K)": 0.87,"Ground reflectance (%)": 12.00, "Window transmittance (%)": 82.00, "Wall reflectance (%)": 83.00,"Ceiling reflectance (%)": 52.00,"Details": "View"},
+        022 :{ "Energy Demand (kWh/m²/yr)": 1,"UDI-c (%)": 93,"WWR Wall A (%)": 27.00,"WWR Wall B (%)": 40.00,"WWR Wall C (%)": 26.00,"WWR Wall D (%)": 28.00,"Floor U-value (W/m²K)": 2.21,"Roof U-value (W/m²K)": 0.29,"Wall A U-value (W/m²K)": 2.59,"Wall D U-value (W/m²K)": 0.10,"Ground reflectance (%)": 12.00, "Window transmittance (%)": 66.00, "Wall reflectance (%)": 58.00,"Ceiling reflectance (%)": 75.00,"Details": "View"},
+        029 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 97,"WWR Wall A (%)": 22.00,"WWR Wall B (%)": 12.00,"WWR Wall C (%)": 12.00,"WWR Wall D (%)": 24.00,"Floor U-value (W/m²K)": 3.25,"Roof U-value (W/m²K)": 0.81,"Wall A U-value (W/m²K)": 1.00,"Wall D U-value (W/m²K)": 3.32,"Ground reflectance (%)": 19.00, "Window transmittance (%)": 90.00, "Wall reflectance (%)": 62.00,"Ceiling reflectance (%)": 87.00,"Details": "View"},
+        031 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 86,"WWR Wall A (%)": 33.00,"WWR Wall B (%)": 51.00,"WWR Wall C (%)": 44.00,"WWR Wall D (%)": 39.00,"Floor U-value (W/m²K)": 3.13,"Roof U-value (W/m²K)": 1.07,"Wall A U-value (W/m²K)": 1.37,"Wall D U-value (W/m²K)": 0.52,"Ground reflectance (%)": 18.00, "Window transmittance (%)": 47.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 60.00,"Details": "View"},
+        032 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 98,"WWR Wall A (%)": 32.00,"WWR Wall B (%)": 30.00,"WWR Wall C (%)": 11.00,"WWR Wall D (%)": 13.00,"Floor U-value (W/m²K)": 2.59,"Roof U-value (W/m²K)": 1.99,"Wall A U-value (W/m²K)": 1.71,"Wall D U-value (W/m²K)": 2.64,"Ground reflectance (%)": 9.00, "Window transmittance (%)": 55.00, "Wall reflectance (%)": 61.00,"Ceiling reflectance (%)": 95.00,"Details": "View"},
+        033 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 92,"WWR Wall A (%)": 30.00,"WWR Wall B (%)": 39.00,"WWR Wall C (%)": 17.00,"WWR Wall D (%)": 37.00,"Floor U-value (W/m²K)": 1.00,"Roof U-value (W/m²K)": 0.75,"Wall A U-value (W/m²K)": 1.95,"Wall D U-value (W/m²K)": 1.21,"Ground reflectance (%)": 9.00, "Window transmittance (%)": 67.00, "Wall reflectance (%)": 63.00,"Ceiling reflectance (%)": 88.00,"Details": "View"},
+        054 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 76,"WWR Wall A (%)": 39.00,"WWR Wall B (%)": 44.00,"WWR Wall C (%)": 41.00,"WWR Wall D (%)": 45.00,"Floor U-value (W/m²K)": 3.42,"Roof U-value (W/m²K)": 2.10,"Wall A U-value (W/m²K)": 0.25,"Wall D U-value (W/m²K)": 1.60,"Ground reflectance (%)": 19.00, "Window transmittance (%)": 53.00, "Wall reflectance (%)": 62.00,"Ceiling reflectance (%)": 93.00,"Details": "View"},
+        059 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 64,"WWR Wall A (%)": 52.00,"WWR Wall B (%)": 25.00,"WWR Wall C (%)": 37.00,"WWR Wall D (%)": 33.00,"Floor U-value (W/m²K)": 3.46,"Roof U-value (W/m²K)": 0.82,"Wall A U-value (W/m²K)": 1.82,"Wall D U-value (W/m²K)": 1.80,"Ground reflectance (%)": 14.00, "Window transmittance (%)": 85.00, "Wall reflectance (%)": 56.00,"Ceiling reflectance (%)": 65.00,"Details": "View"},
+        081 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 91,"WWR Wall A (%)": 22.00,"WWR Wall B (%)": 48.00,"WWR Wall C (%)": 23.00,"WWR Wall D (%)": 29.00,"Floor U-value (W/m²K)": 2.39,"Roof U-value (W/m²K)": 1.26,"Wall A U-value (W/m²K)": 1.34,"Wall D U-value (W/m²K)": 2.91,"Ground reflectance (%)": 13.00, "Window transmittance (%)": 77.00, "Wall reflectance (%)": 53.00,"Ceiling reflectance (%)": 58.00,"Details": "View"},
+        087 :{ "Energy Demand (kWh/m²/yr)": 0,"UDI-c (%)": 71,"WWR Wall A (%)": 12.00,"WWR Wall B (%)": 13.00,"WWR Wall C (%)": 15.00,"WWR Wall D (%)": 17.00,"Floor U-value (W/m²K)": 2.23,"Roof U-value (W/m²K)": 0.33,"Wall A U-value (W/m²K)": 1.43,"Wall D U-value (W/m²K)": 0.59,"Ground reflectance (%)": 6.00, "Window transmittance (%)": 72.00, "Wall reflectance (%)": 27.00,"Ceiling reflectance (%)": 74.00,"Details": "View"},
+        108 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 89,"WWR Wall A (%)": 17.00,"WWR Wall B (%)": 45.00,"WWR Wall C (%)": 24.00,"WWR Wall D (%)": 25.00,"Floor U-value (W/m²K)": 2.66,"Roof U-value (W/m²K)": 1.82,"Wall A U-value (W/m²K)": 2.04,"Wall D U-value (W/m²K)": 3.20,"Ground reflectance (%)": 5.00, "Window transmittance (%)": 86.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 95.00,"Details": "View"},
+        111 :{ "Energy Demand (kWh/m²/yr)": 4,"UDI-c (%)": 52,"WWR Wall A (%)": 37.00,"WWR Wall B (%)": 68.00,"WWR Wall C (%)": 30.00,"WWR Wall D (%)": 42.00,"Floor U-value (W/m²K)": 2.63,"Roof U-value (W/m²K)": 0.88,"Wall A U-value (W/m²K)": 1.49,"Wall D U-value (W/m²K)": 0.26,"Ground reflectance (%)": 11.00, "Window transmittance (%)": 77.00, "Wall reflectance (%)": 76.00,"Ceiling reflectance (%)": 94.00,"Details": "View"},
+        145 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 73,"WWR Wall A (%)": 31.00,"WWR Wall B (%)": 21.00,"WWR Wall C (%)": 62.00,"WWR Wall D (%)": 45.00,"Floor U-value (W/m²K)": 2.52,"Roof U-value (W/m²K)": 0.92,"Wall A U-value (W/m²K)": 0.82,"Wall D U-value (W/m²K)": 1.38,"Ground reflectance (%)": 13.00, "Window transmittance (%)": 68.00, "Wall reflectance (%)": 25.00,"Ceiling reflectance (%)": 64.00,"Details": "View"},
+        150 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 86,"WWR Wall A (%)": 39.00,"WWR Wall B (%)": 51.00,"WWR Wall C (%)": 20.00,"WWR Wall D (%)": 39.00,"Floor U-value (W/m²K)": 3.47,"Roof U-value (W/m²K)": 2.60,"Wall A U-value (W/m²K)": 1.24,"Wall D U-value (W/m²K)": 2.96,"Ground reflectance (%)": 6.00, "Window transmittance (%)": 65.00, "Wall reflectance (%)": 57.00,"Ceiling reflectance (%)": 53.00,"Details": "View"},
+        154 :{ "Energy Demand (kWh/m²/yr)": 2,"UDI-c (%)": 95,"WWR Wall A (%)": 36.00,"WWR Wall B (%)": 54.00,"WWR Wall C (%)": 16.00,"WWR Wall D (%)": 14.00,"Floor U-value (W/m²K)": 2.41,"Roof U-value (W/m²K)": 0.52,"Wall A U-value (W/m²K)": 1.98,"Wall D U-value (W/m²K)": 0.30,"Ground reflectance (%)": 10.00, "Window transmittance (%)": 51.00, "Wall reflectance (%)": 72.00,"Ceiling reflectance (%)": 93.00,"Details": "View"},
+        156 :{ "Energy Demand (kWh/m²/yr)": 5,"UDI-c (%)": 89,"WWR Wall A (%)": 49.00,"WWR Wall B (%)": 59.00,"WWR Wall C (%)": 16.00,"WWR Wall D (%)": 68.00,"Floor U-value (W/m²K)": 2.29,"Roof U-value (W/m²K)": 0.60,"Wall A U-value (W/m²K)": 0.34,"Wall D U-value (W/m²K)": 0.54,"Ground reflectance (%)": 11.00, "Window transmittance (%)": 46.00, "Wall reflectance (%)": 25.00,"Ceiling reflectance (%)": 61.00,"Details": "View"},
+        168 :{ "Energy Demand (kWh/m²/yr)": 1,"UDI-c (%)": 94,"WWR Wall A (%)": 28.00,"WWR Wall B (%)": 22.00,"WWR Wall C (%)": 29.00,"WWR Wall D (%)": 46.00,"Floor U-value (W/m²K)": 3.52,"Roof U-value (W/m²K)": 1.06,"Wall A U-value (W/m²K)": 1.15,"Wall D U-value (W/m²K)": 1.66,"Ground reflectance (%)": 25.00, "Window transmittance (%)": 42.00, "Wall reflectance (%)": 69.00,"Ceiling reflectance (%)": 77.00,"Details": "View"},
+        171 :{ "Energy Demand (kWh/m²/yr)": 2,"UDI-c (%)": 81,"WWR Wall A (%)": 30.00,"WWR Wall B (%)": 42.00,"WWR Wall C (%)": 55.00,"WWR Wall D (%)": 21.00,"Floor U-value (W/m²K)": 3.07,"Roof U-value (W/m²K)": 0.93,"Wall A U-value (W/m²K)": 2.76,"Wall D U-value (W/m²K)": 0.20,"Ground reflectance (%)": 5.00, "Window transmittance (%)": 89.00, "Wall reflectance (%)": 32.00,"Ceiling reflectance (%)": 64.00,"Details": "View"}
+        };
 
-    var data = d3.entries(types).map(function(d) {
-    var val = d.value;
-    val.Case = d.key;
-    return val;
-    });
-    var parcoords = d3.parcoords()("#example2")
-    .color(color)
-    .alpha(0.6)
-    parcoords
-    .data(data)
-    .color(color)
-    .hideAxis(["Case", "Details"])
-    .render()
-    .reorderable()
-    .brushMode("1D-axes");
-    // slickgrid needs each data element to have an id
-    data.forEach(function(d,i) { d.id = d.id || i; });
-    // setting up grid
-    var column_keys = d3.keys(data);
-    var columns = column_keys.map(function(key,i) {
-    return {
-    id: key,
-    name: key,
-    field: key,
-    sortable: true
-    }
-    });
-    //hyperlinking rows//
-    var column_keys = d3.keys(data[0]);
-    var columns = column_keys.map(function(key,i) {
-    return {
-    name: key,
-    field: key,
-    id: key,
-    sortable: true,
-    formatter: linkFormatter = function ( row, cell, value, columnDef, dataContext ) {
-    return '<a href="#" data-toggle="modal" data-target="#Type1'+ dataContext['id'] +'">'+ value + '</a>';
-    }
-    }});
-    var options = {
-    enableCellNavigation: true,
-    enableColumnReorder: false,
-    multiColumnSort: false,
-    forceFitColumns: true
-    };
-    //remove columns from display
-    columns = columns.slice(0,15);
-    var dataView = new Slick.Data.DataView();
-    var grid = new Slick.Grid("#grid2", dataView, columns, options);
-    var pager = new Slick.Controls.Pager(dataView, grid, $("#pager"));
-    // wire up model events to drive the grid
-    dataView.onRowCountChanged.subscribe(function (e, args) {
-    grid.updateRowCount();
-    grid.render();
-    });
-    dataView.onRowsChanged.subscribe(function (e, args) {
-    grid.invalidateRows(args.rows);
-    grid.render();
-    });
-    // column sorting
-    var sortcol = column_keys[0];
-    var sortdir = 1;
-    // click header to sort grid column
-    grid.onSort.subscribe(function (e, args) {
-    sortdir = args.sortAsc ? 1 : -1;
-    sortcol = args.sortCol.field;
-    //if ($.browser.msie && $.browser.version <= 8) {
-    dataView.fastSort(sortcol, args.sortAsc);
-    });
-    // highlight row in chart
-    grid.onMouseEnter.subscribe(function(e,args) {
-    // Get row number from grid
-    var grid_row = grid.getCellFromEvent(e).row;
-    // Get the id of the item referenced in grid_row
-    var item_id = grid.getDataItem(grid_row).id;
-    var d = parcoords.brushed() || data;
-    // Get the element position of the id in the data object
-    elementPos = d.map(function(x) {return x.id; }).indexOf(item_id);
-    // Highlight that element in the parallel coordinates graph
-    parcoords.highlight([d[elementPos]]);
-    });
-    grid.onMouseLeave.subscribe(function(e,args) {
-    parcoords.unhighlight();
-    });
-    // fill grid with data
-    gridUpdate(data);
-    // update grid on brush
-    parcoords.on("brush", function(d) {
-    gridUpdate(d);
-    });
-    function gridUpdate(data) {
-    dataView.beginUpdate();
-    dataView.setItems(data);
-    dataView.endUpdate();
-    };
+        var data = d3.entries(types).map(function(d) {
+        var val = d.value;
+        val.Case = d.key;
+        return val;
+        });
+        var parcoords = d3.parcoords()("#example2")
+        .color(color)
+        .alpha(0.6)
+        parcoords
+        .data(data)
+        .color(color)
+        .hideAxis(["Case", "Details"])
+        .render()
+        .reorderable()
+        .brushMode("1D-axes");
+        // slickgrid needs each data element to have an id
+        data.forEach(function(d,i) { d.id = d.id || i; });
+        // setting up grid
+        var column_keys = d3.keys(data);
+        var columns = column_keys.map(function(key,i) {
+        return {
+        id: key,
+        name: key,
+        field: key,
+        sortable: true
+        }
+        });
+        //hyperlinking rows//
+        var column_keys = d3.keys(data[0]);
+        var columns = column_keys.map(function(key,i) {
+        return {
+        name: key,
+        field: key,
+        id: key,
+        sortable: true,
+        formatter: linkFormatter = function ( row, cell, value, columnDef, dataContext ) {
+        return '<a href="#" data-toggle="modal" data-target="#Type1'+ dataContext['id'] +'">'+ value + '</a>';
+        }
+        }});
+        var options = {
+        enableCellNavigation: true,
+        enableColumnReorder: false,
+        multiColumnSort: false,
+        forceFitColumns: true
+        };
+        //remove columns from display
+        columns = columns.slice(0,15);
+        var dataView = new Slick.Data.DataView();
+        var grid = new Slick.Grid("#grid2", dataView, columns, options);
+        var pager = new Slick.Controls.Pager(dataView, grid, $("#pager"));
+        // wire up model events to drive the grid
+        dataView.onRowCountChanged.subscribe(function (e, args) {
+        grid.updateRowCount();
+        grid.render();
+        });
+        dataView.onRowsChanged.subscribe(function (e, args) {
+        grid.invalidateRows(args.rows);
+        grid.render();
+        });
+        // column sorting
+        var sortcol = column_keys[0];
+        var sortdir = 1;
+        // click header to sort grid column
+        grid.onSort.subscribe(function (e, args) {
+        sortdir = args.sortAsc ? 1 : -1;
+        sortcol = args.sortCol.field;
+        //if ($.browser.msie && $.browser.version <= 8) {
+        dataView.fastSort(sortcol, args.sortAsc);
+        });
+        // highlight row in chart
+        grid.onMouseEnter.subscribe(function(e,args) {
+        // Get row number from grid
+        var grid_row = grid.getCellFromEvent(e).row;
+        // Get the id of the item referenced in grid_row
+        var item_id = grid.getDataItem(grid_row).id;
+        var d = parcoords.brushed() || data;
+        // Get the element position of the id in the data object
+        elementPos = d.map(function(x) {return x.id; }).indexOf(item_id);
+        // Highlight that element in the parallel coordinates graph
+        parcoords.highlight([d[elementPos]]);
+        });
+        grid.onMouseLeave.subscribe(function(e,args) {
+        parcoords.unhighlight();
+        });
+        // fill grid with data
+        gridUpdate(data);
+        // update grid on brush
+        parcoords.on("brush", function(d) {
+        gridUpdate(d);
+        });
+        function gridUpdate(data) {
+        dataView.beginUpdate();
+        dataView.setItems(data);
+        dataView.endUpdate();
+        };
     </script>
-
-
-
-
-
   </div>
 </div>
-
-
-
-
-
-
-
 
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- Footer -->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 
-<footer class="page-footer font-small indigo" style="background-color:#f1f1f1;">
-  <div class="container">
-    <!-- Grid row-->
-    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-      <!-- Grid column -->
-      <div class="col-md-3 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <a href="../index.html" target="_blank">About the author</a>
-        </h6>
-      </div>
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
+<footer class="ct-footer text-center-lg">
+  <div class="" style="padding-left: 15%;padding-right: 15%;">
+    <ul class="ct-footer-list text-center-lg" style="padding-top: 5%;">
+      <li >
+        <h4 class="text-uppercase font-weight-bold">
+          <a href="index.html" target="_blank">About the author</a>
+        </h4>
+      </li>
+      <li>
+        <h4 class="text-uppercase font-weight-bold">
           <a href="#" data-toggle="modal" data-target="	#downloads">Downloads</a>
-        </h6>
-      </div>
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
+        </h4>
+      </li>
+      <li>
+        <h4 class="text-uppercase font-weight-bold">
           <a href="#" data-toggle="modal" data-target="#Acknowledgement">Acknowledgements</a>
-        </h6>
-      </div>
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
+        </h4>
+      </li>
+      <li>
+        <h4 class="text-uppercase font-weight-bold">
           <a href="#" data-toggle="modal" data-target="	#help">Help</a>
-        </h6>
-      </div>
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">Contact</a>
-        </h6>
-      </div>
-      <!-- Grid column -->
-    </div>
+        </h4>
+      </li>
+      <li>
+        <h4 class="text-uppercase font-weight-bold">
+          <a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com">Contact us</a>
+        </h4>
+      </li>
+    </ul>
     <!-- Line-->
     <hr class="rgba-white-light" style="margin: 0 15%;">
-    <!-- Grid row-->
-    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-      <!-- Grid column -->
-      <div class="col-md-9 col-12 mt-5">
-        <p style="line-height: 1.7rem">
-          This guide is developed as a result of the research work
-          carried out at Loughborough University, United Kingdom.
-          We are currently testing the usability of the this guide. So, only designs for buildings
-          planned to be constructed in the city of Thiruvananthapuram, in Thiruvananthapuram district, provided here.</p>
-      </div>
-    </div>
-    <!-- Line -->
-    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+    <!-- Line-->
+    <ul class="ct-footer-list text-center-lg" >
+      <p style="line-height: 1.7rem; text-align:center">
+        This guide is developed as a result of the research work
+        carried out at Loughborough University, United Kingdom.
+        We are currently testing the usability of the this guide. So, only designs for buildings
+        planned to be constructed in the city of Thiruvananthapuram, in Thiruvananthapuram district, provided here.</p>
+    </ul>
+    <!-- Line-->
+    <hr class="rgba-white-light" style="margin: 0 15%;">
+    <!-- Line-->
+    <ul class="ct-footer-list text-center">
+      <p>&copy; Copyright 2020,
+          <a href="index.html"> Renjith Jayapalan Nair</a></p>
+    </ul>
   </div>
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">&copy; Copyright 2020,
-    <a href="index.html"> Renjith Jayapalan Nair</a>
-  </div>
-  <!-- Copyright -->
 
 </footer>
+
+
+
+
+
+
+
 
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- #Modal-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- /# Details about parallel - coordinates -->
+<div class="content"  style="background-color:#f1f1f1">
+  <div class="modal fade bannerformmodal" tabindex="-1" aria-labelledby="bannerformmodal" aria-hidden="true" id="PC_read_more">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content"><span class="close cursor" data-dismiss="modal" onclick="closeModal()">&times;</span>
+        <div class="modal-header">
+          <h2 style="font-size:24px" align="center">  Parallel Coordinates plot </h2>
+        </div>
+        <div class="modal-body">
+          <p style="width:95%;font-size:24px" align=justify> Parallel Coordinates Plots is type of data visualisation method. They are ideal for comparing many variables together and seeing the relationships between them. In this context, each variable (design parameter) is given its own axis. Each axis is placed parallel to each other and have different scales -- depending on their units. The values are plotted as a series of lines that are interconnected between axes. These interconnections show the relationship between them to produce the corresponding thermal and daylight performance. The variables or the design parameters were selected based on a sensitivity analysis. For the sensitivity analysis, a number of design parameters including of Window-Wall ratio (WWR) for different facades, U-values for walls, windows, roof and floor, reflectance of wall, ceiling, floor, outside ground etc. were considered. For sampling from among these parameters, Morris method was adopted. From the results of the analysis, the most sensitive parameters were selected and were used to produce the parallel coordinates plots.
+          </p>
+          <p style="width:95%;font-size:24px" align=justify>
+            To know more about how to select the design(s) using the parallel coordinates plots, please watch the below video. <br/>
+            <div class="content" id="home" >
+              <div class="text-center">
+                <div id="video-container ">
+                  <video class="video_player" controls id="player" width="80%" >
+                    <source src="../../../../../../../New_method/Videos/Step5.m4v"/>
+                  </video>
+                </div>
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+      <div class="text-center">
+      </div>
+      <div id="myModal" class="modal"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for design images in slickgrid-->
+<div>
+  <div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type10"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 00.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_007_0.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_007_0.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 4 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 53%. This is in between the lower and upper threshold values (28 % and 86 %) respectively.  Thus the design exhibits medium daylight performance. </h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_007.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_007.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_007.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_007.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_007.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_007.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_007_0.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_007_0.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type11"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 01.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_013_1.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_013_1.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 0 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 92%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_013.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_013.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_013.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_013.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_013.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_013.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_013_1.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_013_1.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type12"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 02.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_021_2.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_021_2.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 4 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 98%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_021.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_021.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_021.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_021.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_021.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_021.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_021_2.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_021_2.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type13"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 03.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_022_3.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_022_3.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 1 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 93%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_022.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_022.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_022.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_022.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_022.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_022.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_022_3.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_022_3.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type14"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 04.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_029_4.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_029_4.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 0 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 97%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_029.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_029.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_029.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_029.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_029.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_029.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_029_4.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_029_4.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type15"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 05.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_031_5.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_031_5.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 4 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 86%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_031.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_031.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_031.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_031.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_031.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_031.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_031_5.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_031_5.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type16"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 06.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_032_6.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_032_6.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 4 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 98%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_032.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_032.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_032.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_032.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_032.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_032.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_032_6.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_032_6.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type17"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 07.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_033_7.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_033_7.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 4 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 92%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_033.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_033.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_033.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_033.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_033.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_033.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_033_7.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_033_7.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type18"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 08.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_054_8.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_054_8.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 5 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 76%. This is in between the lower and upper threshold values (28 % and 86 %) respectively.  Thus the design exhibits medium daylight performance. </h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_054.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_054.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_054.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_054.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_054.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_054.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_054_8.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_054_8.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type19"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 09.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_059_9.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_059_9.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 5 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 64%. This is in between the lower and upper threshold values (28 % and 86 %) respectively.  Thus the design exhibits medium daylight performance. </h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_059.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_059.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_059.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_059.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_059.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_059.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_059_9.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_059_9.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type110"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 10.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_081_10.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_081_10.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 4 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 91%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_081.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_081.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_081.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_081.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_081.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_081.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_081_10.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_081_10.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type111"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 11.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_087_11.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_087_11.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 0 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 71%. This is in between the lower and upper threshold values (28 % and 86 %) respectively.  Thus the design exhibits medium daylight performance. </h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_087.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_087.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_087.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_087.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_087.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_087.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_087_11.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_087_11.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type112"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 12.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_108_12.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_108_12.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 4 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 89%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_108.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_108.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_108.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_108.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_108.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_108.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_108_12.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_108_12.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type113"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 13.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_111_13.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_111_13.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 4 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 52%. This is in between the lower and upper threshold values (28 % and 86 %) respectively.  Thus the design exhibits medium daylight performance. </h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_111.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_111.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_111.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_111.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_111.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_111.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_111_13.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_111_13.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type114"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 14.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_145_14.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_145_14.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 5 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 73%. This is in between the lower and upper threshold values (28 % and 86 %) respectively.  Thus the design exhibits medium daylight performance. </h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_145.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_145.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_145.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_145.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_145.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_145.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_145_14.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_145_14.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type115"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 15.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_150_15.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_150_15.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 5 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 86%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_150.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_150.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_150.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_150.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_150.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_150.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_150_15.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_150_15.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type116"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 16.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_154_16.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_154_16.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 2 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 95%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_154.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_154.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_154.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_154.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_154.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_154.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_154_16.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_154_16.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type117"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 17.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_156_17.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_156_17.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 5 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 89%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_156.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_156.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_156.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_156.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_156.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_156.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_156_17.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_156_17.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type118"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 18.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_168_18.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_168_18.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 1 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 94%. This is higher than the upper threshold value (86%).Thus the design exhibits better daylight performance.</h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_168.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_168.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_168.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_168.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_168.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_168.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_168_18.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_168_18.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div><div class="modal fade bannerformmodal"tabindex="-1"aria-labelledby="bannerformmodal"aria-hidden="true"id="Type119"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header" style="background-color:#d2d2d2"><h4 class="modal-title"id="myModalLabel">Design ID - 19.  <br/> Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_171_19.pdf"target="_blank"style="font-size:24px">Executive summary</a></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_171_19.pdf"target="_blank"style="font-size:24px">Design report</a></button></h4></div><div class="modal-body"><h3> The annual total energy demand for heating and cooling for the building design is 2 kWh/m²/yr. This is below the lower threshold value (8 kWh/m²/yr). Thus the design exhibits better thermal performance. </h3><h3> The UDI-c value of the building design is 81%. This is in between the lower and upper threshold values (28 % and 86 %) respectively.  Thus the design exhibits medium daylight performance. </h3><h3 align=justify>The figures presented below shows the comparison of the selected design against the threshold value and also with other designs at the location - Thiruvananthapuram</h3><div class="imgsection1"><img src="Bar/Thermal/Type1_TP_bar_171.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 1: The bar chart shows the thermal performance of the selected design against the threshold performance value in terms of annual total energy demand for the location. The median value of annual total energy demand for heating and cooling for 250 different possible designs at the selected location is also shown.</h4></imgcaption></div><div class="imgsection2"><img src="Bar/Daylight/Type1_DP_bar_171.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 2: The bar chart shows the daylight performance value in terms of UDI-c (%) of the selected design against the threshold performance value for the location. The median value of UDI-c (%) for 250 different possible designs at the selected is also shown.</h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Thermal/Type1_TP_hist_171.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 3: Frequency distribution plot of thermal performance of selected building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Thermal/Type1_TP_hist_171.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 4:  Frequency distribution plot of thermal performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding energy demand for heating and cooling. The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-body"><div class="imgsection1"><img src="Hist/Hist1/Daylight/Type1_DP_hist_171.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 5: Frequency distribution plot of daylight performance of all building designs (250 designs) at the selected location. Each bar represents the number of designs out of 250 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div><div class="imgsection2"><img src="Hist/Hist2/Daylight/Type1_DP_hist_171.jpg"style="width:100%"><imgcaption><h4 align=justify>Figure 6:  Frequency distribution plot of daylight performance of all building designs (750 designs) at the selected location. Each bar represents the number of designs out of 750 with the corresponding UDI-c(%). The bar corresponding to the selected design is marked in red. </h4></imgcaption></div></div><div class="modal-footer" style="background-color:#d2d2d2"><h4>Please click here to download <button class="btn btn-default"><a  href="PDF/EX_Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_171_19.pdf"target="_blank"style="font-size:24px">Executive summary</a> </h4></button> <button class="btn btn-default"><a  href="PDF/Designreport_Thiruvananthapuram_Thiruvananthapuram_Thermal_171_19.pdf"target="_blank"style="font-size:24px">Design report</a> </h4></button> </div><span class="close cursor"data-dismiss="modal"onclick="closeModal()">&times;</span></div></div></div>
+</div>
+
 
 <!-- /# Modal for Updated soon -->
 <div class="content"  >
@@ -382,6 +398,7 @@
 </div>
 
 
+
 <!-- /# help -->
 <div class="content"  >
   <div class="modal fade" id="help" role="dialog">
@@ -389,33 +406,23 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Help - select the location</h4>
+          <h4 class="modal-title">Help - select the design</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <p>The first step is to select the location of interest in Kerala. Kerala
-            is one of the 29 States in India and is located in the south western part
-            of the country between the Arabian sea and the mountain ranges - Western
-            Ghats. The State of Kerala is divided into 14 administrative districts,
-            which are further divided into corporations, municipalities, panchayaths
-            and villages. In this guide each of the administrative bodies are assigned
-            their respective Adaptive Climate Zone. By selecting the location, the
-            designs tailored for their respective climate will be made available.
-            To know how to select the location please watch the below video.
-          </p>
+          <h6 style="font-size:20px;">To know how to select the design, please watch the below video.
+          </h6>
           <div id="video-container ">
-            <video class="video_player" controls id="player" width="100%" >
-                <source src="../New_method/Videos/Step1.m4v"/>
-              </video>
-              <br><br>
-              <p><img src="../New_method/GIFs/CZ_step1.gif" alt="App" style="width:100%"><br/></p>
+            <video class="video_player"  controls muted id="player" width="80%" poster="../../../../../../../New_method/img/Turorial_skip_video_poster.jpeg" >
+              <source src="../../../../../../../New_method/Videos/Step5_1.m4v"/>
+            </video>
               <br><br>
           </div>
-          <p>
+          <h6 style="font-size:20px;">
           For further details, please send us an <button class="large-font btn-default" style="font-size:20px;background-color:gray;color:black">
             <a href = "mailto: r.jayapalan-nair@lboro.ac.uk.com" style="font-size:20px;background-color:gray;color:white">email
               <span class="fas fa-envelope"></span></a></button>
-        </p>
+        </h6>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -437,19 +444,13 @@
           <h4 class="modal-title">Acknowledgements</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
-        <div class="modal-body">
-          <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-          <div class="col-md-7 mb-3">
-            <figure>
-              <img src="../New_method/img/Habitat.png" alt="App" style="width:100%;">
-            </figure>
-          </div>
-          <div class="col-md-7 mb-3">
-            <figure>
-              <img src="../New_method/img/Lboro.jpeg" alt="App" style="width:100%">
-            </figure>
-          </div>
-        </div>
+        <div class="modal-body" align=center>
+          <div id="video-container ">
+              <img src="../../../../../../../New_method/img/Habitat.png" alt="App" style="width:30%;">
+            </div>
+              <div id="video-container ">
+                <img src="../../../../../../../New_method/img/Lboro.jpeg" alt="App" style="width:30%">
+              </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -460,16 +461,163 @@
   </div>
 </div>
 
+
+<!-- /# terminology -->
+
+<div class="content"  >
+  <div class="modal fade bannerformmodal" tabindex="-1" aria-labelledby="bannerformmodal" aria-hidden="true" id="terms">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header"><span class="close cursor" data-dismiss="modal" onclick="closeModal()">&times;</span>
+          <h2 style="font-size:30px" align="center"> <b> Terminologies </b></h2>
+        </div>
+        <div class="modal-body">
+          <p style="width:95%"  align= left>
+            <h2 style="font-size:24px; text-aligh:center"; align="justify">
+              <b>Thermal performance - Energy demand</b>
+            </h2>
+            <p style="width:95%;align=justify">
+              <p style="font-size:20px;width:95%"  align=justify> The thermal performance of the buildings were assessed by carrying out building performance simulations using EnergyPlus v8.9 software. In this study, the whole building was assumed as a single thermal zone.  The HVAC template in the model was defined using Packaged Terminal Air Conditioner (PTAC) where as ventilation was defined using airflow network. The thermostat set point temperatures for heating and cooling were defined based on adaptive thermal comfort model. This was because the latest version of the Nation Building Code of India (NBC) had adopted the Indian Model of Adaptive Comport (IMAC) for specifying the comfort conditions inside the building. According to the IMAC model, for mixed-mode ventilated buildings the neutral/comfort temperatures are calculated using the equation:</br>
+              T_c=0.28T_o+17.9</br>
+              where T_c is the neutral/comfort temperature in degree Celsius and T_o is the 30-day outdoor running mean air temperature ranging from 13°C  to 38.5°C .  The limits of 90% acceptability are ±3.5°C. The upper and lower limits of 90% acceptability comfort/neutral temperature were calculated using IMAC model and were used as set point temperatures for cooling and heating respectively.</br>
+              The building was modelled to have mixed mode ventilation and the ventilation was controlled by opening the windows (at an angle of 90°) when both mean zone and outside air temperature were within the IMAC acceptability comfort limits (90%). The buildings were also modelled to have ceiling fans which were functional when the indoor zone temperature was above 25°C and when the HVAC was not ON. The use of ceiling fans is considered as one of the main mechanisms in Warm-Humid climates to improve the indoor thermal comfort. When ceiling fans were in operation the cooling set points (i.e. IMAC 90% acceptability upper limit) were offset by 2.2°C. Energy Management System (EMS) programs were written to define the ventilation and ceiling operation schedules. For assessing the building performances, only annual heating and cooling energy demands were considered.  More details will be provided in the design report.</br>
+              </p>
+            </p>
+          </p>
+          <p style="width:95%"  align= left>
+            <h2 style="font-size:24px; text-aligh:center"; align="justify">
+              <b>Daylight performance - Useful Daylight Illuminance - combined</b>
+            </h2>
+            <p style="width:95%"align="justify">
+              <p style="font-size:20px; text-aligh:center"; align="justify"> A number of Radiance-based methods are available to perform Climate-Based Daylight Modelling (CBDM). The simulations were run with 2-Phase method. Since the study does not involve complex glazing systems, 2-Phase method (with higher sky resolution) was used to assess the daylight performance of buildings.</br>
+                The climate-based metric Useful Daylight Illuminance (UDI) was used to assess daylighting performance. The simulations were run with 2-Phase method. UDI was calculated in terms of UDI not achieved (UDI-n), UDI combined (UDI-c) and UDI exceeded (UDI-e).
+                <ul>
+                  <li style="font-size:20px; text-aligh:center"; align="justify">UDI-n was calculated as the percentage of annual occupied hours for which the illuminance values are less than 100 lux. </li>
+                  <li style="font-size:20px; text-aligh:center"; align="justify"> UDI-c was calculated as the percentage of annual occupied hours for which the illuminance values falls between 100 lux and 3000 lux and </li>
+                  <li style="font-size:20px; text-aligh:center"; align="justify"> UDI-e was calculated as the percentage of annual occupied hours for which the illuminance values are greater than 3000 lux. </li>
+                </ul>
+                <p style="font-size:20px; text-aligh:center"; align="justify">
+                The time schedule 08:00-17:00 (without considering daylight saving time) was used as occupancy period. The sensor grid points were placed at a (horizontal) working plane height of 0.8 m above the floor level and 0.25 m from the surrounding walls. Results from each UDI range were obtained for all sensor points on the working plane, and then averaged.
+                </p>
+              </p>
+            </p>
+          </p>
+          <p style="width:95%"  align= left>
+            <h2 style="font-size:24px; text-aligh:center"; align="justify">
+                <b>U-values (W/m²K)</b>
+            </h2>
+            <p style="width:95%"align="justify">
+              <p style="font-size:20px; text-aligh:center"; align="justify"> U-value is the measure of the heat transmission through a material (or a combination of materials). The U-values are expressed in W/m²K. Lower the U-value, better the insulation. For development of this design guide, the U-values for walls, windows, roof and floor were considered. The U-values for walls and windows were considered separately for the different facades. The design parameters (with U-values) provided in the parallel coordinates plot are only for the sensitive ones. For the other facades, the designer can choose materials his/her desired/preferred  U-values. Some of the common material and their U-values are provided in the Energy Conservation Building Code of India.
+              </p>
+            </p>
+          </p>
+          <p style="width:95%"  align= left>
+            <h2 style="font-size:24px; text-aligh:center"; align="justify">
+              <b>Window-Wall Ratio (WWR)</b>
+            </h2>
+            <p style="width:95%"align="justify">
+              <p style="font-size:24px; text-aligh:center"; align="justify"> Window-Wall Ratio maybe defined as the ratio of total area of window to the total area of the exterior wall. For the simulations, the WWR were varied separately for different facades. So, the WWR in this context maybe defined as the ratio of total area of windows in a particular facade to the total area of exterior wall in that facade.</br>
+                <img src="../../../../../../New_method/img/WWR_template.jpeg" style="width:30%"  alt="Type 1">
+              </p>
+            </p>
+          </p>
+          <p style="width:95%"  align= left>
+            <h2 style="font-size:24px; text-aligh:center"; align="justify">
+              <b>Reflectance (%)</b>
+            </h2>
+            <p style="width:95%"align="justify">
+              <p style="font-size:20px; text-aligh:center"; align="justify"> The reflectance of a material is the ability of the material to reflect the energy incident on its surface. The reflectance of a material is the ratio of the light reflected to the light incident. This value can be used to describe the nature of a surface in terms of the surface finish. The reflectance values is presented in terms of percentages (%).</br>
+              </p>
+            </p>
+          </p>
+          <p style="width:95%"  align= left>
+            <h2 style="font-size:24px; text-aligh:center"; align="justify">
+              <b>Transmittance (%)</b>
+            </h2>
+            <p style="width:95%"align="justify">
+              <p style="font-size:20px; text-aligh:center"; align="justify"> The transmittance is the ratio of the light passing through to the light incident on the material. The transmittance values is presented in terms of percentages (%).</br>
+              </p>
+            </p>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+    </div>
+    <div id="myModal" class="modal">
+    </div>
+  </div>
+</div>
+
+
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- #javascript-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
-<!-- #Welcome modal-->
+
 <script>
-	$(document).ready(function(){
-		$("#myModal").modal('show');
-	});
+$(document).ready(function(){
+// hide .navbar first
+$(".topper").hide();
+// fade in .navbar
+$(function () {
+$(window).scroll(function () {
+// set distance user needs to scroll before we fadeIn navbar
+if ($(this).scrollTop() > 1000) {
+$('.topper').fadeIn();
+} else {
+$('.topper').fadeOut();
+}});});});
+</script>
+
+<!-- #Welcome modal-->
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
 </script>
 
 
+<!-- Script to close Welcome Window start-->
+<script>
+window.onload = function () {
+d3.selectAll(".popupWindowClose")
+.on("click", function () {
+d3.selectAll(".popupWindow")
+.style("display", "none");
+});
+};
+</script>
+<!-- Script to play video-->
+<script type="text/javascript">
+function goFullscreen(id) {
+var element = document.getElementById(id);
+if (element.mozRequestFullScreen) {
+element.mozRequestFullScreen();
+} else if (element.webkitRequestFullScreen) {
+element.webkitRequestFullScreen();
+}
+}
+</script>
+
 </body>
 </html>
+
+
+<!-- Hide content till everything loads -->
+<!--
+<style media="screen">
+#load{width:100%;height:100%;position:fixed;z-index:9999;background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center rgba(0,0,0,0.25)}
+</style><div class="" id="load"></div>
+<script type="text/javascript">
+document.onreadystatechange = function () {
+var state = document.readyState
+if (state =='interactive') {
+document.getElementById('contents').style.visibility="hidden";
+} else if (state =='complete') {
+setTimeout(function(){
+document.getElementById('interactive');
+document.getElementById('load').style.visibility="hidden";
+document.getElementById('contents').style.visibility="visible";
+},1000);}}
+</script>-->
+<!-- Hide content till everything loads -->
