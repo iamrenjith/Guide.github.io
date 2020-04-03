@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Guide - new layout</title>
+<title>Guide - Home</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -69,6 +69,18 @@
 </div>
 
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- /#Inroduction video-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<div class="content"  id="home">
+      <div class="text-center" >
+          <div id="video-container " >
+            <video class="video_player" playsinline autoplay muted id="player" width="100%"  poster="New_method/img/Welcome.jpeg" >
+                <source src="New_method/Videos/Welcome.m4v"/>
+              </video>
+          </div>
+      </div>
+</div>
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- Navbar-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
@@ -79,24 +91,12 @@
       </a>
 </nav>
 
-<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
-<!-- /#Inroduction video-->
-<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
-<div class="content"  id="home">
-      <div class="text-center" >
-          <div id="video-container " >
-            <video class="video_player" playsinline autoplay muted id="player" width="100%"  poster="New_method/img/Turorial_poster.jpeg" >
-                <source src="New_method/Videos/Turorial_mov.m4v"/>
-              </video>
-          </div>
-      </div>
-</div>
 
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- #About the guide-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 
-<div class="container">
+<div class="container" id="jump">
   <div class="jumbotron">
     <h1 align="center" style="color:red;">About the guide</h1>
     <p>This is a residential building design guide which is developed to assist during the early stages,
@@ -356,71 +356,6 @@
 
 
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
-<!-- #javascript-->
-<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
-<!-- #Welcome modal-->
-<script>
-	$(document).ready(function(){
-		$("#myModal").modal('show');
-	});
-</script>
-
-<!-- #Video full screen-->
-<script type="text/javascript">
-  var $video  = $('video'),
-    $window = $(window);
-
-$(window).resize(function(){
-    var height = $window.height();
-    $video.css('height', height);
-
-    var videoWidth = $video.width(),
-        windowWidth = $window.width(),
-    marginLeftAdjust =   (windowWidth - videoWidth) / 2;
-
-    $video.css({
-        'height': height,
-        'marginLeft' : marginLeftAdjust
-    });
-}).resize();
-
-</script>
-
-<!-- #Google maps-->
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-                <script src="https://maps.googleapis.com/maps/api/js"></script>
-            <script>
-                function initialize() {
-                    var map_canvas = document.getElementById('map_canvas');
-                    var map_options = {
-                        center: new google.maps.LatLng(10,76),
-                        zoom: 7,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                    }
-                    var map = new google.maps.Map(map_canvas, map_options);
-                }
-                google.maps.event.addDomListener(window, 'load', initialize);
-            </script>
-
-<!-- scroll to top -->
-<script>
-    $(document).ready(function(){
-  	// hide .navbar first
-  	$(".topper").hide();
-  	// fade in .navbar
-  	$(function () {
-  		$(window).scroll(function () {
-              // set distance user needs to scroll before we fadeIn navbar
-  			if ($(this).scrollTop() > 500) {
-  				$('.topper').fadeIn();
-  			} else {
-  				$('.topper').fadeOut();
-  			}
-  		});
-  	});
-  });
-</script>
-<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- #Modal-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 
@@ -645,18 +580,51 @@ $(window).resize(function(){
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-          <div class="col-md-7 mb-3">
-            <figure>
-              <img src="New_method/img/Habitat.png" alt="App" style="width:100%;">
-            </figure>
+          <!-- /#Meet the team-->
+          <div class="text-center">
+            <h2 style="color:red;">Research supervisors</h2><br>
+          <div class="row" align=center>
+          <div class="col-sm-1" ></div>
+          <div class="col-sm-3" >
+                  <img src="New_method/img/Contacts/John.jpg" alt="Avatar" class="image"style="width:100%">
+                    <div ><a href="https://www.lboro.ac.uk/departments/abce/staff/john-mardaljevic/" style="color:black;">Prof. John Mardaljevic</a></div>
+                    <!--<h6>Professor of Building Daylight Modelling</h6>
+                    <h6 >Loughborough University, United Kingdom </h6>-->
           </div>
-          <div class="col-md-7 mb-3">
-            <figure>
-              <img src="New_method/img/Lboro.jpeg" alt="App" style="width:100%">
-            </figure>
+          <div class="col-sm-3" >
+                <img src="New_method/img/Contacts/Christina.jpg" alt="Avatar" class="image"style="width:100%">
+                  <div ><a href="https://uk.linkedin.com/in/christina-hopfe-9669439" style="color:black;">Prof. Christina Hopfe </a></div>
+                  <!--<h6 >Professor/ Chair of Building Physics</h6>
+                  <h6 >Graz University of Technology, Austria </h6>-->
           </div>
-        </div>
+          <div class="col-sm-3" >
+                <img src="New_method/img/Contacts/Eleonora.jpg" alt="Avatar" class="image"style="width:100%">
+                  <div><a href="https://www.lboro.ac.uk/departments/abce/staff/eleonora-brembilla/" style="color:black;">Dr. Eleonora Brembilla </a></div>
+                  <!--<h6 >Professor/ Chair of Building Physics</h6>
+                  <h6 >Loughborough University, United Kingdom </h6>-->
+          </div>
+          <div class="col-sm-1" ></div>
+          </div>
+          </div>
+          <br>
+          <br>
+          <div class="text-center">
+            <h2 style="color:red;">Supporting Organisation/University</h2><br>
+          <div class="row" align=center>
+            <div class="col-sm-1" ></div>
+              <div class="col-sm-3" >
+                  <img src="New_method/img/Habitat.png" alt="Avatar" class="image"style="width:100%">
+              </div>
+              <div class="col-sm-3" >
+                  <img src="New_method/img/KIIDC.png" alt="Avatar" class="image"style="width:100%">
+              </div>
+              <div class="col-sm-3" >
+                <img src="New_method/img/Lboro.jpeg" alt="Avatar" class="image"style="width:100%">
+              </div>
+              <div class="col-sm-1" ></div>
+          </div>
+          </div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -666,6 +634,88 @@ $(window).resize(function(){
     </div>
   </div>
 </div>
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #javascript-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Welcome modal-->
+<script>
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
+
+<!-- #Video full screen-->
+<script type="text/javascript">
+  var $video  = $('video'),
+    $window = $(window);
+
+$(window).resize(function(){
+    var height = $window.height();
+    $video.css('height', height);
+
+    var videoWidth = $video.width(),
+        windowWidth = $window.width(),
+    marginLeftAdjust =   (windowWidth - videoWidth) / 2;
+
+    $video.css({
+        'height': height,
+        'marginLeft' : marginLeftAdjust
+    });
+}).resize();
+
+</script>
+
+<!-- #Google maps-->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+                <script src="https://maps.googleapis.com/maps/api/js"></script>
+            <script>
+                function initialize() {
+                    var map_canvas = document.getElementById('map_canvas');
+                    var map_options = {
+                        center: new google.maps.LatLng(10,76),
+                        zoom: 7,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    }
+                    var map = new google.maps.Map(map_canvas, map_options);
+                }
+                google.maps.event.addDomListener(window, 'load', initialize);
+            </script>
+
+<!-- scroll to top -->
+<script>
+    $(document).ready(function(){
+  	// hide .navbar first
+  	$(".topper").hide();
+  	// fade in .navbar
+  	$(function () {
+  		$(window).scroll(function () {
+              // set distance user needs to scroll before we fadeIn navbar
+  			if ($(this).scrollTop() > 500) {
+  				$('.topper').fadeIn();
+  			} else {
+  				$('.topper').fadeOut();
+  			}
+  		});
+  	});
+  });
+</script>
+
+<!-- #Scroll after video-->
+
+<script type="text/javascript">
+$(document).ready(function () {
+ var myVideo = $('video').first().get(0);
+ myVideo.addEventListener('loadeddata', function() {
+   setTimeout( function() {
+     $('html, body').animate({
+       scrollTop: $('#jump').offset().top
+     }, 2000);
+   }, 14000);
+ }, false);
+});
+</script>
 
 
 </body>

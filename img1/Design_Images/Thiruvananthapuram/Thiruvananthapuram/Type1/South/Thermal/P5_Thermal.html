@@ -32,6 +32,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../../../New_method/CSS_new/scroll_results.css">
 <style media="screen">.modal{opacity: 1 !important;}.navbar {position: fixed;z-index: 100;width:100%;top:0;}.popupWindow,.modal-backdrop{background-color: rgba(0, 0, 0, .8);}</style>
 <style media="screen">/* Footer style */.ct-footer {background-color: #f1f1f1;margin-top: 20px;position: relative;}.ct-footer-list {padding: 10px 10px;display: table;width: 100%;}/* Media Queries */@media (min-width:1200px) {.ct-footer-pre {display: table;}.ct-footer-pre > .inner {display: table-cell;vertical-align: middle;}.ct-footer-list > li {width: 10%;display: table-cell;vertical-align: top;}.ct-footer-list > li:last-child {width: 7%;}}@media (max-width: 1199px) {.ct-footer-list > li {display: inline-block;float: left;}}@media (min-width:992px) {.ct-footer-post .inner-left {float: left;}.ct-footer-post .inner-right {float: right;}}@media (max-width:991px) {.ct-footer-post {text-align: center;}}@media (min-width: 768px) and (max-width: 1199px) {.ct-footer-list > li {width: 33.3333%;}}@media (min-width:768px) {.ct-footer-post p {display: inline-block;}}@media (min-width: 480px) and (max-width:767px) {.ct-footer-list > li {width: 50%;}}@media (max-width:479px) {.ct-footer-list > li {width: 100%;text-align: center;}.ct-footer-list {padding: 20px 0;}}</style>
+<style media="screen">.topper {position: fixed;top: 75%;right: 0;font-size: 20px;cursor: pointer;background-color: gray;opacity: 0.8;color: white;padding: 10px 15px;border: none;transform: rotate(-90deg);opacity: .5;}.topper a {font-size: 20px;color: grey;text-align: center;padding: 10px 10px;text-decoration: none;}.topper a:hover {color: white;background-color: white;}</style>
 
 </head>
 <body>
@@ -135,7 +136,7 @@
       <a href="#1navbar1"><img src="../../../../../../../New_method/img/T1_S.jpeg"   class="hover-shadow cursor" alt="Type 1"></a>
       </div>
       <div class="section1">
-      <a href="#1navbar1"><img src="../../../../../../../New_method/img/Type-1i.jpeg"   class="hover-shadow cursor" alt="Type 2"></a>
+      <a href="#1navbar1"><img src="../../../../../../../New_method/img/Type-1i.jpeg"   class="hover-shadow cursor" alt="Type 1"></a>
       </div>
     </div>
   </div>
@@ -277,6 +278,12 @@
     </script>
   </div>
 </div>
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Scroll to top-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<a href="#top"> <button class="topper topbtn" >Top</button></a>
 
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- Footer -->
@@ -450,16 +457,46 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Acknowledgements</h4>
+          <h2 class="modal-title">Acknowledgements</h2>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body" align=center>
-          <div id="video-container ">
-              <img src="../../../../../../../New_method/img/Habitat.png" alt="App" style="width:30%;">
-            </div>
-              <div id="video-container ">
-                <img src="../../../../../../../New_method/img/Lboro.jpeg" alt="App" style="width:30%">
+          <div class="partiton" >
+            <h2 style="color:red;">Research supervisors</h2>
+          <div class="part1" >
+                  <img src="../../../../../../../New_method/img/Contacts/John.jpg" alt="Avatar" class="image"style="width:50%">
+                    <h3 ><a href="https://www.lboro.ac.uk/departments/abce/staff/john-mardaljevic/" style="color:black;">Prof. John Mardaljevic</a></h3>
+                    <!--<h6>Professor of Building Daylight Modelling</h6>
+                    <h6 >Loughborough University, United Kingdom </h6>-->
+          </div>
+          <div class="part1" >
+                <img src="../../../../../../../New_method/img/Contacts/Christina.jpg" alt="Avatar" class="image"style="width:50%">
+                  <h3><a href="https://uk.linkedin.com/in/christina-hopfe-9669439" style="color:black;">Prof. Christina Hopfe </a></h3>
+                  <!--<h6 >Professor/ Chair of Building Physics</h6>
+                  <h6 >Graz University of Technology, Austria </h6>-->
+          </div>
+          <div class="part1" >
+                <img src="../../../../../../../New_method/img/Contacts/Eleonora.jpg" alt="Avatar" class="image"style="width:50%">
+                  <h3><a href="https://www.lboro.ac.uk/departments/abce/staff/eleonora-brembilla/" style="color:black;">Dr. Eleonora Brembilla </a></h3>
+                  <!--<h6 >Professor/ Chair of Building Physics</h6>
+                  <h6 >Loughborough University, United Kingdom </h6>-->
+          </div>
+          </div>
+
+          <h2 style="color:red;">Supporting Organisation/University</h2>
+            <div class="partiton" >
+
+                <div class="part1">
+                  <img src="../../../../../../../New_method/img/Habitat.png" alt="Avatar" class="image"style="width:50%">
               </div>
+                <div class="part1">
+                  <img src="../../../../../../../New_method/img/KIIDC.png" alt="Avatar" class="image"style="width:50%">
+              </div>
+                <div class="part1">
+                <img src="../../../../../../../New_method/img/Lboro.jpeg" alt="Avatar" class="image"style="width:50%">
+              </div>
+
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -563,19 +600,23 @@
 <!-- #javascript-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 
+<!-- scroll to top -->
 <script>
-$(document).ready(function(){
-// hide .navbar first
-$(".topper").hide();
-// fade in .navbar
-$(function () {
-$(window).scroll(function () {
-// set distance user needs to scroll before we fadeIn navbar
-if ($(this).scrollTop() > 1000) {
-$('.topper').fadeIn();
-} else {
-$('.topper').fadeOut();
-}});});});
+    $(document).ready(function(){
+  	// hide .navbar first
+  	$(".topper").hide();
+  	// fade in .navbar
+  	$(function () {
+  		$(window).scroll(function () {
+              // set distance user needs to scroll before we fadeIn navbar
+  			if ($(this).scrollTop() > 500) {
+  				$('.topper').fadeIn();
+  			} else {
+  				$('.topper').fadeOut();
+  			}
+  		});
+  	});
+  });
 </script>
 
 <!-- #Welcome modal-->
