@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<style media="screen">
+#respond {
+margin-top: 40px;
+}
+
+#respond input[type='text'],
+#respond input[type='email'],
+#respond textarea {
+margin-bottom: 10px;
+display: block;
+width: 100%;
+
+border: 1px solid rgba(0, 0, 0, 0.1);
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-o-border-radius: 5px;
+-ms-border-radius: 5px;
+-khtml-border-radius: 5px;
+border-radius: 5px;
+
+line-height: 1.4em;
+}
+</style>
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Building Simulation and Optimization 2020</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+	 			<script type= "text/javascript">
+	 			function getYouTubeInfo() {
+	 							$.ajax({
+	 											url: "http://gdata.youtube.com/feeds/api/videos/art3Z2Ywg0o?v=2&alt=json",
+	 											dataType: "jsonp",
+	 											success: function (data) { parseresults(data); }
+	 							});
+	 			}
+
+	 			function parseresults(data) {
+	 							var title = data.entry.title.$t;
+	 							var description = data.entry.media$group.media$description.$t;
+	 							var viewcount = data.entry.yt$statistics.viewCount;
+	 							var author = data.entry.author[0].name.$t;
+	 							$('#title').html(title);
+	 							$('#description').html('<b>Description</b>: ' + description);
+	 							$('#extrainfo').html('<b>Author</b>: ' + author + '<br/><b>Views</b>: ' + viewcount);
+	 							getComments(data.entry.gd$comments.gd$feedLink.href + '&max-results=50&alt=json', 1);
+	 			}
+
+	 			function getComments(commentsURL, startIndex) {
+	 							$.ajax({
+	 											url: commentsURL + '&start-index=' + startIndex,
+	 											dataType: "jsonp",
+	 											success: function (data) {
+	 											$.each(data.feed.entry, function(key, val) {
+	 															$('#comments').append('<br/>Author: ' + val.author[0].name.$t + ', Comment: ' + val.content.$t);
+	 											});
+	 											if ($(data.feed.entry).size() == 50) { getComments(commentsURL, startIndex + 50); }
+	 											}
+	 							});
+	 			}
+
+	 			$(document).ready(function () {
+	 							getYouTubeInfo();
+	 			});
+	 			</script>
+	</head>
+
+	<body> <!-- style="background-color:hsla(0,0%,90%,1.00)">-->
+		<nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+			<div class="container">
+				<button class="navbar-toggler" type="button"
+				  data-toggle="collapse" data-target="#myTogglerNav"
+				  aria-controls="myTogglerNav"
+				  aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">BSO-V 2020</a>
+				<div class="collapse navbar-collapse" id="myTogglerNav">
+					<div class="navbar-nav ml-auto">
+						<a class="nav-item nav-link active" href="index.html">Home</a>
+						<a class="nav-link" href="#authors">Authors</a>
+                        <a class="nav-item nav-link" href="#industry">Practioners</a>
+                        <a class="nav-item nav-link" href="#committees">People</a>
+						<a class="nav-item nav-link" href="#contact">Contact Us</a>
+					</div><!-- navbar -->
+				</div><!-- collapse -->
+			</div><!-- container -->
+		</nav><!-- nav -->
+
+		<header>
+			<div class="container-fluib mb-0 mt-5" id="banner"
+					 style="height: 150px;
+							background: url('images/BSO20_header.jpg') no-repeat right center;
+							background-size: cover;
+							margin-bottom: 20px;
+							">
+			</div>
+			<div class="jumbotron mb-0">
+				<div class="container text-center">
+					<h1 class="display-5">Building Simulation and Optimization 2020</h1>
+                    <p class="h5">September 21<sup>st</sup> and 22<sup>nd</sup> 2020</p>
+                    <p class="h5">IBPSA England's First Virtual Conference</p>
+					<p>Hosted by the Building Energy Research Group at Loughborough University</p>
+				</div>
+			</div>
+
+
+	 <div align="center">
+                <br/><br/>
+                <div id="title" style="color: #dddddd">Could not find a title</div><br/>
+                <iframe title="Youtube Video Player" width="640" height="390" src="http://www.youtube.com/embed/art3Z2Ywg0o?fs=1&autoplay=1&loop=0" frameborder="0" allowfullscreen style="border: 1px solid black"></iframe>
+                <br/><br/>
+                <div id="description" style="width:400px; background-color: #dddddd; font-size:10px; text-align:left;">Could not find a description</div>
+                <div id="extrainfo" style="width:400px; background-color: #dddddd; font-size:10px; text-align:left;">Could not find extra information</div>
+                <div id="comments" style="width:400px; background-color: #dddddd; font-size:10px; text-align:left;">Could not find comments</div>
+        </div>
+				<?php
+require('Persistence.php');
+
+$db = new Persistence();
+if( $db->add_comment($_POST) ) {
+  header( 'Location: index.php' );
+}
+else {
+  header( 'Location: index.php?error=Your comment was not posted due to errors in your form submission' );
+}
+?>
+				<div id="respond">
+
+				  <h3>Leave a Comment</h3>
+
+				  <form action="post_comment.php" method="post" id="commentform">
+
+				    <label for="comment_author" class="required">Your name</label>
+				    <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
+
+				    <label for="email" class="required">Your email;</label>
+				    <input type="email" name="email" id="email" value="" tabindex="2" required="required">
+
+				    <label for="comment" class="required">Your message</label>
+				    <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
+
+				    <-- comment_post_ID value hard-coded as 1 -->
+				    <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+				    <input name="submit" type="submit" value="Submit comment" />
+
+				  </form>
+
+				</div>
+
+		</header>
+
+		<main>
+			<article id="about">
+				<div class="container-fluid mr-0 text-light bg-dark">
+					<div class="row">
+                        <div class="col-md-4 p-4">
+							<h1 class="h2">BSO-V 2020</h1>
+
+                            <p>This Building Simulation and Optimization conference 2020 will be IBPSA England's first virtual conference. We are excited to develop an innovative approach for exchanging knowledge and ideas in response to the impacts of COVID-19. </p>
+
+				        </div><!--col-->
+						<div class="col-md-4" style="height: auto;
+									background: url('images/bso_wordcloud_.png') no-repeat center center;
+									background-size: cover;">
+						</div><!--col-->
+						<div class="col-md-4">
+							<a class="twitter-timeline" data-width="300" data-height="300" data-theme="light" href="https://twitter.com/BsOconference?ref_src=twsrc%5Etfw">Tweets by BsOconference</a>
+							<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						</div>
+					</div><!--row-->
+				</div><!--container-fluid-->
+			</article>
+
+            <article id="virtual conference">
+                <div class="jumbotron mb-0">
+					<div class="container text-center">
+						<h1 class="display-5">What is a Virtual Conference?</h1>
+					</div>
+                    <div class="container text-center">
+                        <p> A virtual conference is a curated series of webinars, online meet-ups, and one-to-one chats to enable the exchange of knowledge, creation of new networks and generation of innovative ideas.</p>
+                        <h2 class="display-6">Benefits of a Virtual Conference</h2>
+                    </div>
+                    <div class="row">
+					    <div class="col-sm-3 p-2">
+                            <div class="container-fluid" style="height:30%;">
+                                <img src="images/camerats.png" class="img-thumbnail" />
+                            </div>
+                            <p>Recorded Presentations available to conference attendees </p>
+				        </div>
+						<div class="col-sm-3 p-2">
+                            <div class="container-fluid" style="height:30%;">
+                                <img src="images/globes.png" class="img-thumbnail" />
+                            </div>
+                            <p>Broaden Your Reach. Attendees can participate from all
+						</div><!--col-->
+                        <div class="col-sm-3 p-2">
+                            <div class="container-fluid" style="height:30%;">
+                                <img src="images/handshakets.png" class="img-thumbnail" />
+                            </div>
+                            <p>Connect with more people through facilitated networking</p>
+				        </div><!--col-->
+                        <div class="col-sm-3 p-2">
+                            <div class="container-fluid" style="height:30%;">
+                                <img src="images/co2s.png" class="img-thumbnail" />
+                            </div>
+                            <p>Reduce greenhouse gas emissions from reduced air travel</p>
+				        </div><!--col-->
+                        <span id="authors">&nbsp;</span>
+					</div><!--row-->
+                </div>
+
+			</article>
+
+			<article >
+
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-4 " style="height: auto;
+									background: url('images/pen.jpg') no-repeat center center;
+									background-size: cover;
+									">
+                            <!--<img src="images/pen.jpg" class="img-fluid"/>-->
+						</div><!--col-->
+						<div class="col ">
+							<h1 class="h3 pt-3">Authors Instructions</h1>
+                            <p>The full papers should be between 6 and 8 pages long.
+						The abstract should include the papers objectives, research methods,
+						and novelty. More details can be found in either the word or
+						Latex templates.</p>
+                            <h2 class="h3"> Key Dates</h2>
+                            <p>Paper submission deadline: 24 May 2020
+                            <br>Paper review result: TBD
+                            <br>Final paper submission: TBD
+                            <br>Final paper decision: TBD</p>
+                            <div class="container py-2">
+						      <a href="docs/BS02020_Paper_format_guide.docx"
+						          class="btn btn-primary mb-2"
+						          download>
+							     Full paper template - MS Word
+						      </a>
+						      <a href="docs/paper_latex_BSO2020.zip"
+						          class="btn btn-primary mb-2"
+						          download>
+							     Full paper template - LaTeX
+						      </a>
+                              <a href="https://www.conftool.pro/bso2020/" class="btn btn-primary mb-2">
+								    Submit Paper
+                              </a>
+					        </div>
+                            <div class="container-fluid">
+                                <h2 class="h4"> Journal of Building Performance Simulation Special Issue</h2>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>The best BSO papers will be invited to contribute to a special issue of the Journal of Building Performance Simulation. More information about the special issue will be provided soon.
+                                        <span id="industry">&nbsp;</span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+						</div><!--col-->
+					</div><!--row-->
+				</div><!--container-->
+
+			</article>
+            <article>
+				<div class="container-fluid" style="background-color: #e9ecef;">
+					<div class="row">
+						<div class="col ">
+							<h1 class="h3 pt-4">Call for Practitioner Presentations</h1>
+							<p>Are you working in the field of Building Design and Simulation?
+								Do you use optimization or parametric design tools?
+								Present your latest work at the conference.</p>
+							<p>Abstracts due: 15 July 2020<br>Submissions due: 9 August 2020</p>
+							<p>Please submit an abstract of 500 words that describes your
+								modelling or experimental objectives, the methods
+								employed, and the novelty of the outcomes</p>
+							<a href="https://www.conftool.pro/bso2020/" class="btn btn-primary mb-4">
+								Submit an abstract</a>
+                            <span id="committees">&nbsp;</span>
+						</div><!--col-->
+
+                        <div class="col-sm-4 m-0 p-0 d-none d-sm-block"
+							 style="height: auto;
+									background: url('images/AdobeStock_100028105_web.jpg') no-repeat center center;
+									background-size: cover;
+									margin-bottom: 20px;">
+
+						</div><!--col-->
+					</div><!--row-->
+				</div><!--container-->
+			</article>
+
+            <article id="com">
+                <div class="container-fluid text-center">
+                    <h1 class="h3 py-3">Conference Chairs</h1>
+                </div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col">
+							<p class="h6">Conference Chair</p>
+							<p>
+								Dr. Bianca Howard<br>
+								Loughborough University<br>
+
+							</p>
+						</div><!--col-->
+                        <div class="col">
+							<p class="h6">Scientific Co-Chair</p>
+							<p>
+								Dr. Eleonora Brembilla<br>
+								Loughborough University<br>
+
+							</p>
+						</div><!--col-->
+                        <div class="col">
+							<p class="h6">Scientific Co-Chair</p>
+							<p>
+								Dr. Argyris Oraiopoulos<br>
+								Loughborough University<br>
+
+							</p>
+						</div><!--col-->
+					</div><!--row-->
+				</div><!--container-->
+
+                <div class="container-fluid text-center" >
+                    <h1 class="h3 pt-3">Organising Committee</h1>
+                </div>
+                <div class="container-fluid pt-3">
+					<div class="row ">
+						<div class="col">
+							<p>
+								Prof. Malcolm Cook<br>
+								Loughborough University<br>
+
+							</p>
+						</div><!--col-->
+                        <div class="col">
+							<p>
+								Prof. Jonathan Wright<br>
+								Loughborough University<br>
+
+							</p>
+						</div><!--col-->
+                        <div class="col">
+							<p>
+								Dr. Ruchi Choudhary<br>
+								Cambridge University<br>
+
+							</p>
+						</div><!--col-->
+                        <div class="col">
+							<p>
+								Dr. Bianca Howard<br>
+								Loughborough University<br>
+
+							</p>
+						</div><!--col-->
+					</div><!--row-->
+				</div><!--container-->
+		                <div class="container-fluid text-center" >
+                    			<h1 class="h3 pt-3">Local Organising Committee</h1>
+               			</div>
+                		<div class="container-fluid pt-3">
+					<div class="row ">
+						<div class="col">
+							<p>
+								Prof. Malcolm Cook<br>
+							</p>
+						</div><!--col-->
+                        			<div class="col">
+							<p>
+								Prof. Jonathan Wright<br>
+							</p>
+						</div><!--col-->
+                        			<div class="col">
+							<p>
+								Dr. Eleonora Bremilla<br>
+							</p>
+						</div><!--col-->
+                        			<div class="col">
+							<p>
+								Dr. Argyris Oraiopoulos<br>
+							</p>
+						</div><!--col-->
+                        			<div class="col">
+							<p>
+								Dr. Bianca Howard<br>
+							</p>
+						</div><!--col-->
+                        			<div class="col">
+							<p>
+								Dr. Mahroo Eftekhari<br>
+							</p>
+						</div><!--col-->
+                        			<div class="col">
+							<p>
+								Dr. Vanda Dimitriou<br>
+							</p>
+						</div><!--col-->
+                        			<div class="col">
+							<p>
+								Mr. Renjith Jayapalan Nair<br>
+							</p>
+						</div><!--col-->
+					</div><!--row-->
+				</div><!--container-->
+                <div class="container text-center">
+                    <h1 class="h3 py-3">Reviewers</h1>
+                </div>
+                <p class="h6 text-center">United Kingdom</p>
+                <div class="container-fluid">
+					<div class="row">
+						<div class="col">
+							<p>
+								Dr. David Allinson<br>
+								Dr. Arash Beizaee<br>
+								Dr. Clarice Bleil De Souza<br>
+								Dr. Eleonora Brembilla<br>
+								Dr. Alexander Brownlee<br>
+  								Prof. Joe Clarke<br>
+								Dr. Daniel Coakley<br>
+  								Prof. David Coley<br>
+								Prof. Malcolm Cook<br>
+  								Prof. Pieter de Wilde<br>
+
+							</p>
+						</div><!--col-->
+                        <div class="col">
+							<p>
+								Dr. Amira Elnokaly<br>
+								Dr. Steven Firth<br>
+								Dr. Shaun Fitzgerald<br>
+								Dr. Neveen Hamza<br>
+								Prof. Victor Hanby<br>
+  								Dr. Bianca Howard<br>
+								Dr. Nick Kelly<br>
+  								Prof. Kevin Lomas<br>
+								Dr. Liora Malki-Epshtein<br>
+  								Prof. John Mardalijevic<br>
+
+							</p>
+						</div><!--col-->
+                        <div class="col">
+							<p>
+								Prof. Ljiljana Marjanovic-Halburd<br>
+								Dr. Anna Mavrogianni<br>
+								Prof. Dejan Mumovic<br>
+								Mr. Edward Murphy<br>
+								Dr. Sukumar Natarajan<br>
+  								Dr. Elli Nikolaidou<br>
+								Dr. Argyris Oraiopoulos<br>
+  								Mr. Bertug Ozarisoy<br>
+								Dr. James Parker<br>
+
+							</p>
+						</div><!--col-->
+                        <div class="col">
+							<p>
+								Dr. Rokia Raslan<br>
+								Prof. Darren Robinson<br>
+								Dr. Dimitrios Rovas<br>
+								Dr. Paul Strachan<br>
+  								Dr. Minna Sunikka-Blank<br>
+								Mr. Riccardo Talami<br>
+  								Ms. Rebecca Ward<br>
+								Prof. Jonathan Wright<br>
+  								Dr. Yupeng Wu<br>
+							</p>
+						</div><!--col-->
+					</div><!--row-->
+				</div><!--container-->
+                <div class="container-fluid">
+					<div class="row">
+						<div class="col">
+                            <p class="h6">Europe</p>
+							<p>
+								Prof. Marilyne Andersen<br>
+								Dr. Jerome Kaempf<br>
+								Dr. Rongling Li<br>
+								Dr. Ala Hasan<br>
+  								Dr. Mattia De Rosa<br>
+								Dr. Donal Finn<br>
+  								Dr. Dominic O'Sullivan<br>
+								Prof. Jan Hensen<br>
+  								Prof. Christina Hopfe<br>
+							</p>
+						</div><!--col-->
+                        <div class="col">
+                            <p class="h6">North America</p>
+							<p>
+								Prof. Ian Beausoleil-Morrison<br>
+								Dr. Ralph Evins<br>
+								Prof. Michaël Kummert<br>
+								Dr. Dru Crawley<br>
+  								Dr. Tianzhen Hong<br>
+								Dr. Ralph Muehleisen<br>
+  								Dr. Janet Reyna<br>
+							</p>
+						</div><!--col-->
+                        <div class="col">
+                            <p class="h6">Asia/Austraila</p>
+							<p>
+								Dr. Asal Bidarmaghz<br>
+								Prof. Tian Wei<br>
+								Prof. Da Yan<br>
+								Prof. Cheol-Soo Park<br>
+  								Dr. Adrian Chong<br>
+								Prof. Chao Yuan<br>
+							</p>
+						</div><!--col-->
+					</div><!--row-->
+				</div><!--container-->
+			</article>
+
+			<article id="contact">
+				<div class="container-fluid py-3" style="background-color: #e9ecef;">
+					<div class="row-fluid text-center">
+                            <h1 class="display-5">Contact us</h1>
+							<p>
+								Dr Bianca Howard<br>
+								Loughborough University<br>
+								<a href="mailto:BSO2020info@lboro.ac.uk">BSO2020info@lboro.ac.uk</a>
+							</p>
+					</div><!--row-->
+				</div><!--container-->
+			</article>
+
+			<footer>
+				<div class="container-fluid bg-dark text-light py-4">
+					<div class="container d-flex">
+						<p>
+							Building Simulation and Optimization is the biannual conference of
+							<a href="https://www.ibpsa-england.org/">IBPSA-England</a>
+							, the English chapter of the International Building
+							Performance and Simulation Association.
+						</p>
+						<a href="https://www.ibpsa-england.org/">
+							<img src="images/ibpsa-logo.png" width="180" height="100"
+								 alt="IBSPA-England logo"/>
+						</a>
+					</div><!--container-->
+					<div class="container">
+						<p>This website uses the
+							<a href="https://getbootstrap.com/">Bootstrap</a> framework and is
+							hosted on GitHub
+							<a href="https://github.com/building-energy/bso2020">here</a>.
+						</p>
+					</div><!--container-->
+				</div><!--container-fluid-->
+			</footer>
+
+		</main>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap-4.3.1.js"></script>
+
+	</body>
+
+</html>
