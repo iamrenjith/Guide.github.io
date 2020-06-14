@@ -316,9 +316,9 @@ messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
 										<a href="https://teams.microsoft.com/meetingOptions/?organizerId=a390358c-85fd-4c5f-b56b-eeb084c735a5&tenantId=cf264fc0-aeb8-449f-9054-82ce4454084b&threadId=19_meeting_MDMwYWE1OGUtNzFkYy00NjYzLThmYzgtMzgwZGUyMmJmYTI4@thread.v2&messageId=0&language=en-US" target="_blank" onclick="javascript:return validatePass()"><input type="submit" /></a>
 									</p>-->
 									<form name="login">
-				            <p style="font-size:20px;color:black">Username<input type="text" name="userid"/></p>
+				            <p style="font-size:20px;color:black">Username <br><input type="text" name="userid"/></p>
 										<br>
-				            <p style="font-size:20px;color:black">Password<input type="password" name="pswrd"/></p>
+				            <p style="font-size:20px;color:black">Password <br><input type="password" name="pswrd"/></p>
 										<br>
 				            <input type="button" onclick="check(this.form)" value="Login"/>
 				        	</form>
@@ -534,8 +534,9 @@ messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
 					<h3>Please enter your password to join.</h3>
 					<br>
 					<form name="login">
-            Username \n<input type="text" name="userid"/>
-            Password \n<input type="password" name="pswrd"/>
+            Username <br> <input type="text" name="userid"/>
+						<br>
+            Password <br> <input type="password" name="pswrd"/>
             <input type="button" onclick="check(this.form)" value="Login"/>
 
         </form>
