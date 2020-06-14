@@ -50,6 +50,6 @@ function check(form) { /*function to check userid & password*/
 				window.open('https://teams.microsoft.com/meetingOptions/?organizerId=a390358c-85fd-4c5f-b56b-eeb084c735a5&tenantId=cf264fc0-aeb8-449f-9054-82ce4454084b&threadId=19_meeting_MDMwYWE1OGUtNzFkYy00NjYzLThmYzgtMzgwZGUyMmJmYTI4@thread.v2&messageId=0&language=en-US')/*opens the target page while Id & password matches*/
 		}
 		else {
-				alert("Incorrect Password or Username")/*displays error message*/
+				alert("Incorrect Password or Username. Username and password are case sensitive.")/*displays error message*/
 		}
 		}
