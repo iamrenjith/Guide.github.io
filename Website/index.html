@@ -28,6 +28,21 @@
             }
 
         </style>
+        <style media="screen">
+        .video-container {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        .video-container video {
+          /* Make video to at least 100% wide and tall */
+          min-width: 100%;
+          min-height: 100%;
+        }
+        </style>
 
 </head>
 
@@ -61,7 +76,7 @@
 
         <li><a href="#">Page 2</a></li>-->
         <li><a class="navbar-brand" href="About.html"  style="font-size:18px;">ABOUT</a></li>
-        <li><a class="navbar-brand" href="mailto: renjithj@live.com"  style="font-size:18px;"> CONTACT</a></li>
+        <li><a class="navbar-brand" href="mailto: renjith@ecovolks.com"  style="font-size:18px;"> CONTACT</a></li>
       </ul>
     </div>
   </div>
@@ -69,21 +84,40 @@
   <br>
 </nav>
 
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- /#Inroduction video-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<div id="myModal" class="modal fade">
+    <div class="video-container">
+        <div class="modal-content">
+            <div class="modal-body">
+              <video playsinline autoplay muted  width=100% height=100%>
+                  <source src="Videos/Ecovolks_intro.m4v"/>
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- /#Welcome page-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 
   <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
-<div class="">
 
-</div>
   <ula>
     <lia>
-      <spana>Design</spana>
+      <spana>Zero Energy Designs</spana>
+      <a href="Design/Design.html">
       <img src="Images/Trial/Design.jpeg" /></lia>
-  <lia>
+      </a>
+    <lia>
     <spana>Construction</spana>
-    <a href="Construction/A1.html">
+    <a href="Construction/Construction/Construction.html">
     <img src="Images/Trial/Construction.jpeg" />
-  </a>
-</lia>
+    </a>
+    </lia>
 
 
   <lia>
@@ -107,6 +141,44 @@
     <img src="Images/Trial/Books.jpg" /></a>
   </lia>
 </ula>
+
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #javascript-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Welcome modal-->
+<script>
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+
+    setTimeout(function(){
+    $("#myModal").modal('hide');
+}, 15000);
+
+	});
+</script>
+
+<!-- #Video full screen-->
+<script type="text/javascript">
+  var $video  = $('video'),
+    $window = $(window);
+
+$(window).resize(function(){
+    var height = $window.height();
+    $video.css('height', height);
+
+    var videoWidth = $video.width(),
+        windowWidth = $window.width(),
+    marginLeftAdjust =   0;
+
+    $video.css({
+        'height': height,
+        'marginLeft' : marginLeftAdjust
+    });
+}).resize();
+
+</script>
 
 </body>
 

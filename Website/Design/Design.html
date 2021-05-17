@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang=en-us>
+<head>
+    <title>Construction</title>
+
+
+    <link rel="stylesheet" type="text/css" href="Index.css">
+    <style media="screen">
+    body {
+      margin: auto;
+      margin-top: 100px;
+      font-family:Helvetica;
+    }
+
+    #content {
+      float: center ;
+      width: 100% ;
+      margin-top: 100px;
+      padding-top: 70px;
+    }
+
+
+
+    .content1 {
+      float: center;
+      margin-top: 20px;
+      margin-right: 20px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      padding-bottom: 50px;
+
+    }
+
+    .content2 {
+      float: left;
+      width: 40%;
+    }
+    .content3 {
+      float: left;
+      width: 40%;
+    }
+
+    .content_par {
+      float: right;
+      width: 90%;
+    }
+
+
+    /* for navigation bar navigation bar at the top of page */
+
+    /* End navigation bar at the top of page */
+
+
+    /* Welcome window style */
+
+
+
+    .col {
+        position: relative;
+        min-height: 10px;
+        padding-right: 25px;
+        padding-left: 25px
+    }
+
+    .row {
+        margin-right: -15px;
+        margin-left: -15px
+    }
+
+    .row1 {
+        float: center;
+    }
+
+    .row-centered {
+        text-align: center;
+    }
+
+    .col-centered {
+        display: inline-block;
+        float: none;
+        /* reset the text-align */
+        text-align: left;
+        /* inline-block space fix */
+        margin-right: -4px;
+    }
+
+    #welcomeContainer .col-sm-4 {
+        width: 33.33333333%;
+        float: left;
+
+    }
+
+    .col-sm-4 {
+        position: relative;
+        min-height: 10px;
+        padding-right: 25px;
+        padding-left: 25px
+    }
+    .col-sm-12 {
+        position: relative;
+        min-height: 10px;
+        padding-right: 25px;
+        padding-left: 25px
+    }
+
+    .col-lg-12 {
+        position: relative;
+        min-height: 10px;
+        padding-right: 25px;
+        padding-left: 25px
+    }
+
+
+    .popupWindow {
+        background-color: 0.5 !important;
+
+    }
+
+
+    .popupWindow div.col-centered{
+        background-color: #ffffff;
+        opacity: 1;
+        z-index: 1000;
+        width: 50%;
+        height: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 700px;
+        min-height: 50%;
+        min-width: 50%;
+        padding: 2em;
+
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px
+    }
+
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc
+    }
+
+    .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #adadad
+    }
+
+
+    @font-face {
+        font-family: 'Glyphicons Halflings';
+        src: url(../fonts/glyphicons-halflings-regular.eot);
+        src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'), url(../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+    }
+
+    .glyphicon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-family: 'Glyphicons Halflings';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale
+    }
+
+    .glyphicon-remove:before {
+        content: "\e014"
+    }
+
+    .text-left {
+        text-align: left
+    }
+
+    .text-right {
+        text-align: right
+    }
+
+    .text-center {
+        text-align: center
+    }
+
+    .text-justify {
+        text-align: justify
+    }
+
+    .text-wrap {
+        white-space: wrap
+    }
+
+    .text-lowercase {
+        text-transform: lowercase
+    }
+
+    .text-uppercase {
+        text-transform: uppercase
+    }
+
+    .text-capitalize {
+        text-transform: capitalize
+    }
+
+
+    .h0 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit
+    }
+
+    .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+        font-weight: 400;
+        line-height: 1;
+        color: #777
+    }
+
+    .h0 .h1, .h2, .h3, h1, h2, h3 {
+        margin-top: 20px;
+        margin-bottom: 10px
+    }
+
+    .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small {
+        font-size: 65%
+    }
+
+    .h4, .h5, .h6, h4, h5, h6 {
+        margin-top: 10px;
+        margin-bottom: 10px
+    }
+
+    .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+        font-size: 75%
+    }
+
+    .h0, h0 {
+        font-size: 50px
+    }
+
+
+    .h1, h1 {
+        font-size: 50px
+    }
+
+    .h2, h2 {
+        font-size: 30px
+    }
+
+    .h3, h3 {
+        font-size: 24px
+    }
+
+    .h4, h4 {
+        font-size: 18px
+    }
+
+    .h5, h5 {
+        font-size: 14px
+    }
+
+    .h6, h6 {
+        font-size: 12px
+    }
+
+    .small, small {
+        font-size: 85%
+    }
+
+    .sampleImage {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .sampleImage:hover img {
+        border-color: black;
+        border-width: .2em solid;
+    }
+
+
+
+    :after, :before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    .img-rounded {
+        border-radius: 6px
+    }
+
+
+    .vertical-center {
+        min-height: 100%;
+        /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh;
+        /* These two lines are counted as one           */
+        display: flex;
+        align-items: center;
+    }
+
+    .fullscreen {
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        position: fixed !important;
+        z-index: 1001 !important;
+        overflow: auto;
+
+    }
+    /*********/
+
+    #video-container {
+        max-width: 50em;
+        margin: auto;
+        border: 0.2em solid #333;
+        box-shadow: 0.5em 0.5em 0.5em rgba( 0, 0, 0, 0.3 );
+        margin-bottom: 20px;
+     }
+
+    #video-container video {
+        display: block;
+        width: 100%;
+     }
+
+
+
+     @media screen and (max-width: 650px) {
+       .column {
+         width: 100%;
+         display: block;
+       }
+     }
+
+     .card {
+       float: center;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     }
+
+     .container {
+       margin-top: 100px;
+       float: center;
+       padding: 16px 16px;
+     }
+
+     .container::after, .row::after {
+       content: "";
+       clear: both;
+       display: table;
+     }
+
+     .title {
+       color: grey;
+     }
+
+     .button1 {
+       border: none;
+       outline: 0;
+       display: inline-block;
+       padding: 8px;
+       color: white;
+       background-color: gray;
+       text-align: center;
+       cursor: pointer;
+       width: 100%;
+     }
+
+     .button1:hover {
+       background-color: #555;
+     }
+
+     .row:after {
+       content: "";
+       display: table;
+       clear: both
+     }
+
+     .column-66 {
+       float: left;
+       width: 60%;
+       padding: 20px;
+     }
+
+     .column-33 {
+       float: left;
+       width: 30%;
+       padding: 20px;
+       padding-bottom: 20px;
+     }
+
+     .column-33-33 {
+       float: left;
+       width: 33%;
+       padding: 20px;
+       padding-bottom: 20px;
+     }
+
+     .column-80 {
+       float: left;
+       width: 80%;
+       padding: 20px;
+     }
+
+
+     .large-font {
+       font-size: 48px;
+     }
+
+     .xlarge-font {
+       font-size: 64px
+     }
+
+     .button {
+       border: none;
+       color: white;
+       padding: 14px 28px;
+       font-size: 16px;
+       cursor: pointer;
+       background-color: #4CAF50;
+     }
+
+
+     @media screen and (max-width: 1000px) {
+       .column-66,
+       .column-33 {
+         width: 100%;
+         text-align: center;
+       }
+       img {
+         margin: auto;
+       }
+     }
+
+
+
+     .sidepanel  {
+       width: 0;
+       position: fixed;
+       z-index: 2;
+       height: 80%;
+       bottom: 0;
+       right: 0;
+       background-color: gray;
+       overflow-x: hidden;
+       transition: 0.5s;
+       padding-top: 60px;
+       color: white;
+     }
+
+     .sidepanel a {
+       bottom: 0;
+       right: 0;
+       padding: 8px 8px 8px 32px;
+       text-decoration: none;
+       font-size: 25px;
+       color: #818181;
+       display: block;
+       transition: 0.3s;
+     }
+
+     .sidepanel a:hover {
+       color: #f1f1f1;
+     }
+
+     .sidepanel .closebtn {
+       position: absolute;
+       top: 0;
+       right: 25px;
+       font-size: 36px;
+       color: black;
+     }
+
+     .openbtn {
+       position: fixed;
+       top: 50%;
+       right: 0;
+       font-size: 20px;
+       cursor: pointer;
+       background-color: red;
+       opacity: 0.8;
+       color: white;
+       padding: 10px 15px;
+       border: none;
+       transform: rotate(-90deg);
+
+
+     }
+
+
+     .openbtn:hover {
+       background-color:#444;
+     }
+
+     .topbtn {
+       position: fixed;
+       top: 50%;
+       right: 0;
+       font-size: 20px;
+       cursor: pointer;
+       background-color: gray;
+       opacity: 0.8;
+       color: white;
+       padding: 10px 15px;
+       border: none;
+       transform: rotate(0deg);
+       opacity: 0.5;
+     }
+     .topbtn:hover {
+       background-color:#444;
+     }
+
+
+     .typebtn {
+       position: fixed;
+       top: 20%;
+       left: 0;
+       right: 92%;
+       font-size: 12px;
+       cursor: pointer;
+       background-color: white;
+       opacity: 0.8;
+       color: white;
+       border: none;
+       transform: rotate(0deg);
+      }
+     .typebtn:hover {
+       background-color:#444;
+     }
+
+     .typebtn1 {
+       position: fixed;
+       top: 40%;
+       left: 0;
+       right: 92%;
+       font-size: 12px;
+       cursor: pointer;
+       background-color: white;
+       opacity: 0.8;
+       color: white;
+       border: none;
+       transform: rotate(0deg);
+      }
+     .typebtn1:hover {
+       background-color:#444;
+     }
+
+     .typebtn2 {
+       position: fixed;
+       top: 60%;
+       left: 0;
+       right: 92%;
+       font-size: 12px;
+       cursor: pointer;
+       background-color: white;
+       opacity: 0.8;
+       color: white;
+       border: none;
+       transform: rotate(0deg);
+      }
+     .typebtn2:hover {
+       background-color:#445;
+       opacity: 0.8;
+     }
+
+     .container1 {
+       position: relative;
+       width: 100%;
+     }
+
+     .image {
+       display: block;
+       width: 100%;
+       height: auto;
+     }
+
+     .overlay {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       background-color: rgba(0, 0, 0, 0.7);
+       overflow: hidden;
+       width: 100%;
+       height: 100%;
+       -webkit-transform: scale(0);
+       -ms-transform: scale(0);
+       transform: scale(0);
+       -webkit-transition: .3s ease;
+       transition: .3s ease;
+
+     }
+
+     .container1:hover .overlay {
+       -webkit-transform: scale(1);
+       -ms-transform: scale(1);
+       transform: scale(1);
+     }
+
+     .text1 {
+       color: white;
+       font-size: 16px;
+       position: absolute;
+       top: 70%;
+       left: 50%;
+       -webkit-transform: translate(-50%, -50%);
+       -ms-transform: translate(-50%, -50%);
+       transform: translate(-50%, -50%);
+       text-align: center;
+       white-space:  inherit;
+     }
+
+     .text1 a {
+       color: white;
+       text-align: center;
+       text-decoration: none;
+     }
+
+     /* Three image containers (use 25% for four, and 50% for two, etc) */
+     .column_img {
+       float: left;
+       width: 24%;
+       padding: 5px;
+     }
+
+     /* Clear floats after image containers */
+     .row::after {
+       content: "";
+       clear: both;
+       display: table;
+     }
+
+     .grid-container {
+       display: grid;
+       grid-template-columns: 80% 80% 80%;
+       grid-gap: 10px;
+       padding: 10px;
+       padding-left: 10px;
+       padding-right: 10px;
+     }
+
+     .termbtn {
+       position: fixed;
+       top: 80%;
+       right: 0;
+       font-size: 16px;
+       cursor: pointer;
+       background-color: red;
+       opacity: 0.8;
+       color: white;
+       padding: 10px 15px;
+       border: none;
+       transform: rotate(-90deg);
+
+
+     }
+
+     .termbtn:hover {
+       background-color:#444;
+     }
+
+    </style>
+
+<!-- -->
+<script src="/cdn-cgi/apps/head/TEAHVq5cVsVoM9egFOAS6CBdXPk.js"></script><link rel="stylesheet" href="https://pannellum.org/css/bootstrap.min.css">
+<script type="text/javascript" src="https://pannellum.org/js/bootstrap-native.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600%7CSource+Code+Pro:400,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://pannellum.org/css/pygments.css">
+<link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css" />
+<script type="text/javascript" src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
+<link rel="stylesheet" href="https://pannellum.org/css/style.css">
+
+<!-- -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<style>
+      /* Modify the background color */
+
+      .navbar-custom {
+          background-color: white;
+      }
+      /* Modify brand and text color */
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-text {
+          color: Black;
+          font: Helvetica;
+      }
+
+  </style>
+</head>
+<body class="desktop no-touch body--light">
+
+  <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+  <!-- Navbar-->
+  <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+  <nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="../index.html"> <img src="../Images/ECO.jpeg"  style="width:auto;height:200%">
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="navbar-brand" href="../index.html"  style="font-size:18px;">HOME</a></li>
+        <!--<li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+
+        <li><a href="#">Page 2</a></li>-->
+        <li><a class="navbar-brand" href="../About.html"  style="font-size:18px;">ABOUT</a></li>
+        <li><a class="navbar-brand" href="mailto: renjith@ecovolks.com"  style="font-size:18px;"> CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <br>
+</nav>
+<br>
+<br>
+
+  <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+  <div class="container" id="about" style="background-color:#f1f1f1">
+    <div class="content1"  >
+      <div class="text-center">
+        <h1 class="xlarge-font" style="color:red;"> Zero Energy Homes</h1>
+      </div>
+        <h2 style="font-size:24px" align="justify">We at EvoVolks aim to
+          construct Zero Energy Homes. Zero Energy Homes are the
+          Ultimate Energy Efficient Homes. Zero energy homes are just like any
+          home-except better. They are regular grid-tied homes that are so
+          air-tight, well insulated, and energy efficient that they produce as
+          much renewable energy as they consume over the course of a year,
+          leaving the occupants with a net zero energy bill, and a carbon-free
+          home. A zero energy home is not just a `green home' or a home with
+          solar panels. A zero energy home combines advanced design and superior
+          building systems with energy efficiency and on-site solar panels to
+          produce a better home. Zero energy homes are ultra-comfortable,
+          healthy, quiet, sustainable homes that are affordable to live in.
+        </h2>
+    </div>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <div class="row1">
+      <div class="column-66">
+        <h1 class="large-font" style="color:MediumSeaGreen;"><b>Available Everywhere in Every Size and Style</b></h1>
+          <p><span style="font-size:20px">A zero energy home can fit your life
+            and your style. Individuals, couples, and families, of all ages and
+            incomes can live in zero energy homes. These homes can range from
+            mansions to development homes, to small cottages and tiny homes.
+            Zero energy homes can look like any other home or have their own
+            unique  style. </span>
+            </p>
+      </div>
+      <div class="column-33">
+          <img alt="House 1 3D" width="100%" src="../Images/Trial/3d.jpeg" class="imgix cursor-pointer">
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <div class="row1">
+      <div class="column-33">
+          <img alt="House 1 3D" width="100%" src="../Images/comfort.webp" class="imgix cursor-pointer">
+      </div>
+      <div class="column-66">
+        <h1 class="large-font" style="color:MediumSeaGreen;"><b>Healthier, More Comfortable Homes</b></h1>
+          <p><span style="font-size:20px">A home is more than four walls and a
+            roof. It is a place of comfort and security, a gathering place for
+            friends, and a sanctuary for your family. Your home should serve to
+            protect you and provide a healthy environment in which to live.
+            Because zero energy homes are built to a higher standard, you’ll
+            breathe the cleanest air, feel the most comfortable temperatures,
+            and enjoy the quietest indoor environment. You will sleep well
+            knowing that you and your family live in a healthy, comfortable
+            home, free from allergens and toxins.</span>
+          </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="background-color:#f1f1f1">
+    <div class="row1">
+      <div class="column-66">
+        <h1 class="large-font" style="color:MediumSeaGreen;"><b>Affordable: Save You Money from Day One</b></h1>
+          <p><span style="font-size:20px">From move-in day and for as long as
+            you own the home, the total cost of living in a zero energy home is
+            lower than that of a comparable standard home. A zero energy home
+            will protect you from a rapid rise in energy prices. Ten years from
+            now, you’ll pay the same price you pay today to keep your lights
+            on and your family warm. That price will be zero or next to zero.</span>
+            </p>
+      </div>
+      <div class="column-33">
+          <img alt="House 1 3D" width="100%" src="../Images/affordable.jpg" class="imgix cursor-pointer">
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <div class="row1">
+      <div class="column-33">
+          <img alt="House 1 3D" width="100%" src="../Images/Quality.webp" class="imgix cursor-pointer">
+      </div>
+      <div class="column-66">
+        <h1 class="large-font" style="color:MediumSeaGreen;"><b>Quality Homes: Better and More Durable</b></h1>
+          <p><span style="font-size:20px">Zero energy homes are better, more
+            durable, homes from the ground floor up to the roof. Thicker more
+            air-tight walls, fresh filtered air, and advanced window technologies,
+            among many other features, ensure that our zero energy home is
+            better protected and more durable than the average home. In fact
+            zero energy homes are superior to most high-end homes.</span>
+          </p>
+        <!--<button class="button" style="background-color:red">Read More</button>-->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="background-color:#f1f1f1">
+    <div class="row1">
+      <div class="column-66">
+        <h1 class="large-font" style="color:MediumSeaGreen;"><b>Carbon Free and Climate Friendly</b></h1>
+          <p><span style="font-size:20px">Global climate change is today's most
+            pressing issue. Buildings alone are responsible for 40% of the total
+            energy used in the World. Zero energy homes are one of the
+            cornerstones of a reduced carbon future that is not reliant on
+            fossil fuels. With a zero energy home, you control where your
+            home's energy comes from with every flip of the light switch, every
+            day. The Zero Energy Project is here to connect you with resources
+            and empower you to take action.</span>
+
+        <!--<button class="button" style="background-color:red">Read More</button>-->
+      </div>
+      <div class="column-33">
+          <img alt="House 1 3D" width="100%" src="../Images/Carbon_friendly.png" class="imgix cursor-pointer">
+      </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+
+
+
+<br>
+<br>
+</body>
+</html>
