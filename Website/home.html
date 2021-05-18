@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<!-- code by webdevtrick ( https://webdevtrick.com ) -->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ecovolks</title>
+      <link rel="stylesheet" href="CSS/Expanding_image.css">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+            /* Modify the background color */
+
+            .navbar-custom {
+                background-color: white;
+            }
+            /* Modify brand and text color */
+
+            .navbar-custom .navbar-brand,
+            .navbar-custom .navbar-text {
+                color: Black;
+                font: Helvetica;
+            }
+
+        </style>
+        <style media="screen">
+        .video-container {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        .video-container video {
+          /* Make video to at least 100% wide and tall */
+          min-width: 100%;
+          min-height: 100%;
+        }
+        </style>
+
+</head>
+
+<body>
+
+  <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+  <!-- Navbar-->
+  <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+  <nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="#"> <img src="Images/ECO.jpeg"  style="width:auto;height:200%">
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+
+        <li><a href="#">Page 2</a></li>-->
+        <li><a class="navbar-brand" href="About.html"  style="font-size:18px;">ABOUT</a></li>
+        <li><a class="navbar-brand" href="mailto: renjith@ecovolks.com"  style="font-size:18px;"> CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <br>
+</nav>
+
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- /#Welcome page-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+  <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+  <ula>
+    <lia>
+      <spana>Zero Energy Designs</spana>
+      <a href="Design/Design.html">
+      <img src="Images/Trial/Design.jpeg" /></lia>
+      </a>
+    <lia>
+    <spana>Construction</spana>
+    <a href="Construction/Construction/Construction.html">
+    <img src="Images/Trial/Construction.jpeg" />
+    </a>
+    </lia>
+
+
+  <lia>
+    <spana>Engineering Consultation</spana>
+    <a href="Consultancy/Consultancy.html">
+    <img src="Images/Trial/consulting.jpeg" /></lia>
+  </a>
+
+  <lia>
+    <spana>Renewables</spana>
+    <a href="Renewables/Renewables.html">
+    <img src="Images/Trial/Energy.jpeg" /></a>
+  </lia>
+
+  <lia>
+    <spana>Design Guide</spana>
+    <a href="../index.html">
+    <img src="Images/Trial/Guide.jpeg" /></a>
+  </lia>
+
+  <lia>
+    <spana>News</spana>
+    <a href="News/News.html">
+    <img src="Images/Trial/Books.jpg" /></a>
+  </lia>
+</ula>
+
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #javascript-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Welcome modal-->
+<script>
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+
+    setTimeout(function(){
+    $("#myModal").modal('hide');
+}, 15000);
+
+	});
+</script>
+
+<!-- #Video full screen-->
+<script type="text/javascript">
+  var $video  = $('video'),
+    $window = $(window);
+
+$(window).resize(function(){
+    var height = $window.height();
+    $video.css('height', height);
+
+    var videoWidth = $video.width(),
+        windowWidth = $window.width(),
+    marginLeftAdjust =   0;
+
+    $video.css({
+        'height': height,
+        'marginLeft' : marginLeftAdjust
+    });
+}).resize();
+
+</script>
+
+<!-- scroll to top -->
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Scroll to top-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<a href="#top"> <button class="topper topbtn" >Top</button></a>
+
+<script>
+
+    $(document).ready(function(){
+
+  	// hide .navbar first
+  	$(".topper").hide();
+
+  	// fade in .navbar
+  	$(function () {
+  		$(window).scroll(function () {
+              // set distance user needs to scroll before we fadeIn navbar
+  			if ($(this).scrollTop() > 500) {
+  				$('.topper').fadeIn();
+  			} else {
+  				$('.topper').fadeOut();
+  			}
+  		});
+
+
+  	});
+
+  });
+
+</script>
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> &copy; Copyright 2021, EcoVolks</div>
+
+</body>
+
+</html>

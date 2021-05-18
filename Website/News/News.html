@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang=en-us>
+<head>
+    <title>News</title>
+
+    <!-- -->
+    <script src="/cdn-cgi/apps/head/TEAHVq5cVsVoM9egFOAS6CBdXPk.js"></script><link rel="stylesheet" href="https://pannellum.org/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://pannellum.org/js/bootstrap-native.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600%7CSource+Code+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://pannellum.org/css/pygments.css">
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css" />
+    <script type="text/javascript" src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
+    <link rel="stylesheet" href="https://pannellum.org/css/style.css">
+
+    <!-- -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style media="screen">
+    body {
+      margin: auto;
+      margin-top: 100px;
+      font-family:Helvetica;
+    }
+
+    #content {
+      float: center ;
+      width: 100% ;
+      margin-top: 100px;
+      padding-top: 70px;
+    }
+
+
+
+    .content1 {
+      float: center;
+      margin-top: 20px;
+      margin-right: 20px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      padding-bottom: 50px;
+
+    }
+
+    .content2 {
+      float: left;
+      width: 40%;
+    }
+    .content3 {
+      float: left;
+      width: 40%;
+    }
+
+    .content_par {
+      float: right;
+      width: 90%;
+    }
+
+
+    /* for navigation bar navigation bar at the top of page */
+
+    /* End navigation bar at the top of page */
+
+
+    /* Welcome window style */
+
+
+
+    .col {
+        position: relative;
+        min-height: 10px;
+        padding-right: 25px;
+        padding-left: 25px
+    }
+
+    .row {
+        margin-right: -15px;
+        margin-left: -15px
+    }
+
+    .row1 {
+        float: center;
+    }
+
+    .row-centered {
+        text-align: center;
+    }
+
+    .col-centered {
+        display: inline-block;
+        float: none;
+        /* reset the text-align */
+        text-align: left;
+        /* inline-block space fix */
+        margin-right: -4px;
+    }
+
+    #welcomeContainer .col-sm-4 {
+        width: 33.33333333%;
+        float: left;
+
+    }
+
+    .col-sm-4 {
+        position: relative;
+        min-height: 10px;
+        padding-right: 25px;
+        padding-left: 25px
+    }
+    .col-sm-12 {
+        position: relative;
+        min-height: 10px;
+        padding-right: 25px;
+        padding-left: 25px
+    }
+
+    .col-lg-12 {
+        position: relative;
+        min-height: 10px;
+        padding-right: 25px;
+        padding-left: 25px
+    }
+
+
+    .popupWindow {
+        background-color: 0.5 !important;
+
+    }
+
+
+    .popupWindow div.col-centered{
+        background-color: #ffffff;
+        opacity: 1;
+        z-index: 1000;
+        width: 50%;
+        height: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 700px;
+        min-height: 50%;
+        min-width: 50%;
+        padding: 2em;
+
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px
+    }
+
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc
+    }
+
+    .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #adadad
+    }
+
+
+    @font-face {
+        font-family: 'Glyphicons Halflings';
+        src: url(../fonts/glyphicons-halflings-regular.eot);
+        src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'), url(../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+    }
+
+    .glyphicon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-family: 'Glyphicons Halflings';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale
+    }
+
+    .glyphicon-remove:before {
+        content: "\e014"
+    }
+
+    .text-left {
+        text-align: left
+    }
+
+    .text-right {
+        text-align: right
+    }
+
+    .text-center {
+        text-align: center
+    }
+
+    .text-justify {
+        text-align: justify
+    }
+
+    .text-wrap {
+        white-space: wrap
+    }
+
+    .text-lowercase {
+        text-transform: lowercase
+    }
+
+    .text-uppercase {
+        text-transform: uppercase
+    }
+
+    .text-capitalize {
+        text-transform: capitalize
+    }
+
+
+    .h0 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit
+    }
+
+    .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+        font-weight: 400;
+        line-height: 1;
+        color: #777
+    }
+
+    .h0 .h1, .h2, .h3, h1, h2, h3 {
+        margin-top: 20px;
+        margin-bottom: 10px
+    }
+
+    .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small {
+        font-size: 65%
+    }
+
+    .h4, .h5, .h6, h4, h5, h6 {
+        margin-top: 10px;
+        margin-bottom: 10px
+    }
+
+    .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+        font-size: 75%
+    }
+
+    .h0, h0 {
+        font-size: 50px
+    }
+
+
+    .h1, h1 {
+        font-size: 50px
+    }
+
+    .h2, h2 {
+        font-size: 30px
+    }
+
+    .h3, h3 {
+        font-size: 24px
+    }
+
+    .h4, h4 {
+        font-size: 18px
+    }
+
+    .h5, h5 {
+        font-size: 14px
+    }
+
+    .h6, h6 {
+        font-size: 12px
+    }
+
+    .small, small {
+        font-size: 85%
+    }
+
+    .sampleImage {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .sampleImage:hover img {
+        border-color: black;
+        border-width: .2em solid;
+    }
+
+
+
+    :after, :before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    .img-rounded {
+        border-radius: 6px
+    }
+
+
+    .vertical-center {
+        min-height: 100%;
+        /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh;
+        /* These two lines are counted as one           */
+        display: flex;
+        align-items: center;
+    }
+
+    .fullscreen {
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
+        position: fixed !important;
+        z-index: 1001 !important;
+        overflow: auto;
+
+    }
+    /*********/
+
+    #video-container {
+        max-width: 50em;
+        margin: auto;
+        border: 0.2em solid #333;
+        box-shadow: 0.5em 0.5em 0.5em rgba( 0, 0, 0, 0.3 );
+        margin-bottom: 20px;
+     }
+
+    #video-container video {
+        display: block;
+        width: 100%;
+     }
+
+
+
+     @media screen and (max-width: 650px) {
+       .column {
+         width: 100%;
+         display: block;
+       }
+     }
+
+     .card {
+       float: center;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     }
+
+     .container {
+       margin-top: 20px;
+       float: center;
+
+     }
+
+     .container::after, .row::after {
+       content: "";
+       clear: both;
+       display: table;
+     }
+
+     .title {
+       color: grey;
+     }
+
+     .button1 {
+       border: none;
+       outline: 0;
+       display: inline-block;
+       padding: 8px;
+       color: white;
+       background-color: gray;
+       text-align: center;
+       cursor: pointer;
+       width: 100%;
+     }
+
+     .button1:hover {
+       background-color: #555;
+     }
+
+     .row:after {
+       content: "";
+       display: table;
+       clear: both
+     }
+
+     .column-66 {
+       float: left;
+       width: 60%;
+       padding: 20px;
+     }
+
+     .column-33 {
+       float: left;
+       width: 30%;
+       padding: 20px;
+       padding-bottom: 20px;
+     }
+
+     .column-33-33 {
+       float: left;
+       width: 33%;
+       padding: 20px;
+       padding-bottom: 20px;
+     }
+
+     .column-80 {
+       float: left;
+       width: 80%;
+       padding: 20px;
+     }
+
+
+     .large-font {
+       font-size: 48px;
+     }
+
+     .xlarge-font {
+       font-size: 64px
+     }
+
+     .button {
+       border: none;
+       color: white;
+       padding: 14px 28px;
+       font-size: 16px;
+       cursor: pointer;
+       background-color: #4CAF50;
+     }
+
+
+     @media screen and (max-width: 1000px) {
+       .column-66,
+       .column-33 {
+         width: 100%;
+         text-align: center;
+       }
+       img {
+         margin: auto;
+       }
+     }
+
+
+
+     .sidepanel  {
+       width: 0;
+       position: fixed;
+       z-index: 2;
+       height: 80%;
+       bottom: 0;
+       right: 0;
+       background-color: gray;
+       overflow-x: hidden;
+       transition: 0.5s;
+       padding-top: 60px;
+       color: white;
+     }
+
+     .sidepanel a {
+       bottom: 0;
+       right: 0;
+       padding: 8px 8px 8px 32px;
+       text-decoration: none;
+       font-size: 25px;
+       color: #818181;
+       display: block;
+       transition: 0.3s;
+     }
+
+     .sidepanel a:hover {
+       color: #f1f1f1;
+     }
+
+     .sidepanel .closebtn {
+       position: absolute;
+       top: 0;
+       right: 25px;
+       font-size: 36px;
+       color: black;
+     }
+
+     .openbtn {
+       position: fixed;
+       top: 50%;
+       right: 0;
+       font-size: 20px;
+       cursor: pointer;
+       background-color: red;
+       opacity: 0.8;
+       color: white;
+       padding: 10px 15px;
+       border: none;
+       transform: rotate(-90deg);
+
+
+     }
+
+
+     .openbtn:hover {
+       background-color:#444;
+     }
+
+     .topbtn {
+       position: fixed;
+       top: 50%;
+       right: 0;
+       font-size: 20px;
+       cursor: pointer;
+       background-color: gray;
+       opacity: 0.8;
+       color: white;
+       padding: 10px 15px;
+       border: none;
+       transform: rotate(0deg);
+       opacity: 0.5;
+     }
+     .topbtn:hover {
+       background-color:#444;
+     }
+
+
+     .typebtn {
+       position: fixed;
+       top: 20%;
+       left: 0;
+       right: 92%;
+       font-size: 12px;
+       cursor: pointer;
+       background-color: white;
+       opacity: 0.8;
+       color: white;
+       border: none;
+       transform: rotate(0deg);
+      }
+     .typebtn:hover {
+       background-color:#444;
+     }
+
+     .typebtn1 {
+       position: fixed;
+       top: 40%;
+       left: 0;
+       right: 92%;
+       font-size: 12px;
+       cursor: pointer;
+       background-color: white;
+       opacity: 0.8;
+       color: white;
+       border: none;
+       transform: rotate(0deg);
+      }
+     .typebtn1:hover {
+       background-color:#444;
+     }
+
+     .typebtn2 {
+       position: fixed;
+       top: 60%;
+       left: 0;
+       right: 92%;
+       font-size: 12px;
+       cursor: pointer;
+       background-color: white;
+       opacity: 0.8;
+       color: white;
+       border: none;
+       transform: rotate(0deg);
+      }
+     .typebtn2:hover {
+       background-color:#445;
+       opacity: 0.8;
+     }
+
+     .container1 {
+       position: relative;
+       width: 100%;
+     }
+
+     .image {
+       display: block;
+       width: 100%;
+       height: auto;
+     }
+
+     .overlay {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       background-color: rgba(0, 0, 0, 0.7);
+       overflow: hidden;
+       width: 100%;
+       height: 100%;
+       -webkit-transform: scale(0);
+       -ms-transform: scale(0);
+       transform: scale(0);
+       -webkit-transition: .3s ease;
+       transition: .3s ease;
+
+     }
+
+     .container1:hover .overlay {
+       -webkit-transform: scale(1);
+       -ms-transform: scale(1);
+       transform: scale(1);
+     }
+
+     .text1 {
+       color: white;
+       font-size: 16px;
+       position: absolute;
+       top: 70%;
+       left: 50%;
+       -webkit-transform: translate(-50%, -50%);
+       -ms-transform: translate(-50%, -50%);
+       transform: translate(-50%, -50%);
+       text-align: center;
+       white-space:  inherit;
+     }
+
+     .text1 a {
+       color: white;
+       text-align: center;
+       text-decoration: none;
+     }
+
+     /* Three image containers (use 25% for four, and 50% for two, etc) */
+     .column_img {
+       float: left;
+       width: 24%;
+       padding: 5px;
+     }
+
+     /* Clear floats after image containers */
+     .row::after {
+       content: "";
+       clear: both;
+       display: table;
+     }
+
+     .grid-container {
+       display: grid;
+       grid-template-columns: 80% 80% 80%;
+       grid-gap: 10px;
+       padding: 10px;
+       padding-left: 10px;
+       padding-right: 10px;
+     }
+
+     .termbtn {
+       position: fixed;
+       top: 80%;
+       right: 0;
+       font-size: 16px;
+       cursor: pointer;
+       background-color: red;
+       opacity: 0.8;
+       color: white;
+       padding: 10px 15px;
+       border: none;
+       transform: rotate(-90deg);
+
+
+     }
+
+     .termbtn:hover {
+       background-color:#444;
+     }
+
+    </style>
+
+
+
+<style>
+      /* Modify the background color */
+
+      .navbar-custom {
+          background-color: white;
+      }
+      /* Modify brand and text color */
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-text {
+          color: Black;
+          font: Helvetica;
+      }
+
+  </style>
+</head>
+<body class="desktop no-touch body--light">
+
+
+  <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+  <!-- Navbar-->
+  <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+  <nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="../home.html"> <img src="../Images/ECO.jpeg"  style="width:auto;height:200%">
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="navbar-brand" href="../home.html"  style="font-size:18px;">HOME</a></li>
+        <!--<li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+
+        <li><a href="#">Page 2</a></li>-->
+        <li><a class="navbar-brand" href="../About.html"  style="font-size:18px;">ABOUT</a></li>
+        <li><a class="navbar-brand" href="mailto: renjith@ecovolks.com"  style="font-size:18px;"> CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <br>
+</nav>
+<br>
+<br>
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- /#Inroduction video-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<div class="row">
+    <div class="video-container">
+              <video playsinline autoplay muted  width=100% height=100%>
+                  <source src="../Videos/News.m4v"/>
+                </video>
+    </div>
+  </div>
+
+
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Introduction -->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!--
+<div class="container"  id="jump">
+  <div class="jumbotron">
+    <h1 align="center" style="color:red;">EcoVolks News</h1>
+
+  </div>
+</div>-->
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Research impact-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<div class="container" id="jump">
+  <div class="jumbotron">
+    <h1 align="center" style="color:red;">Research Impact</h1>
+    <div class="row">
+      <div class="col-sm-5">
+        <a href="#" data-toggle="modal" data-target="	#news"> <img src="../Images/TOI_2020-08-04.jpeg" alt="Research impact" style="width:100%;border-radius: 5%;"></a>
+      </div>
+      <div class="col-sm-7">
+        <p> My research focused on supporting the `Livelihood Inclusion and Financial Empowerment (LIFE)' mission where
+          the Government of Kerala plans to build more than 750,000 houses. The beneficiaries (i.e. the people of the State)
+          are free to choose from among 12 proposed outline building designs that will be used to construct their dwellings,
+          irrespective of the location or climate -- which varies considerably within Kerala.  My research aimed to
+          help make energy performance and comfort considerations (including accounting for climatic variation across Kerala)
+          a key part of the decision making for the LIFE mission.</p>
+          <br>
+          <br>
+          </div>
+          <div class="row">  <p>
+          The research comprised: climate analysis and classification of zones within Kerala; building performance uncertainly
+          and sensitivity analysis; compiling a performance database (68,256 annual thermal/daylight simulations); and, 'curating'
+          this data into an easy-to-use online tool which he designed (including some usability testing).
+         <br>
+         <a href="index.html" target="_blank">Click here to access the guide.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Conferences-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<div class="container">
+  <div class="jumbotron">
+    <h1 align="center" style="color:red;">Post Disaster Needs Assesment Report</h1>
+    <div class="row">
+      <div class="col-sm-8">
+        <p> My paper on the `Influence of climate on performance of buildings in Kerala' had inferred that the State of Kerala has regions
+         with different climatic characteristics and that the designs for buildings should be tailored for the climate zones of Kerala.
+         These results are in contrast to the observation of the National Building Code of India and the American Society of Heating,
+         Refrigerating and Air-Conditioning Engineers.
+         <br>
+         <br>
+         In 2018, Kerala witnessed the worst flood after 1924. In response, the Government
+         of Kerala along with experts from the United Nation and the European Union assessed the the damages and losses and produced the Post
+         Disaster Needs Assessment report. The results from paper were corroborated in the report.<!--, though not formerly cited! <span>&#128530;</span>.-->
+         <br>
+         <a href="#publications">Click here to see my publications.</a>
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <img src="../Images/Economic_impact.JPG" alt="Research impact" style="width:110%;border-radius: 5%;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Awards-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%
+<div class="container">
+  <div class="jumbotron">
+    <h1 align="center" style="color:red;"> Awards </h1>
+    <br>
+    <div class="row">
+      <div class="col-sm-6" align="center">
+        <a href="#" data-toggle="modal" data-target="	#update_soon	"><figure>
+          <img src="New_method/img/Habitat.png" alt="App" style="width:60%;">
+          <figcaption style="font-size:20px"><b>Habitat technologies research award worth INR 1.23 Crores.</b></figcaption>
+        </figure></a>
+      </div>
+      <div class="col-sm-6" align="center">
+        <a href="#" data-toggle="modal" data-target="	#update_soon	"><figure>
+          <img src="New_method/img/KIIFB.png" alt="App" style="width:41.5%;">
+          <figcaption style="font-size:20px"><b>KIIFB project fund worth INR 88 Crores.</b></figcaption>
+        </figure></a>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- Recent publications -->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+
+<div class="container" id="publications">
+  <div class="jumbotron">
+    <h1 align="center" style="color:red;">Recent publications</h1>
+    <p>
+      <b><i>Jayapalan Nair, R., E. Brembilla, C. J. Hopfe, and J. Mardaljevic, Usability evaluation of a building simulation web-based design guide on potential user group,
+        In BauSIM conference 2020 (Accepted for publication), TU Graz, Austria, 23-25 September 2020.</i>
+      </b><br>
+      <a href="#" data-toggle="modal" data-target="	#BauSIM2020_abstract	">Abstract</a> &ensp; <a href="https://repository.lboro.ac.uk/articles/conference_contribution/Usability_evaluation_of_a_building_simulation_web-based_design_guide_on_potential_user_group/12621941" target="_blank">Full paper</a> &ensp; <a href="../../Bausim/media.html" target="_blank">Video presentation</a>
+    </p>
+    <p>
+      <b><i>Jayapalan Nair, R., E. Brembilla, C. J. Hopfe, and J. Mardaljevic, Influence of Building Design on Occupant Comfort in Adaptive Climate Zones,
+      In Windsor conference 2020, Windsor castle, UK, 16-19 April 2020.</i>
+      </b><br>
+      <a href="#" data-toggle="modal" data-target="	#Windsor_abstract	">Abstract</a> &ensp; <a href="https://hdl.handle.net/2134/12017076.v1" target="_blank">Full paper</a>
+    </p>
+    <p>
+      <b><i>Jayapalan Nair, R., E. Brembilla, C. J. Hopfe, and J. Mardaljevic, Weather data for building simulation: Grid resolution for climate zone de-lineation,
+      Presented at the 16th IBPSA Building Simulation International Conference, Rome, Italy, 2-4, September 2019.</i>
+      </b><br>
+      <a href="#" data-toggle="modal" data-target="	#BS2019_abstract	">Abstract</a> &ensp; <a href="https://repository.lboro.ac.uk/articles/Weather_data_for_building_simulation_Grid_resolution_for_climate_zone_delineation/9460424" target="_blank">Full paper</a>
+    </p>
+    <p>
+      <b><i>Jayapalan Nair, R., E. Brembilla, C. J. Hopfe, and J. Mardaljevic, Influence of climate on the daylight and thermal performance of buildings in Kerala (India),
+      Presented at Building Simulation and Optimisation 2018 (BSO18), Cambridge, UK, 11-12 September 2018.</i>
+      </b><br>
+      <a href="#" data-toggle="modal" data-target="	#BSO2018_abstract	">Abstract</a> &ensp; <a href="https://repository.lboro.ac.uk/articles/Influence_of_climate_on_the_daylight_and_thermal_performance_of_buildings_in_Kerala_India_/9428363" target="_blank">Full paper</a>
+    </p>
+  </div>
+</div>
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Positions and experience-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!--
+<div class="container">
+  <div class="jumbotron">
+    <h1 align="center" style="color:red;"> Positions and experience </h1>
+    <br>
+    <div class="row">
+      <div class="col-sm-4" align="center">
+        <a href="#" data-toggle="modal" data-target="	#update_soon	"><figure >
+          <img src="New_method/img/Lboro.jpeg" alt="App" style="width:80%;border-radius: 5%;">
+          <figcaption><h1 style="font-size:20px">Loughborough University<br></h1></figcaption>
+        </figure></a>
+    </div>
+      <div class="col-sm-4" align="center">
+        <a href="#" data-toggle="modal" data-target="	#update_soon	"><figure>
+          <img src="New_method/img/EcoVolkslogo.png" alt="App" style="width:35%;border-radius: 5%;">
+          <figcaption><h1 style="font-size:20px">EcoVolks<br></h1></figcaption>
+        </figure></a>
+      </div>
+      <div class="col-sm-4" align="center">
+        <a href="#" data-toggle="modal" data-target="	#update_soon	"><figure>
+          <img src="New_method/img/L&T.png" alt="App" style="width:35%;border-radius: 5%;">
+          <figcaption><h1 style="font-size:20px">Larsen & Tubro Ltd.</h1></figcaption>
+        </figure></a>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Social media interactions-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!--
+<div class="container">
+  <div class="jumbotron">
+    <h1 align="center" style="color:red;">Social media</h1>
+    <div class="container"style="text-align:center">
+      <div class="row" >
+      <div class="col-sm-5">
+        <a class="twitter-timeline" data-width="504" data-height="552" data-theme="dark" href="https://twitter.com/Renjith_jn?ref_src=twsrc%5Etfw">Tweets by Renjith_jn</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <div class="col-sm-5">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6681944535867781120" height="552" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+-->
+
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Scroll to top-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+<a href="#top"> <button class="topper topbtn" >Top</button></a>
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #javascript-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Video full screen-->
+<script type="text/javascript">
+  var $video  = $('video'),
+    $window = $(window);
+
+$(window).resize(function(){
+    var height = $window.height();
+    $video.css('height', height);
+
+    var videoWidth = $video.width(),
+        windowWidth = $window.width(),
+    marginLeftAdjust =   (windowWidth - videoWidth) / 2;
+
+    $video.css({
+        'height': height,
+        'marginLeft' : marginLeftAdjust
+    });
+}).resize();
+
+</script>
+
+<!-- #Scroll after video-->
+
+<script type="text/javascript">
+$(document).ready(function () {
+ var myVideo = $('video').first().get(0);
+ myVideo.addEventListener('loadeddata', function() {
+   setTimeout( function() {
+     $('html, body').animate({
+       scrollTop: $('#jump').offset().top
+     }, 2000);
+   }, 13000);
+ }, false);
+});
+</script>
+
+<!-- scroll to top -->
+<script>
+
+    $(document).ready(function(){
+
+  	// hide .navbar first
+  	$(".topper").hide();
+
+  	// fade in .navbar
+  	$(function () {
+  		$(window).scroll(function () {
+              // set distance user needs to scroll before we fadeIn navbar
+  			if ($(this).scrollTop() > 500) {
+  				$('.topper').fadeIn();
+  			} else {
+  				$('.topper').fadeOut();
+  			}
+  		});
+
+
+  	});
+
+  });
+
+</script>
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- #Modal-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+
+<!-- /# BauSIM-->
+<div class="content"  >
+  <div class="modal fade" id="BauSIM2020_abstract" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">
+            Usability evaluation of a building simulation web-based design guide on potential user group.
+            <br>Jayapalan Nair, R., E. Brembilla, C. J. Hopfe, and J. Mardaljevic
+          </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-pills">
+            <li><a data-toggle="pill" href="#Overview" style="font-size:24px">Abstract </a><br></li>
+            </ul>
+          <p style="width:95%;font-size:20px"  align=justify>
+             The paper summarises the results of the usability testing exercise of a new building performance
+            simulation (BPS) based guide that offers assistance for designing high performance residential
+            buildings. The guide, presented via a web-based platform aims to assist practitioners and
+            policymakers during the early building design stage to achieve higher thermal and daylight
+            performance. This study focused on (a) assessing the usability of the contents of the guide
+            in assisting users during the early design-stages and (b) identifying design/navigation issues,
+            for the web-platform, that would affect the user experience. The results of the usability
+            testing showed that the participants generally perceived the design guide easy to use and
+            valuable during early design stages. The participants found the concept of providing the guide
+            via an interactive web-based platform useful, as it would be easily accessible to a wide range
+            of audience. Furthermore, the participants provided suggestions on areas for possible future improvements.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- /# Windsor-->
+<div class="content"  >
+  <div class="modal fade" id="Windsor_abstract" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">
+            Influence of Building Design on Occupant Comfort in Adaptive Climate Zones.
+            <br>Jayapalan Nair, R., E. Brembilla, C. J. Hopfe, and J. Mardaljevic
+          </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-pills">
+              <li><a data-toggle="pill" href="#Overview" style="font-size:24px">Abstract </a><br></li>
+            </ul>
+          <p style="width:95%;font-size:20px"  align=justify>
+            The responsiveness of buildings to prevailing local climate plays an important role if the dual aspects of occupant comfort and low
+              energy demand are to be met. This study takes as example the State of Kerala in India where the Government - as part of the project titled `Livelihood
+              Inclusion and Financial Empowerment (LIFE) mission' - plans to build more than 750,000 houses across the State, using a uniform design, irrespective
+              of the location or climate. A previous study has identified regions with different climatic characteristics within Kerala using a method based on
+              adaptive thermal comfort model. This study aims to understand how the building design influences occupant comfort in the different adaptive climate
+              zones by performing an uncertainty analysis on the output metrics. The thermal comfort was assessed based on the hours requiring heating/cooling while
+              visual comfort was assessed based on the Useful Daylight Illuminance metric. A sensitivity analysis was also carried out to identify design parameters
+              that influence occupant comfort. The results of this study will serve as a reference for practitioners during the early stages of design to achieve
+              thermal and visual comfort for high performance residential buildings.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- /# BS2019-->
+<div class="content"  >
+  <div class="modal fade" id="BS2019_abstract" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">
+            Weather data for building simulation: Grid resolution for climate zone de-lineation.
+            <br>Jayapalan Nair, R., E. Brembilla, C. J. Hopfe, and J. Mardaljevic
+          </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-pills">
+              <li><a data-toggle="pill" href="#Overview" style="font-size:24px">Abstract </a><br></li>
+              <li><a data-toggle="pill" style="font-size:24px" href="http://www.ibpsa.org/proceedings/BS2019/BS2019_210775.pdf" target="_blank">Full paper</a></li>
+            </ul>
+          <p style="width:95%;font-size:20px"  align=justify>
+            Classification of climate zones for building design and energy assessment purposes plays a vital role in aiding building engineers
+              and architects in achieving energy efficiency in buildings using building performance simulation. Previous studies highlighted the need for climate
+              assessments at higher resolutions for the purpose of climate classification but failed to infer the resolution requirement. In this study, climate
+              zones of Kerala (one of the 29 States in India) are defined and delineated with climate data from grid resolutions of 10, 15, 20 and 25 km. The
+              delineated zones are then assessed by comparing them with the thermal performance of a building representative of building typology of Kerala to
+              identify the grid resolution necessary for zone delineation.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- /# BSO2018-->
+<div class="content"  >
+  <div class="modal fade" id="BSO2018_abstract" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">
+            Influence of climate on the daylight and thermal performance of buildings in Kerala (India).
+            <br>Jayapalan Nair, R., E. Brembilla, C. J. Hopfe, and J. Mardaljevic
+          </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-pills">
+              <li><a data-toggle="pill" href="#Overview" style="font-size:24px">Abstract </a><br></li>
+              <li><a data-toggle="pill" style="font-size:24px" href="https://repository.lboro.ac.uk/articles/Influence_of_climate_on_the_daylight_and_thermal_performance_of_buildings_in_Kerala_India_/9428363" target="_blank">Full paper</a></li>
+            </ul>
+          <p style="width:95%;font-size:20px"  align=justify> Knowledge of location specific climate parameters plays an important role in the design conceptualisation phase if a balance
+            between visual comfort, thermal comfort and energy performance is to be achieved. In this study, the climate diversity of Kerala (India) was
+            assessed using synoptic meteorological tools and three locations with significant population centres and different prevailing climate were
+            identified. A case study building, based on the design proposed in a Government project that aims to built 759,523 houses across Kerala, was
+            simulated under different conditions to understand the sensitivity of daylight and thermal performance to the climate in Kerala.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- /# Full paper -->
+<div class="content"  >
+  <div class="modal fade" id="bannerformmodalT3" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Full paper</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Access to full-paper will provided after the conference.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- /# Modal for news article -->
+<div class="content"  >
+  <div class="modal fade" id="news" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<h4 class="modal-title">Building Design Guide</h4>-->
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p><img src="../Images/TOI_2020-08-04.jpeg" alt="Research impact" style="width:100%;border-radius: 5%;">
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> &copy; Copyright 2021, EcoVolks</div>
+
+<!--<p style="width:95%;font-size:20px"  align=justify><a href="Ecommerce/Items.html" target="_blank">Extras</a>
+</p>-->
+</body>
+</html>

@@ -16369,6 +16369,37 @@ img {vertical-align: middle;}
   background-color: #f1f1f1;
   color: black;
 }
+
+.container {
+  margin-top: 20px;
+  float: center;
+  padding: 16px 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.topbtn {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: gray;
+  opacity: 0.8;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  transform: rotate(0deg);
+  opacity: 0.5;
+}
+.topbtn:hover {
+  background-color:#444;
+}
+
 </style>
 </head>
 <body class="desktop no-touch body--light">
@@ -16385,12 +16416,12 @@ img {vertical-align: middle;}
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="../../index.html"> <img src="../../Images/ECO.jpeg"  style="width:auto;height:200%">
+      <a class="navbar-brand" href="../../home.html"> <img src="../../Images/ECO.jpeg"  style="width:auto;height:200%">
 
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="navbar-brand" href="../../index.html"  style="font-size:18px;">HOME</a></li>
+        <li><a class="navbar-brand" href="../../home.html"  style="font-size:18px;">HOME</a></li>
         <!--<li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -16410,6 +16441,32 @@ img {vertical-align: middle;}
 </nav>
 <br>
 <br>
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!-- /#Inroduction video-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<div class="container" id="home"  >
+
+    <div class="video-container">
+              <video playsinline autoplay muted  width=100% height=100%>
+                  <source src="../../Videos/Construction.m4v"/>
+                </video>
+    </div>
+  </div>
+
+
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+  <!--<div class="container" id="about" >
+    <div class="content1" align="center">
+  <img alt=""  src="../Images/Trial/consulting.jpeg" width=100%>
+
+  </div>
+</div>-->
+<!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+<!--Jump to after video-->
+<div class="" id="jump">
+
+</div>
 
   <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 
@@ -16439,7 +16496,7 @@ img {vertical-align: middle;}
                             </div>
                         </div>-->
             <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
-              <div class="container" id="about" >
+              <!--<div class="container" id="about" >
                 <div class="content1" align="center">
               <img alt="Site: Trivandrum"  src="../../Images/Trial/Construction.jpeg" width="100%">
 
@@ -16447,18 +16504,14 @@ img {vertical-align: middle;}
               </div>
               <br>
 
-              <br>
+              <br>-->
           <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
               <div class="container" id="about" style="background-color:#f1f1f1">
               <div class="content1"  >
-              <div class="text-center">
-              <h1 class="large" style="color:red;"> `Create with the heart; build with the mind.' - Criss Jami</h1>
-              </div>
-
 
               <!--<div class="content2 col">-->
 
-              <h2 style="font-size:24px" align="justify">Our construction activities are
+              <h2 style="font-size:32px" align="justify">Our construction activities are
                 carried out in partnership with ESPY associates. We aim to provide value-added
                 construction services to our customers by creating a successful partnership
                 with them throughout the construction process. As a residential, commercial
@@ -17789,6 +17842,54 @@ img {vertical-align: middle;}
       x[slideIndex[no]-1].style.display = "block";
     }
     </script>
+    <!-- #Scroll after video-->
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+     var myVideo = $('video').first().get(0);
+     myVideo.addEventListener('loadeddata', function() {
+       setTimeout( function() {
+         $('html, body').animate({
+           scrollTop: $('#jump').offset().top
+         }, 2000);
+       }, 16000);
+     }, false);
+    });
+    </script>
+    <!-- scroll to top -->
+
+
+    <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+    <!-- #Scroll to top-->
+    <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+    <a href="#top"> <button class="topper topbtn" >Top</button></a>
+
+    <script>
+
+        $(document).ready(function(){
+
+      	// hide .navbar first
+      	$(".topper").hide();
+
+      	// fade in .navbar
+      	$(function () {
+      		$(window).scroll(function () {
+                  // set distance user needs to scroll before we fadeIn navbar
+      			if ($(this).scrollTop() > 500) {
+      				$('.topper').fadeIn();
+      			} else {
+      				$('.topper').fadeOut();
+      			}
+      		});
+
+
+      	});
+
+      });
+
+    </script>
+    <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> &copy; Copyright 2021, EcoVolks</div>
 
 </body>
 </html>
