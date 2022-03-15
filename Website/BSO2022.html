@@ -31,6 +31,64 @@ color: red;
 
   </style>
 
+
+  <style>
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .title {
+    color: grey;
+  }
+
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+  </style>
 </head>
 <body>
 
@@ -48,7 +106,7 @@ color: red;
 <iframe src="https://onedrive.live.com/embed?cid=5AF3E2A91FD1FB89&resid=5AF3E2A91FD1FB89%2119505&authkey=AISS-lJlCwibTgk"  style="width:100vw; height:100vh;" scrolling=“no” frameborder="0" allowfullscreen allow="autoplay"></iframe>
 
 <iframe src="https://www.youtube.com/embed/eeNbHbxMkL4" style="width:100vw; height:100vh;" scrolling=“no” frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-<img src="Images/image001.png" alt="BSO2022" style="width:90%;">
+<img src="Images/image001.png" alt="Research impact" style="width:90%;">
               </div>
 
           </div>
@@ -66,12 +124,12 @@ color: red;
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
+      <!--<li class="nav-item">
         <a class="nav-link" href="Keynotes.html"  target="_blank">Keynotes</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Features.html"  target="_blank">Features</a>
-      </li>
+      </li>-->
       <li class="nav-item">
         <a class="nav-link" href="https://easychair.org/conferences/?conf=bso2022"  target="_blank">Submit Abstracts</a>
       </li>
@@ -264,6 +322,125 @@ color: red;
   </div>
 </div>
 
+<!--##########-->
+
+<div class="container">
+  <div class="jumbotron">
+    <h1 align="center" style="color:red;">Conference features</h1>
+
+    <div class="row">
+      <h2>Debate</h2>
+      <p >
+      Dr Sukumar Natarajan will moderate an Oxford-style debate where speakers will argue for and against the motion 'Building energy modellers are not literate.' Using audience polling, we'll measure audience sentiment before and after the debate to judge which side moved the most people and won the debate.
+      </p>
+  </div> <br>
+
+<div class="row">
+  <h2 >Networking</h2>
+  <p >
+    We want our delegates to have plenty of opportunities to engage with each other and the speakers at the conference. We are working on making sure the online experience supports networking to foster new research collaborations across the globe.
+  </p>
+</div>
+<br>
+
+<div class="row">
+  <h2>Research showcase</h2>
+  <p >
+  We plan to showcase key outputs from a series of high-profile research grants awarded under the Newton Fund between researchers in the UK and India. This will show what is achievable using effective collaboration between the Global North and the Global South.
+  </p>
+</div>
+
+
+
+
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="jumbotron">
+    <h1 align="center" style="color:red;"> Speakers </h1>
+    <br>
+    <div class="row">
+
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="Images/Ana1.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h3>Prof. Ana Paula Melo</h3>
+        <!--<p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>-->
+        <p><button class="button" data-toggle="modal" data-target="	#Ana">Know more</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Images/Rajan1.png" alt="Mike" style="width:100%">
+      <div class="container">
+        <h3>Prof. Rajan Rawal</h3>
+        <p><button class="button" data-toggle="modal" data-target="	#Rajan">Know more</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Images/Jacques2.jpeg" alt="John" style="width:100%">
+      <div class="container">
+        <h3>Prof. Jacques Laubscher</h3>
+        <p><button class="button" data-toggle="modal" data-target="	#Jacques">Know more</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="row">
+
+
+
+<div class="row">
+<div class="column">
+<div class="card">
+  <img src="Images/David.png" alt="Jane" style="width:100%">
+  <div class="container">
+    <h3>Prof. David Coley</h3>
+    <p><button class="button" data-toggle="modal" data-target="	#David">Know more</button></p>
+  </div>
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+  <img src="Images/Eddie.jpg" alt="Eddward" style="width:100%">
+  <div class="container">
+    <h3>Eddie Murphy</h3>
+    <p><button class="button" data-toggle="modal" data-target="	#Eddie">Know more</button></p>
+  </div>
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+  <img src="Images/Clarice11.jpeg" alt="John" style="width:100%">
+  <div class="container">
+    <h3>Dr Clarice Bleil D'Souza</h3>
+    <p><button class="button" data-toggle="modal" data-target="	#Clarice">Know more</button></p>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
 
 
 <div class="container"  id="jump">
@@ -288,12 +465,55 @@ color: red;
 </div>
   </div>
 </div>
+<!--
 
+<div class="container">
+  <div class="jumbotron">
+    <h1 align="center" style="color:red;"> Other </h1>
+    <br>
+    <div class="row">
+      <div class="col-sm-8" align="center">
+        </div>
+        <table align="center" >
+            <tr>
+              <td><b>Call for papers:</b></td>
+              <td> <b>December 2021</b></td>
+            <tr>
+              <td><b>Abstract submission deadline:</b></td>
+              <td><b>1 February 2022</b></td>
+            <tr>
+              <td><b>Full paper call:</b></td>
+              <td><b>15 February 2022</b></td>
+            <tr>
+              <td><b>Full paper deadline:</b></td>
+              <td><b>15 June 2022</b></td>
+            <tr>
+              <td><b>Reviews:</b></td>
+              <td><b>15 July 2022</b></td>
+            </tr>
+        </table>
+          <div class="col-sm-4" align="center">
+            <a href="#" data-toggle="modal" data-target="	#guide"><figure >
+              <a class="twitter-timeline" data-width="250" data-height="250"  href="https://twitter.com/BsOconference?ref_src=twsrc%5Etfw">Tweets by BsOconference</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              <figcaption><h1 style="font-size:24px">Social media<br>
+              </h1></figcaption>
+            </figure></a>    </div>
+      <div class="col-sm-4" align="center">
+          <a href="Website/index.html" target="_blank"><figure >
+            <img src="bso2020-master/images/bso_wordcloud_.png" alt="App" style="width:65%;border-radius: 5%;">
+            <figcaption><h1 style="font-size:24px">BSOV2020<br>
+            </h1></figcaption>
+          </figure></a>    </div>
+    </div>
+  </div>
+</div>
+
+-->
 
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- #Products-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
-<div class="container">
+<!--<div class="container">
   <div class="jumbotron">
     <h1 align="center" style="color:red;"> Other </h1>
     <br>
@@ -325,7 +545,7 @@ color: red;
     </div>
   </div>
 </div>
-
+-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!-- #Social media interactions-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
@@ -350,6 +570,8 @@ color: red;
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
+
+
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
@@ -438,10 +660,105 @@ $(document).ready(function () {
 <!--%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%-->
 
 
+<!-- /# Modal for Ana -->
+<div class="content"  >
+  <div class="modal fade" id="Ana" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Prof. Ana Paula Melo</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="align=center">
+          <p style="width:95%;font-size:20px"  align=justify>I am full professor in the Department of Civil Engineering at Federal University of Santa Catarina. My area of expertise is building energy simulation and computational modeling for optimizing design and operation of high-performance buildings. I am the president of the IBPSA BRASIL International Building Performance Simulation Association (IBPSA), and the advisor of the ASHARE Florianópolis Student Branch.</p>
+          <p align= "center"><iframe width="560" height="315" src="https://www.youtube.com/embed/l0E7gh_f-yQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /# Modal for Rajan soon -->
+<div class="content"  >
+  <div class="modal fade" id="Rajan" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Prof. Rajan Rawal</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="align=center">
+          <p style="width:95%;font-size:20px"  align=justify>Rajan Rawal is a CRDF Professor at CEPT University and Senior Advisor of “Centre for Advanced Studies in Building Science and Energy” (CARBSE) at CEPT Research and Development Foundation (CRDF). His work revolves around the design, construction and operation of climate responsive built habitat, occupant comfort, energy standards, codes and policy. </p>
+          <!--<p><iframe width="560" height="315" src="https://www.youtube.com/embed/xDTPTIamZ-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>-->
+          <p style="width:95%;font-size:20px"  align=justify>Video coming soon</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /# Modal for Jacques soon -->
+<div class="content"  >
+  <div class="modal fade" id="Jacques" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Prof. Jacques Laubscher</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="align=center">
+          <p style="width:95%;font-size:20px"  align=justify>Jacques Laubscher is a practising Professional Architect, a Professor in Architecture and the current Head of the Department of Architecture and Industrial Design at the Tshwane University of Technology.
+Having lectured for more than 20 years at three South African Universities, he has extensively supervised postgraduate students in architectural design and technology. Jacques also formed part of research partnerships in the Netherlands, Italy and the UK. His current research includes the relationship between regulatory practices of the built environment and climate change in the Global South.</p>
+<p style="width:95%;font-size:20px"  align=justify>Jacques holds a PhD in Architecture (University of Pretoria), a Master’s degree in Urban and Regional Planning (University of the Free State), an MBA in Education Management (Haaga-Helia University, Finland) and a Higher Education Teaching Certificate (Harvard).
+</p>
+          <p align= "center"><iframe width="560" height="315" src="https://www.youtube.com/embed/4e-sEJbco6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /# Modal for David soon -->
+<div class="content"  >
+  <div class="modal fade" id="David" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Prof. David Coley</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="align=center">
+          <p style="width:95%;font-size:20px"  align=justify>David started his academic career as a nuclear physicist, but a growing interest in tackling climate change led him to building physics. He is currently Professor of Zero Carbon Design in the Dept of Architecture and Civil Engineering at the University of Bath. His research interests span: the design of housing in refugee camps around the world, weather files for building simulation and simple energy/carbon models targeted at architects.
+          </p>
+          <p align= "center"><iframe width="560" height="315" src="https://www.youtube.com/embed/xDTPTIamZ-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- /# Eddie-->
 <div class="content"  >
-  <div class="modal fade" id="eddie" role="dialog">
+  <div class="modal fade" id="Eddie" role="dialog">
     <div class="modal-dialog modal-lg">
       <!-- Modal content-->
       <div class="modal-content">
@@ -463,6 +780,7 @@ His practice has been the winner of the award for Innovation at the Constructing
 Edward is a member of the ASHRAE UK Midlands Board and is a judge for the Constructing Excellence Yorkshire and Humber and National Awards.
 
           </p>
+            <p style="width:95%;font-size:20px"  align=justify>Video coming soon</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -473,6 +791,35 @@ Edward is a member of the ASHRAE UK Midlands Board and is a judge for the Constr
   </div>
 </div>
 
+
+<!-- /# Clarice-->
+<div class="content"  >
+  <div class="modal fade" id="Clarice" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">
+            Dr Clarice Bleil De Souza
+
+          </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p style="width:95%;font-size:20px"  align=justify>
+            Clarice is a Reader at the Welsh School of Architecture working in the interdisciplinary area of decision-making in the built environment.</p>
+<p style="width:95%;font-size:20px"  align=justify>
+She is interested in exploring interdisciplinary aspects of decision-making including models and modelling applied to the areas of conventional design, sustainable design and regenerative design. She has done extensive work in user-centric building performance simulation and its integration throughout the design process in her teaching and research. She has a particular interest in decision-making in emergency, disaster management and post-disaster relief as well as decision-making in designing for harsh climates and decision-making in participatory design processes including low-income communities. Her work is highly interdisciplinary and she collaborates with other academics in the areas of Computer Science, Civil and Mechanical Engineering, Urban Planning and Business.  </p>
+  <p style="width:95%;font-size:20px"  align=justify>Video coming soon</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <!-- /# Modal for Updated soon -->
 <div class="content"  >
